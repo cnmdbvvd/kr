@@ -1,0 +1,110 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_focus_He_was_reappointed_as_the_helm_of_the_shi"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_He_was_reappointed_as_the_helm_of_the_shi.png"
+	}
+	spriteType = {
+		name = "GFX_focus_Where_is_the_future"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Where_is_the_future.png"
+	}
+	spriteType = {
+		name = "GFX_focus_Rehabilitate_Stalin"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Rehabilitate_Stalin.png"
+	}
+	spriteType = {
+		name = "GFX_focus_Mr_Grand_Marshal"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Mr_Grand_Marshal.png"
+	}
+	spriteType = {
+		name = "GFX_focus_A_clear_stream_of_intellectuals"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_A_clear_stream_of_intellectuals.png"
+	}
+	spriteType = {
+		name = "GFX_focus_Revisionism_is_re_criticized"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Revisionism_is_re_criticized.png"
+	}
+	spriteType = {
+		name = "GFX_focus_Young_people_from_the_Kremlin"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Young_people_from_the_Kremlin.png"
+	}
+	spriteType = {
+		name = "GFX_focus_The_last_day"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_The_last_day.png"
+	}
+	spriteType = {
+		name = "GFX_focus_operation_against_former_member_states"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_operation_against_former_member_states.png"
+	}
+	spriteType = {
+		name = "GFX_The_red_sun_has_just_risen_and_the_path_is_bright"
+		texturefile = "gfx/interface/goals/SOV/GFX_The_red_sun_has_just_risen_and_the_path_is_bright.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi"
+		texturefile = "gfx/event/GFX_report_event_He_was_reappointed_as_the_helm_of_the_shi.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Where_is_the_future"
+		texturefile = "gfx/event/GFX_report_event_Where_is_the_future.png"
+	}
+	spriteType = {
+		name = "GFX_report_Rehabilitate_Stalin"
+		texturefile = "gfx/event/GFX_report_Rehabilitate_Stalin.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Mr_Grand_Marsha"
+		texturefile = "gfx/event/GFX_report_event_Mr_Grand_Marsha.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_A_clear_stream_of_intellectuals"
+		texturefile = "gfx/event/GFX_report_event_A_clear_stream_of_intellectuals.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_oung_Revisionism_is_re_criticized"
+		texturefile = "gfx/event/GFX_report_event_oung_Revisionism_is_re_criticized.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_Young_people_from_the_Kremlin"
+		texturefile = "gfx/event/GFX_report_event_Young_people_from_the_Kremlin.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_The_last_day"
+		texturefile = "gfx/event/GFX_report_event_The_last_day.png"
+	}
+	spriteType = {
+		name = "£nina_andreyeva"
+		texturefile = "gfx/gui/nina_andreyeva.png"
+	}
+	spriteType = {
+		name = "£yazov"
+		texturefile = "gfx/gui/yazov.png"
+	}
+	spriteType = {
+		name = "£putin"
+		texturefile = "gfx/gui/putin.png"
+	}
+	spriteType = {
+		name = "£ryzhkov"
+		texturefile = "gfx/gui/ryzhkov.png"
+	}
+	spriteType = {
+		name = "GFX_idea_USSR_Economic_collapse"
+		texturefile = "gfx/interface/ideas/SOV_memories_of_perestroika.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_USSR_The_financial_crisis_is_becoming_increasingly_severe"
+		texturefile = "gfx/ideas/GFX_idea_USSR_The_financial_crisis_is_becoming_increasingly_severe.png"
+	}
+	spriteType = {
+		name = "GFX_idea_USSR_Confused_thinking"
+		texturefile = "gfx/ideas/GFX_USSR_Confused_thinking.png"
+	}
+	spriteType = {
+		name = "GFX_idea_USSR_A_corrupt_political_atmosphere"
+		texturefile = "gfx/ideas/GFX_idea_USSR_A_corrupt_political_atmosphere.png"
+	}
+	spriteType = {
+		name = "GFX_USSR_red_army"
+		texturefile = "gfx/interface/ideas/SOV_shared_army_spirit.dds"
+	}
+}

@@ -1,0 +1,294 @@
+shared_focus = {
+	id = SOV_Three_Year_Plan_for_Economic_Revival
+	icon = GFX_focus_Three_Year_Plan_for_Economic_Revival
+	x = 8
+	y = 0
+	cost = 1
+	completion_reward = {
+		
+	}
+}
+shared_focus = {
+	id = SOV_The_Return_of_the_Accounting_Ruble
+	icon = GFX_focus_SOV_The_Return_of_the_Accounting_Ruble
+	x = -1
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Three_Year_Plan_for_Economic_Revival
+	prerequisite = { 
+		focus = SOV_Three_Year_Plan_for_Economic_Revival
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_consumer_goods_factor = -0.25
+			tooltip = consumer_goods_factor_tt
+		}
+        add_to_variable = {
+			SOV_consumer_goods_expected_value = -0.05
+			tooltip = consumer_goods_expected_value_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Reform_the_State_Planning_Commission
+	icon = GFX_focus_SOV_Reform_the_State_Planning_Commission
+	x = 1
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Three_Year_Plan_for_Economic_Revival
+	prerequisite = { 
+		focus = SOV_Three_Year_Plan_for_Economic_Revival
+	}
+	completion_reward = {
+        add_political_power = 100
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_production_speed_buildings_factor = 0.075
+			tooltip = production_speed_buildings_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Eliminate_economic_parasites
+	icon = GFX_focus_SOV_Reform_the_State_Planning_Commission
+	x = -1
+	y = 1
+	cost = 3
+    relative_position_id = SOV_The_Return_of_the_Accounting_Ruble
+	prerequisite = { 
+		focus = SOV_The_Return_of_the_Accounting_Ruble
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse
+        add_to_variable = {
+			SOV_consumer_goods_expected_value = -0.25
+			tooltip = consumer_goods_expected_value_tt
+		}
+        add_to_variable = {
+			SOV_production_speed_buildings_factor = 0.075
+			tooltip = production_speed_buildings_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Revising_the_textbook_of_political_economy
+	icon = GFX_focus_SOV_Revising_the_textbook_of_political_economy
+	x = 0
+	y = 1
+	cost = 3
+    relative_position_id = SOV_Eliminate_economic_parasites
+	prerequisite = { 
+		focus = SOV_Eliminate_economic_parasites
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_stability_factor = 0.05
+			tooltip = SOV_stability_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Oriented_towards_the_tertiary_industry
+	icon = GFX_focus_SOV_Oriented_towards_the_tertiary_industry
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Revising_the_textbook_of_political_economy
+	prerequisite = { 
+		focus = SOV_Revising_the_textbook_of_political_economy
+	}
+	completion_reward = {
+		119 = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+			}
+			add_building_construction = {
+				type = global_building_slots
+				level = 4
+			}
+		}
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_stability_factor = 0.1
+			tooltip = SOV_stability_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_The_economic_sector_is_completely_renewed
+	icon = GFX_focus_SOV_The_economic_sector_is_completely_renewed
+	x = -1
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Reform_the_State_Planning_Commission
+	prerequisite = { 
+		focus = SOV_Reform_the_State_Planning_Commission
+	}
+	prerequisite = { 
+		focus = SOV_The_Return_of_the_Accounting_Ruble
+	}
+	available = {
+		always = no
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_consumer_goods_factor = -0.075
+			tooltip = consumer_goods_factor_tt
+		}
+		add_to_variable = {
+			SOV_production_factory_efficiency_gain_factor = 0.1
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = {
+			SOV_production_speed_buildings_factor = 0.075
+			tooltip = production_speed_buildings_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Optimize_enterprise_accounting_mechanisms
+	icon = GFX_focus_SOV_Optimize_enterprise_accounting_mechanisms
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_The_economic_sector_is_completely_renewed
+	prerequisite = { 
+		focus = SOV_The_economic_sector_is_completely_renewed
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_stability_factor = 0.1
+			tooltip = stability_factor_tt
+		}
+		add_to_variable = {
+			SOV_consumer_goods_factor = -0.25
+			tooltip = consumer_goods_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Technical_cadres_decide_everything
+	icon = GFX_focus_SOV_Technical_cadres_decide_everything
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Optimize_enterprise_accounting_mechanisms
+	prerequisite = { 
+		focus = SOV_Optimize_enterprise_accounting_mechanisms
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_production_factory_efficiency_gain_factor = 0.1
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = {
+			SOV_civilian_factory_use = -2
+			tooltip = civilian_factory_use_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Soviet_economic_statistical_system
+	icon = GFX_focus_SOV_Soviet_economic_statistical_system
+	x = 1
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Reform_the_State_Planning_Commission
+	prerequisite = { 
+		focus = SOV_Reform_the_State_Planning_Commission
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_production_speed_buildings_factor = 0.075
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			SOV_civilian_factory_use = -3
+			tooltip = civilian_factory_use_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Clarify_the_principles_of_physical_indicators
+	icon = GFX_focus_SOV_Clarify_the_principles_of_physical_indicators
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Soviet_economic_statistical_system
+	prerequisite = { 
+		focus = SOV_Soviet_economic_statistical_system
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_production_factory_efficiency_gain_factor = 0.05
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = {
+			SOV_consumer_goods_factor = -0.1
+			tooltip = civilian_factory_use_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Encourage_technological_innovation
+	icon = GFX_focus_SOV_Encourage_technological_innovation
+	x = 0
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Clarify_the_principles_of_physical_indicators
+	prerequisite = { 
+		focus = SOV_Clarify_the_principles_of_physical_indicators
+	}
+	completion_reward = {
+		custom_effect_tooltip = USSR_Economic_collapse_tt
+        add_to_variable = {
+			SOV_line_change_production_efficiency_factor = 0.15
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+		add_to_variable = {
+			SOV_production_speed_buildings_factor = 0.075
+			tooltip = production_speed_buildings_factor_tt
+		}
+	}
+}
+shared_focus = {
+	id = SOV_Brand_new_fourteen_Five-Year_Plan
+	icon = GFX_focus_SOV_Brand_new_fourteen_Five
+	x = -2
+	y = 1
+	cost = 2
+    relative_position_id = SOV_Encourage_technological_innovation
+	prerequisite = { 
+		focus = SOV_Encourage_technological_innovation
+	}
+	prerequisite = { 
+		focus = SOV_Technical_cadres_decide_everything
+	}
+	prerequisite = { 
+		focus = SOV_Oriented_towards_the_tertiary_industry
+	}
+	completion_reward = {
+		remove_dynamic_modifier = {
+			modifier = USSR_Economic_collapse
+		}
+		add_dynamic_modifier = USSR_Socialist_planned_economy
+		set_variable = { USSR_production_speed_buildings_factor = 0.1}
+		set_variable = { consumer_goods_factor = -0.01}
+		set_variable = { line_change_production_efficiency_factor = 0.1}
+		set_variable = { production_factory_start_efficiency_factor = 0.1}
+		set_variable = { USSR_industrial_capacity_factory = 0.07}
+		set_variable = { USSR_industrial_capacity_dockyard = 0.07}
+	}
+}

@@ -1,0 +1,290 @@
+guiTypes = {
+
+	
+	containerWindowType = {
+		name = "sov_party_factionalism_window"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height= 890 }
+		
+		containerWindowType = {
+			name = "decision_fix"
+			position = { x = -6 y = 0 }
+			
+			containerWindowType = {
+				name = "text_window"
+				
+				iconType = {
+					name ="sov_factionalism_bg"
+					spriteType = "GFX_sov_factionalism_bg"
+				}
+				
+				instantTextBoxType = {
+					name ="sov_party_factionalism_text"
+					font = "hoi_16mbs"
+					text = "sov_party_factionalism_text"
+					format = left
+					maxHeight = 0
+					maxWidth = 475
+					position = { x = 15 y = 175 }
+				}
+				
+				containerWindowType = {
+					name = "text_window_2"
+					position = { x = 15 y = 275 }
+					
+					instantTextBoxType = {
+						name ="sov_party_factionalism_text_2"
+						font = "hoi_16mbs"
+						text = "sov_party_factionalism_text_2"
+						format = left
+						maxHeight = 0
+						maxWidth = 230
+					}
+					
+					instantTextBoxType = {
+						name ="sov_party_factionalism_text_3"
+						font = "hoi_16mbs"
+						text = "sov_party_factionalism_text_3"
+						format = center
+						maxHeight = 0
+						maxWidth = 230
+						position = { x = 248 y = 0 }
+					}
+				}
+			}
+			
+			containerWindowType = {
+				name = "icon_window"
+				position = { x = 0 y = 390 }
+			
+				
+				#iconType = {
+				#	name ="sov_factionalism_hammer_and_sickle"
+				#	spriteType = "GFX_sov_factionalism_hammer_and_sickle"
+				#	position = { x = 75 y = 90 } 
+				#
+				#}
+				
+				containerWindowType = {
+					name = "text_window"
+					position = { x = 0 y = -15 }
+					
+					instantTextBoxType = {
+						name ="sov_current_state_of_factionalism"
+						position = { x = 0 y = 0 }
+						font = "hoi_30header"
+						text = "sov_current_state_of_factionalism_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 500
+					}
+					
+					instantTextBoxType = {
+						name ="sov_current_gensec"
+						position = { x = 0 y = 25 }
+						font = "hoi_24header"
+						text = "sov_current_gensec_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 500
+					}
+				}
+				
+				containerWindowType = {
+					name = "hardliner_window"
+					position = { x = -30 y = 0 }
+				
+					iconType = {
+						name ="sov_hardliner_icon_2"
+						spriteType = "GFX_sov_hardliner_icon"
+						position = { x=65	 y=50 } 
+						pdx_tooltip = sov_hardliner_localisation_tt
+						pdx_tooltip_delayed = sov_hardliner_influance_text_loc
+						frame = 2
+					}
+					
+					iconType = {
+						name ="sov_hardliner_icon"
+						spriteType = "GFX_sov_hardliner_icon"
+						position = { x=65	 y=50 } 
+						pdx_tooltip = sov_hardliner_localisation_tt
+						pdx_tooltip_delayed = sov_hardliner_influance_text_loc
+						frame = 1
+					}
+						
+					iconType = {
+						name ="sov_hardliner_hat_icon"
+						spriteType = "GFX_sov_hardliner_ruler_hat_icon"
+						position = { x=75 y=25 } 
+						pdx_tooltip = this_faction_rules_the_nation_hardliner
+					}
+
+					instantTextBoxType = {
+						name ="sov_hardliner_text"
+						position = { x = 50 y = 165 }
+						font = "hoi_18mbs"
+						text = "sov_hardliner_text_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 175
+					}
+					
+					instantTextBoxType = {
+						name ="sov_hardliner_influance_text"
+						position = { x = 50 y = 190 }
+						font = "hoi_16mbs"
+						text = "sov_hardliner_influance_text_loc"
+						format = left
+						maxHeight = 0
+						maxWidth = 250
+					}
+				}
+				
+				containerWindowType = {
+					name = "militarist_window"
+					position = { x = 245 y = 0 }
+					
+					iconType = {
+						name ="sov_militarist_icon_2"
+						spriteType = "GFX_sov_army_icon"
+						position = { x=65	 y=50 } 
+						pdx_tooltip = sov_militarist_localisation_tt
+						frame = 2
+					}
+					
+					iconType = {
+						name ="sov_militarist_icon"
+						spriteType = "GFX_sov_army_icon"
+						position = { x=65	 y=50 } 
+						pdx_tooltip = sov_militarist_localisation_tt
+						frame = 1
+					}
+					
+					iconType = {
+						name ="sov_military_hat_icon"
+						spriteType = "GFX_sov_military_ruler_hat_icon"
+						position = { x=75 y=25 } 
+						pdx_tooltip = this_faction_rules_the_nation_military
+					}
+					
+					instantTextBoxType = {
+						name ="sov_militarist_text"
+						position = { x = 50 y = 165 }
+						font = "hoi_18mbs"
+						text = "sov_militarist_text_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 175
+					}
+					
+					instantTextBoxType = {
+						name ="sov_militarist_influance_text"
+						position = { x = 50 y = 190 }
+						font = "hoi_16mbs"
+						text = "sov_militarist_influance_text_loc"
+						format = left
+						maxHeight = 0
+						maxWidth = 250
+					}
+				}
+				
+				containerWindowType = {
+					name = "reformist_window"
+					position = { x = -30 y = 220 }
+				
+					iconType = {
+						name ="sov_reformist_icon_2"
+						spriteType = "GFX_sov_reformist_icon"
+						position = { x=78	 y=55 } 
+						pdx_tooltip = sov_reformist_localisation_tt
+						frame = 2
+					}
+					
+					iconType = {
+						name ="sov_reformist_icon"
+						spriteType = "GFX_sov_reformist_icon"
+						position = { x=78	 y=55 } 
+						pdx_tooltip = sov_reformist_localisation_tt
+						frame = 1
+					}
+					
+					iconType = {
+						name ="sov_reformist_hat_icon"
+						spriteType = "GFX_sov_reformist_ruler_hat_icon"
+						position = { x=75 y=25 } 
+						pdx_tooltip = this_faction_rules_the_nation_reformist
+					}
+					
+					instantTextBoxType = {
+						name ="sov_reformist_text"
+						position = { x = 50 y = 165 }
+						font = "hoi_18mbs"
+						text = "sov_reformist_text_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 175
+					}
+					
+					instantTextBoxType = {
+						name ="sov_reformist_influance_text"
+						position = { x = 50 y = 190 }
+						font = "hoi_16mbs"
+						text = "sov_reformist_influance_text_loc"
+						format = left
+						maxHeight = 0
+						maxWidth = 250
+					}
+				}
+				
+				containerWindowType = {
+					name = "kgb_window"
+					position = { x = 245 y = 220 }
+				
+					iconType = {
+						name ="sov_kgb_icon_2"
+						spriteType = "GFX_sov_kgb_icon"
+						position = { x=93	 y=50 } 
+						pdx_tooltip = sov_kgb_localisation_tt
+						frame = 2
+					}
+					
+					iconType = {
+						name ="sov_kgb_icon"
+						spriteType = "GFX_sov_kgb_icon"
+						position = { x=93	 y=50 } 
+						pdx_tooltip = sov_kgb_localisation_tt
+						frame = 1
+					}
+					
+					iconType = {
+						name ="sov_kgb_hat_icon"
+						spriteType = "GFX_sov_kgb_ruler_hat_icon"
+						position = { x=75 y=25 } 
+						pdx_tooltip = this_faction_rules_the_nation_kgb
+					}
+					
+					instantTextBoxType = {
+						name ="sov_kgb_text"
+						position = { x = 50 y = 165 }
+						font = "hoi_18mbs"
+						text = "sov_kgb_text_loc"
+						format = center
+						maxHeight = 0
+						maxWidth = 175
+					}
+					
+					instantTextBoxType = {
+						name ="sov_kgb_influance_text"
+						position = { x = 50 y = 190 }
+						font = "hoi_16mbs"
+						text = "sov_kgb_influance_text_loc"
+						format = left
+						maxHeight = 0
+						maxWidth = 250
+					}
+				}
+			}
+		}
+	}
+
+}
