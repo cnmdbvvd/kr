@@ -1,8 +1,0 @@
-ceshi = {
-    icon = GFX_PRC_gaw_cat
-    visible_when_empty = yes
-    priority = 100
-    allowed = {
-        tag = sov
-    }
-}

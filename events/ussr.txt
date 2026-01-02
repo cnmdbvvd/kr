@@ -1,0 +1,7414 @@
+﻿add_namespace = ussr
+add_namespace = ussr_rebel
+add_namespace = ussr_hidden
+add_namespace = ussr_intro
+add_namespace = ussr_ai
+
+add_namespace = ussr_foreign_policy
+add_namespace = ussr_cold_war
+add_namespace = ussr_ww3
+
+add_namespace = ussr_rebel_cin
+add_namespace = ussr_rebel_ukr
+
+add_namespace = ussr_pugo_policy
+
+add_namespace = ussr_cw
+
+#The Final Struggle#
+country_event = {
+	id = ussr_ww3.1
+	title = ussr_ww3.1.t
+	desc = ussr_ww3.1.d
+	picture = GFX_report_event_final_struggle
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.1.a
+		custom_effect_tooltip = sov_final_struggle
+		}
+	}
+#Annoucement#
+country_event = {
+	id = ussr_ww3.2
+	title = ussr_ww3.2.t
+	desc = ussr_ww3.2.d
+	picture = GFX_report_event_SOV_heir_to_zhukov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.2.a
+		custom_effect_tooltip = "A Small Focus Tree For WW3 Will Be Available On The Far Right Corner."
+		}
+	}
+#Fatherland In Danger#
+country_event = {
+	id = ussr_ww3.3
+	title = ussr_ww3.3.t
+	desc = ussr_ww3.3.d
+	picture = GFX_report_event_SOV_army_purge
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.3.a
+		hidden_effect = {
+			country_event = { id = ussr_ww3.4 days = 7 }
+		}
+		}
+	}
+
+#The Great Patriotic Liberation War#
+country_event = {
+	id = ussr_ww3.4
+	title = ussr_ww3.4.t
+	desc = ussr_ww3.4.d
+	picture = GFX_report_event_SOV_reform
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.4.a
+		hidden_effect = {
+			country_event = { id = ussr_ww3.5 days = 7 }
+		}
+		}
+	}
+
+#International Volunteers#
+country_event = {
+	id = ussr_ww3.5
+	title = ussr_ww3.5.t
+	desc = ussr_ww3.5.d
+	picture = GFX_report_event_SOV_reform
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.5.a
+		set_country_flag = Soviet_in_ww3
+		ai_chance = {
+		factor = 100
+
+		}
+		custom_effect_tooltip = "All Nations Within Your Sphere of Influence Will Send Volunteer To You"	
+		every_country = {
+			limit = {
+				has_idea = ussr_aligned_nation
+			}
+			rd_volunteers_add_override_start = yes
+		     set_temp_variable = { temp = SOV }
+		    rd_volunteers_add_override = yes
+		}
+		if = {
+      limit = {
+			PRC = {
+				has_government = reformed_communism
+				}
+
+	  }
+       	   country_event = { id = ussr_ww3.6 days = 8}
+		}
+		}
+	option = {
+		name = ussr_ww3.5.b
+		add_political_power = 100
+		if = {
+      limit = {
+			PRC = {
+				has_government = reformed_communism
+				}
+
+	  }
+       	   country_event = { id = ussr_ww3.6 days = 8}
+		}
+		}
+	}
+
+#Request Chinese Help#
+country_event = {
+	id = ussr_ww3.6
+	title = ussr_ww3.6.t
+	desc = ussr_ww3.6.d
+	picture = GFX_report_event_SOV_reform
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_ww3.6.a
+		ai_chance = {
+		factor = 60
+
+		}
+		set_country_flag = Soviet_in_ww3_prc
+		custom_effect_tooltip = "All Nations Within Chinese Sphere of Influence Will Send Volunteer To You"	
+		add_political_power = -100
+		every_country = {
+			limit = {
+				has_idea = china_aligned_nation
+			}
+			rd_volunteers_add_override_start = yes
+		     set_temp_variable = { temp = SOV }
+		    rd_volunteers_add_override = yes
+		}
+		}
+	option = {
+		name = ussr_ww3.6.b
+		ai_chance = {
+		factor = 40
+
+		}
+		}
+	}
+#The Red sun shines#
+country_event = {
+	id = ussr_intro.1
+	title = ussr_intro.1.t
+	desc = ussr_intro.1.d
+	picture = GFX_report_event_SOV_1991
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.1.a
+		
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr_intro.2 days = 5 }
+			}
+	
+		}
+	}
+}
+
+#Our Biggest “Failures”#
+country_event = {
+	id = ussr_intro.2
+	title = ussr_intro.2.t
+	desc = ussr_intro.2.d
+	picture = GFX_report_event_biggest_failures
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.2.a
+		
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr_intro.3 days = 5 }
+			}
+		}
+	}
+	option = {
+		name = ussr_intro.2.b
+		custom_effect_tooltip = this_will_skip_lore
+	}		
+}
+
+#The Elephant(s) in the Room#
+country_event = {
+	id = ussr_intro.3
+	title = ussr_intro.3.t
+	desc = ussr_intro.3.d
+	picture = GFX_report_event_meet_the_ministers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.3.a
+		
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr_intro.4 days = 5 }
+			}
+		}
+	}
+}
+
+#An Old Man, an Older Nation#
+country_event = {
+	id = ussr_intro.4
+	title = ussr_intro.4.t
+	desc = ussr_intro.4.d
+	picture = GFX_report_event_yannayevs_burden
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.4.a
+		
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr_intro.5 days = 5 }
+			}
+		}
+	}
+}
+
+#Where Giants Walk, Moscow Hobbles#
+country_event = {
+	id = ussr_intro.5
+	title = ussr_intro.5.t
+	desc = ussr_intro.5.d
+	picture = GFX_report_event_SOV_lenin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.5.a
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr_intro.7 days = 5 }
+			}
+		}
+
+	}
+}
+
+#Gorby#
+country_event = {
+	id = ussr_intro.6
+	title = ussr_intro.6.t
+	desc = ussr_intro.6.d
+	picture = GFX_report_event_gorbachev_pardon
+
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.6.a
+				hidden_effect = {
+				SOV = {
+				country_event = { id = ussr_intro.8 days = 5 }
+			}
+			}
+
+	}
+}
+
+#Moscow Evening#
+country_event = {
+	id = ussr_intro.7
+	title = ussr_intro.7.t
+	desc = ussr_intro.7.d
+	picture = GFX_report_event_soviet_tavern
+
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.7.a
+			hidden_effect = {
+				SOV = {
+				country_event = { id = ussr_intro.6 days = 5 }
+			}
+			}
+  
+	}
+}
+
+#August Coup#
+country_event = {
+	id = ussr_intro.8
+	title = ussr_intro.8.t
+	desc = ussr_intro.8.d
+	picture = GFX_report_event_meet_the_ministers
+
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_intro.8.a
+
+  
+	}
+}
+
+#morning in moscow#
+country_event = {
+	id = ussr.1
+	title = ussr.1.t
+	desc = ussr.1.d
+	picture = GFX_report_event_morning_in_moscow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.1.a
+		add_political_power = 10
+	}
+}
+
+#morning in moscow 2#
+country_event = {
+	id = ussr.105
+	title = ussr.105.t
+	desc = ussr.105.d
+	picture = GFX_report_event_morning_in_moscow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.105.a
+		add_political_power = 10
+	}
+}
+
+
+#Convoy ambush#
+country_event = {
+	id = ussr.77
+	title = ussr.77.t
+	desc = ussr.77.d
+	picture = GFX_report_event_SOV_destroyed_btr
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.77.a
+	}
+
+}
+
+#the feared report#
+country_event = {
+	id = ussr.2
+	title = ussr.2.t
+	desc = ussr.2.d
+	picture = GFX_report_event_SOV_union
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.2.a
+	}
+}
+
+#economy report#
+country_event = {
+	id = ussr.3
+	title = ussr.3.t
+	desc = ussr.3.d
+	picture = GFX_report_event_SOV_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.3.a
+	}
+}
+
+#yazov protest#
+country_event = {
+	id = ussr.4
+	title = ussr.4.t
+	desc = ussr.4.d
+	picture = GFX_report_event_SOV_yazov_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.4.a
+		add_war_support = -0.05
+	}
+}
+
+#meeting Krychkov#
+country_event = {
+	id = ussr.69
+	title = ussr.69.t
+	desc = ussr.69.d
+	picture = GFX_report_event_SOV_krychkov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.69.a
+	}
+}
+
+#yazov meeting#
+country_event = {
+	id = ussr.73
+	title = ussr.73.t
+	desc = ussr.73.d
+	picture = GFX_report_event_SOV_yazov_boss
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.73.a
+	}
+}
+
+#ryzhkov speech#
+country_event = {
+	id = ussr.86
+	title = ussr.86.t
+	desc = ussr.86.d
+	picture = GFX_report_event_SOV_lenin_statue
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.86.a
+	}
+}
+
+
+#letter#
+country_event = {
+	id = ussr.33
+	title = ussr.33.t
+	desc = ussr.33.d
+	picture = GFX_report_event_yannayevs_burden
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.33.a
+		add_political_power = -15
+	}
+}
+
+#spech#
+country_event = {
+	id = ussr.34
+	title = ussr.34.t
+	desc = ussr.34.d
+	picture = GFX_report_event_yanayev_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.34.a
+		add_to_variable = {sov_militarist_influence_var = 5}
+		custom_effect_tooltip = army_5_influence_increase
+		add_political_power = -10
+	}
+	option = {
+		name = ussr.34.b
+		add_to_variable = {sov_hardliner_influence_var = 5}
+		custom_effect_tooltip = hardliner_5_influence_increase
+		add_political_power = -10
+	}
+	option = {
+		name = ussr.34.c
+		add_to_variable = {sov_reformist_influence_var = 10}
+            	custom_effect_tooltip = reformist_10_influence_increase
+		add_political_power = -10
+	}
+	option = {
+		name = ussr.34.e
+		add_to_variable = {sov_kgb_influence_var = 5}
+		custom_effect_tooltip = kgb_5_influence_increase
+		add_political_power = -10
+	}
+}
+
+#resignment#
+country_event = {
+	id = ussr.5
+	title = ussr.5.t
+	desc = ussr.5.d
+	picture = GFX_report_event_SOV_resignation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.5.a
+		add_political_power = -20
+		add_stability = -0.05
+		retire_country_leader = yes
+		promote_character = SOV_party
+			hidden_effect = {
+				news_event = { id = old_times_news.1 hours = 6 }
+				SOV = {
+					country_event = { id = ussr.89 hours = 4 }
+				}
+			}
+
+	}
+}
+
+#meeting of the central committee#
+country_event = {
+	id = ussr.89
+	title = ussr.89.t
+	desc = ussr.89.d
+	picture = GFX_report_event_SOV_resignation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.89.a
+		add_political_power = 10
+		add_stability = 0.025
+		retire_country_leader = yes
+		promote_character = SOV_valentin_pavlov
+
+	}
+}
+
+#party meeting#
+country_event = {
+	id = ussr.6
+	title = ussr.6.t
+	desc = ussr.6.de
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+		#yazov#
+	option = {
+		name = ussr.6.a
+		trigger = {
+			check_variable = { sov_militarist_influence_var > sov_hardliner_influence_var }
+			check_variable = { sov_militarist_influence_var > sov_reformist_influence_var }
+			check_variable = { sov_militarist_influence_var > sov_kgb_influence_var }
+		}
+		retire_country_leader = yes
+		promote_character = SOV_dmitry_yazov
+		load_focus_tree = ussr_yazov_focus
+		news_event = { id = old_times_news.3 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_military_rules_nation_flag
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		ai_chance = {
+		factor = 55
+			modifier = {
+				factor = 99999
+				has_game_rule = {
+				rule = SOV_paths_selection
+				option = SOV_YAZOV_PATH_CHOSEN
+				}
+			}
+		}
+	}
+	#安德烈耶娃#
+	option = {
+	name = ussr.6.b
+	trigger = {
+		check_variable = { sov_hardliner_influence_var > sov_militarist_influence_var }
+		check_variable = { sov_hardliner_influence_var > sov_reformist_influence_var }
+		check_variable = { sov_hardliner_influence_var > sov_kgb_influence_var }
+	}
+		retire_country_leader = yes
+		promote_character = SOV_nina_andreyeva
+		add_political_power = 50
+		load_focus_tree = ussr_andreyeva_focus1
+		news_event = {id = old_times_news.261}
+	}
+	
+	#putin!!!!#
+	option = {
+		name = ussr.6.c
+		trigger = {
+			check_variable = { sov_kgb_influence_var > sov_hardliner_influence_var }
+			check_variable = { sov_kgb_influence_var > sov_reformist_influence_var }
+			check_variable = { sov_kgb_influence_var > sov_militarist_influence_var }
+		}
+		retire_country_leader = yes
+		promote_character = SOV_vladimir_putin
+		load_focus_tree = ussr_putin_focus
+		news_event = { id = old_times_news.6 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_kgb_rules_nation_flag
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		
+	}
+
+	#ryzhkov the dentist#
+	option = {
+		name = ussr.6.d
+		trigger = {
+			check_variable = { sov_reformist_influence_var > sov_hardliner_influence_var }
+			check_variable = { sov_reformist_influence_var > sov_kgb_influence_var }
+			check_variable = { sov_reformist_influence_var > sov_militarist_influence_var }
+		}
+		set_politics = {
+			ruling_party = reformed_communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 14
+			fascism = 11
+			reformed_communism = 40
+			neutrality = 7
+			communism = 28
+		}
+
+		retire_country_leader = yes
+		promote_character = SOV_nikolay_ryzhkov
+		load_focus_tree = ussr_ryzhkov_focus
+		news_event = { id = old_times_news.5 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_reformist_rules_nation_flag
+		
+		SOV = {
+			country_event = { id = ussr_foreign_policy.2 days = 5 }
+		}
+	}
+}
+
+
+#Party meeting contunies#
+country_event = {
+	id = ussr.7
+	title = ussr.7.t
+	desc = ussr.7.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	#putin!!!!#
+	option = {
+		name = ussr.7.a
+		retire_country_leader = yes
+		promote_character = SOV_vladimir_putin
+		load_focus_tree = ussr_putin_focus
+		news_event = { id = old_times_news.6 days = 1 }
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		ai_chance = {
+			factor = 50
+				modifier = {
+					factor = 99999
+					has_game_rule = {
+					rule = SOV_paths_selection
+					option = SOV_PUTIN_PATH_CHOSEN
+					}
+				}
+		}
+		
+	}
+
+	#ryzhkov the dentist#
+	option = {
+		name = ussr.7.b
+
+		set_politics = {
+			ruling_party = reformed_communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 14
+			fascism = 11
+			reformed_communism = 40
+			neutrality = 7
+			communism = 28
+		}
+
+		retire_country_leader = yes
+		promote_character = SOV_nikolay_ryzhkov
+		load_focus_tree = ussr_ryzhkov_focus
+		news_event = { id = old_times_news.5 days = 1 }
+		
+		SOV = {
+			country_event = { id = ussr_foreign_policy.2 days = 5 }
+		}
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 99999
+				has_game_rule = {
+					rule = SOV_paths_selection
+					option = SOV_GORBACHEV_PATH_CHOSEN
+				}
+			}
+		}
+	}
+}
+#AI's party meeting#
+country_event = {
+	id = ussr_ai.1
+	title = ussr_ai.1.t
+	desc = ussr_ai.1.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+		#yazov#
+	option = {
+		name = ussr_ai.1.a
+		retire_country_leader = yes
+		promote_character = SOV_dmitry_yazov
+		load_focus_tree = ussr_yazov_focus
+		news_event = { id = old_times_news.3 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_military_rules_nation_flag
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		ai_chance = {
+		factor = 55
+			modifier = {
+				factor = 99999
+				has_game_rule = {
+				rule = SOV_paths_selection
+				option = SOV_YAZOV_PATH_CHOSEN
+				}
+			}
+		}
+	}
+		#Pugo#
+		option = {
+		name = ussr_ai.1.b
+		retire_country_leader = yes
+		promote_character = SOV_boris_pugo
+		load_focus_tree = ussr_pugo_focus
+		news_event = { id = old_times_news.4 days = 1 }
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		ai_chance = {
+		factor = 50
+			modifier = {
+				factor = 99999
+				has_game_rule = {
+				rule = SOV_paths_selection
+				option = SOV_PUGO_PATH_CHOSEN
+				}
+			}
+		}
+	}
+	#putin!!!!#
+	option = {
+		name = ussr_ai.1.c
+		retire_country_leader = yes
+		promote_character = SOV_vladimir_putin
+		load_focus_tree = ussr_putin_focus
+		news_event = { id = old_times_news.6 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_kgb_rules_nation_flag
+		
+			SOV = {
+				country_event = { id = ussr_foreign_policy.2 days = 5 }
+			}
+		
+		ai_chance = {
+			factor = 50
+				modifier = {
+					factor = 99999
+					has_game_rule = {
+					rule = SOV_paths_selection
+					option = SOV_PUTIN_PATH_CHOSEN
+					}
+				}
+		}
+		
+	}
+
+	#ryzhkov the dentist#
+	option = {
+		name = ussr_ai.1.d
+		set_politics = {
+			ruling_party = reformed_communism
+			elections_allowed = no
+		}
+		set_popularities = {
+			democratic = 14
+			fascism = 11
+			reformed_communism = 40
+			neutrality = 7
+			communism = 28
+		}
+
+		retire_country_leader = yes
+		promote_character = SOV_nikolay_ryzhkov
+		load_focus_tree = ussr_ryzhkov_focus
+		news_event = { id = old_times_news.5 days = 1 }
+		clr_country_flag = sov_hardliner_rules_nation_flag
+		set_country_flag = sov_reformist_rules_nation_flag
+		
+		SOV = {
+			country_event = { id = ussr_foreign_policy.2 days = 5 }
+		}
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 99999
+				has_game_rule = {
+					rule = SOV_paths_selection
+					option = SOV_GORBACHEV_PATH_CHOSEN
+				}
+			}
+		}
+	}
+}
+
+############ YAOZV##############
+
+#rip pizza hut person#
+country_event = {
+	id = ussr.8
+	title = ussr.8.t
+	desc = ussr.8.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.8.a
+		add_stability = -0.01
+		news_event = { id = old_times_news.260 }
+	}
+
+}
+
+#True Soviet Patriot#
+country_event = {
+	id = ussr.50
+	title = ussr.50.t
+	desc = ussr.50.d
+	picture = GFX_report_event_SOV_yazov_boss
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.50.a
+			add_political_power = 15
+	}
+
+}
+
+#pugo fren#
+country_event = {
+	id = ussr.42
+	title = ussr.42.t
+	desc = ussr.42.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.42.a
+	}
+
+}
+
+#report#
+country_event = {
+	id = ussr.45
+	title = ussr.45.t
+	desc = ussr.45.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.45.a
+	}
+
+}
+
+#report 2#
+country_event = {
+	id = ussr.46
+	title = ussr.46.t
+	desc = ussr.46.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.46.a
+	}
+
+}
+
+
+
+#libtards owned#
+country_event = {
+	id = ussr.43
+	title = ussr.43.t
+	desc = ussr.43.d
+	picture = GFX_report_event_SOV_minsk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.43.a
+		206 = {
+		add_manpower = -300
+		}
+		add_political_power = 50
+	}
+}
+
+#yazov with no friends except Romanov <3#
+country_event = {
+	id = ussr.44
+	title = ussr.44.t
+	desc = ussr.44.d
+	picture = GFX_report_event_SOV_yazov_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.44.a
+	}
+}
+
+#soviet bear coming to west#
+country_event = {
+	id = ussr.9
+	title = ussr.9.t
+	desc = ussr.9.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.9.a
+		add_stability = -0.01
+		
+		set_country_flag = ai_SOV_eastern_european_war
+	}
+
+}
+
+#reunification talks fail#
+country_event = {
+	id = ussr.10
+	title = ussr.10.t
+	desc = ussr.10.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.10.a
+		add_political_power = -1
+		add_war_support = 0.01
+	}
+
+}
+#WE WANT CZE#
+country_event = {
+	id = ussr.11
+	title = ussr.11.t
+	desc = ussr.11.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.11.a
+		USA = { country_event = { id = ws_usa.9 } }
+		
+		custom_effect_tooltip = if_they_accept_tt
+		effect_tooltip = {
+			SOV = { puppet = CZE }
+			CZE = {
+				set_cosmetic_tag = CZE_com_puppet
+				add_popularity = {
+					ideology = communism
+					popularity = -0.20
+				}
+				add_popularity = {
+					ideology = socialism
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = 0.25
+				}
+			}
+		}
+	}
+
+}
+
+#us doesnt agree on cze#
+country_event = {
+	id = ussr.12
+	title = ussr.12.t
+	desc = ussr.12.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.12.a
+		set_country_flag = us_disagree_cze
+	}
+
+}
+
+#us agree on cze#
+country_event = {
+	id = ussr.13
+	title = ussr.13.t
+	desc = ussr.13.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.13.a
+		set_country_flag = us_agree_cze
+		SOV = { puppet = CZE }
+		CZE = {
+		set_cosmetic_tag = CZE_com_puppet
+			CZE = {
+				set_cosmetic_tag = CZE_com_puppet
+					add_popularity = {
+						ideology = communism
+						popularity = -0.20
+					}
+					add_popularity = {
+						ideology = socialism
+						popularity = 0.15
+					}
+					add_popularity = {
+						ideology = liberalism
+							popularity = 0.25
+					}
+			}
+		}
+
+	}
+
+}
+
+#not yet#
+country_event = {
+	id = ussr.14
+	title = ussr.14.t
+	desc = ussr.14.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.14.a
+		
+	}
+
+}
+
+#looking at the polar star#
+country_event = {
+	id = ussr.15
+	title = ussr.15.t
+	desc = ussr.15.d
+	picture = GFX_report_event_polar_star
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.15.a
+		
+	}
+
+}
+
+#stroll in helenski#
+country_event = {
+	id = ussr.16
+	title = ussr.16.t
+	desc = ussr.16.d
+	picture = GFX_report_event_helsinki
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.16.a
+		
+	}
+
+}
+
+#event for yugoslavia to join moscow#
+country_event = {
+	id = ussr.17
+	title = ussr.17.t
+	desc = ussr.17.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+		#yes#
+	option = {
+		name = ussr.17.a
+		ai_chance = {
+		base = 100
+		}
+		SOV = {
+			add_to_faction = YUG
+		}
+		news_event = { id = old_times_news.68 }
+	}
+	
+	#no#
+	option = {
+		SOV = {
+			country_event = { id = ussr_foreign_policy.3}
+		
+		}
+		ai_chance = {
+		base = 35
+		}
+		name = ussr.17.b
+		
+	}
+
+}
+
+#event for yugoslavia to join moscow putin#
+country_event = {
+	id = ussr.78
+	title = ussr.78.t
+	desc = ussr.78.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+		#yes#
+	option = {
+		name = ussr.78.a
+			SOV = {
+		        country_event = {id = ussr.79 days = 1 }
+			}
+	}
+	
+	#no#
+	option = {
+		name = ussr.78.b
+			SOV = {
+		        country_event = {id = ussr.80 days = 1 }
+			}
+	}
+
+}
+
+#soviets approch yugos#
+country_event = {
+	id = ussr.84
+	title = ussr.84.t
+	desc = ussr.84.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.84.a
+	}
+
+	option = {
+		name = ussr.84.b
+		SOV = {
+		unlock_national_focus = SOV_put_offer
+		unlock_national_focus = SOV_put_red_danube
+		}
+		SOV = {
+				declare_war_on = {
+					target = YUG
+					type = annex_everything
+					
+				}
+		}
+	}
+	
+}
+
+#talk with yugoslavs#
+country_event = {
+	id = ussr.81
+	title = ussr.81.t
+	desc = ussr.81.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.81.a
+	}
+	
+}
+
+#belgrade on line#
+country_event = {
+	id = ussr.82
+	title = ussr.82.t
+	desc = ussr.82.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.82.a
+			diplomatic_relation = {
+			    country = YUG
+			    relation = guarantee
+			}
+
+			diplomatic_relation = {
+			    country = YUG
+			    relation = non_aggression_pact
+			}
+	}
+	
+}
+
+#they accept#
+country_event = {
+	id = ussr.79
+	title = ussr.79.t
+	desc = ussr.79.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.79.a
+		set_country_flag = yugo_accepted
+		news_event = { id = old_times_news.68 }
+	}
+	
+}
+
+#they deny#
+country_event = {
+	id = ussr.80
+	title = ussr.80.t
+	desc = ussr.80.d
+	picture = GFX_report_event_YUG_depressed
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.80.a
+		set_country_flag = yugo_rejected
+	}
+
+}
+
+
+#gorbie pardoned#
+country_event = {
+	id = ussr.87
+	title = ussr.87.t
+	desc = ussr.87.d
+	picture = GFX_report_event_gorbachev_pardon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.87.a
+		hidden_effect = {
+			news_event = { id = old_times_news.145 hours = 6 }
+		}
+	}
+
+}
+
+#sorry old friend#
+country_event = {
+	id = ussr.18
+	title = ussr.18.t
+	desc = ussr.18.d
+	picture = GFX_report_event_old_friend
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.18.a
+		
+	}
+
+}
+
+#another red flag over beijang#
+country_event = {
+	id = ussr.19
+	title = ussr.19.t
+	desc = ussr.19.d
+	picture = GFX_report_event_beijing
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.19.a
+		
+	}
+
+}
+
+#shield of the motherland#
+country_event = {
+	id = ussr.20
+	title = ussr.20.t
+	desc = ussr.20.d
+	picture = GFX_report_event_shield_of_the_motherland
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.20.a
+		
+	}
+
+}
+
+#one final war#
+country_event = {
+	id = ussr.21
+	title = ussr.21.t
+	desc = ussr.21.d
+	picture = GFX_report_event_ww3
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.21.a
+		declare_war_on = {
+            type = annex_everything
+            target = USA
+        }
+		
+	}
+
+}
+
+#Politics of Yazov#
+country_event = {
+	id = ussr.41
+	title = ussr.41.t
+	desc = ussr.41.d
+	picture = GFX_report_event_SOV_yazov_protest
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.41.a
+		
+	}
+
+}
+
+############ RYZHKOV ##############
+
+
+#new bukharin#
+country_event = {
+	id = ussr.91
+	title = ussr.91.t
+	desc = ussr.91.d
+	picture = GFX_report_event_SOV_ryzhkov_shining
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.91.a
+		
+	}
+
+}
+
+#no more gimmicks#
+country_event = {
+	id = ussr.92
+	title = ussr.92.t
+	desc = ussr.92.d
+	picture = GFX_report_event_SOV_no_more_gimmicks
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.92.a
+		
+	}
+
+}
+
+#not so bitter loss#
+country_event = {
+	id = ussr.93
+	title = ussr.93.t
+	desc = ussr.93.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.93.a
+		
+	}
+
+}
+
+#cycle begins anew#
+country_event = {
+	id = ussr.94
+	title = ussr.94.t
+	desc = ussr.94.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.94.a
+		
+	}
+
+}
+
+#KGB drifts to hardliners#
+country_event = {
+	id = ussr.95
+	title = ussr.95.t
+	desc = ussr.95.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.95.a
+		subtract_from_variable = {sov_ryz_kgb_alliance_var = 25}
+		custom_effect_tooltip =  sov_ryz_kgb_change_25_dec
+		SOV_ryz_agenda_clamper = yes 
+	}
+
+}
+
+#KGB drifts to reformists#
+country_event = {
+	id = ussr.96
+	title = ussr.96.t
+	desc = ussr.96.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.96.a
+		add_to_variable = {sov_ryz_kgb_alliance_var = 25}
+		custom_effect_tooltip =  sov_ryz_kgb_change_25_inc
+		SOV_ryz_agenda_clamper = yes #clamper only works when its put after variable changes
+	}
+
+}
+
+#Militarists drifts to hardliners#
+country_event = {
+	id = ussr.97
+	title = ussr.97.t
+	desc = ussr.97.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.97.a
+		subtract_from_variable = {sov_ryz_militarist_alliance_var = 25}
+		custom_effect_tooltip =  sov_ryz_militarist_change_25_dec
+		SOV_ryz_agenda_clamper = yes
+	}
+
+}
+
+#Militarists drifts to reformists#
+country_event = {
+	id = ussr.98
+	title = ussr.98.t
+	desc = ussr.98.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.98.a
+		add_to_variable = {sov_ryz_militarist_alliance_var = 25}
+		custom_effect_tooltip =  sov_ryz_militarist_change_25_inc
+		SOV_ryz_agenda_clamper = yes
+	}
+
+}
+
+#hardliner fury
+country_event = {
+	id = ussr.99
+	title = ussr.99.t
+	desc = ussr.99.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.99.a
+		subtract_from_variable = {sov_reform_prog_monthly_var = 0.50}
+		custom_effect_tooltip = sov_ryz_monthly_change_050_dec	
+		SOV_ryz_agenda_clamper = yes	
+	}
+
+}
+
+#hardliner protests
+country_event = {
+	id = ussr.100
+	title = ussr.100.t
+	desc = ussr.100.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.100.a
+		subtract_from_variable = {sov_reform_prog_monthly_var = 0.25}
+		custom_effect_tooltip = sov_ryz_monthly_change_025_dec		
+		SOV_ryz_agenda_clamper = yes
+	}
+
+}
+
+#hardliner coup
+country_event = {
+	id = ussr.101
+	title = ussr.101.t
+	desc = ussr.101.d
+	picture = GFX_report_event_SOV_second_coup
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.101.a
+		trigger = {
+			is_ai = no
+		}
+		SOV = {
+		complete_national_focus = SOV_coup_first_time
+		}
+		add_stability = -0.10
+		add_political_power = -75
+		retire_country_leader = yes
+		promote_character = SOV_boris_pugo
+		load_focus_tree = ussr_coup_focus
+		set_politics = {
+			ruling_party = communism
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		news_event = {id = old_times_news.74}
+	}
+	option = {
+		name = ussr.101.b #auto-win for ai so soviets dont get content locked
+		trigger = {
+			is_ai = yes
+		}
+		set_variable = {sov_hardliner_status_var = 100}
+		set_variable = {sov_ryz_militarist_alliance_var = 100}
+		set_variable = {sov_ryz_kgb_alliance_var = 100}
+	}
+}
+
+#a movement puppeted
+country_event = {
+	id = ussr.107
+	title = ussr.107.t
+	desc = ussr.107.d
+	picture = GFX_report_event_sad_ryzkov
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.107.a
+		custom_effect_tooltip = SOV_ryzhkov_thanks_for_playing_sc_1
+	}
+
+}
+
+#new ussr rises
+country_event = {
+	id = ussr.108
+	title = ussr.108.t
+	desc = ussr.108.d
+	picture = GFX_report_event_soviet_port
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.108.a
+		custom_effect_tooltip = SOV_ryzhkov_thanks_for_playing_sc_2
+	}
+
+}
+
+#new ussr rises
+country_event = {
+	id = ussr.109
+	title = ussr.109.t
+	desc = ussr.109.d
+	picture = GFX_report_event_gorby_ryzkov
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.109.a
+		custom_effect_tooltip = SOV_ryzhkov_thanks_for_playing_sc_3
+	}
+
+}
+
+#new ussr rises
+country_event = {
+	id = ussr.110
+	title = ussr.110.t
+	desc = ussr.110.d
+	picture = GFX_report_event_sovet_rises
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.110.a
+		custom_effect_tooltip = SOV_ryzhkov_thanks_for_playing_sc_4
+	}
+
+}
+
+
+#Back in Kremlin#
+country_event = {
+	id = ussr.22
+	title = ussr.22.t
+	desc = ussr.22.d
+	picture = GFX_report_event_guard
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.22.a
+		add_political_power = 5
+	}
+
+}
+
+#The speech#
+country_event = {
+	id = ussr.23
+	title = ussr.23.t
+	desc = ussr.23.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.23.a
+	}
+
+}
+
+#The marshal#
+country_event = {
+	id = ussr.24
+	title = ussr.24.t
+	desc = ussr.24.d
+	picture = GFX_report_event_marshal
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.24.a
+	}
+
+}
+
+#rip yozov#
+country_event = {
+	id = ussr.26
+	title = ussr.26.t
+	desc = ussr.26.d
+	picture = GFX_report_event_yazov_rip
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.26.a
+
+		add_stability = +0.05
+		add_manpower = -1
+		custom_effect_tooltip = sov_dmitry_yazov_dies_cool_text
+		hidden_effect = {
+		retire_character = SOV_dmitry_yazov
+		}
+	}
+
+}
+
+#gorby gud#
+country_event = {
+	id = ussr.27
+	title = ussr.27.t
+	desc = ussr.27.d
+	picture = GFX_report_event_gorby_gud
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr.27.a
+		set_politics = {
+			ruling_party = reformed_communism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = reformed_communism
+			popularity = 0.15
+		}
+	}
+
+}
+
+#The choice for ussr braeak aways#
+country_event = {
+	id = ussr.25
+	title = ussr.25.t
+	desc = ussr.25.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+        #peaceful#
+	option = {
+		name = ussr.25.a
+		set_country_flag = Gorbachev_chose_peace_ussr
+	}
+
+}
+
+#The choice for eastern block breakaways#
+country_event = {
+	id = ussr.28
+	title = ussr.28.t
+	desc = ussr.28.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #peaceful#
+	option = {
+		name = ussr.28.a
+		set_country_flag = Gorbachev_chose_peace_east_block
+	}
+
+}
+
+#referandums suceeds#
+country_event = {
+	id = ussr.29
+	title = ussr.29.t
+	desc = ussr.29.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #epico#
+	option = {
+		name = ussr.29.a
+		set_country_flag = sov_refs_succeeds
+		annex_country = {
+			target = EST
+			transfer_troops = yes
+		}
+		EST = {
+			every_core_state = {
+				add_core_of = SOV
+			}
+		}
+		annex_country = {
+			target = LAT
+			transfer_troops = yes
+		}
+		LAT = {
+			every_core_state = {
+				add_core_of = SOV
+			}
+		}		
+		annex_country = {
+			target = ARM
+			transfer_troops = yes
+		}
+		ARM = {
+			every_core_state = {
+				limit = { is_owned_and_controlled_by = ARM }
+				add_core_of = SOV
+			}
+		}		
+		annex_country = {
+			target = AZR
+			transfer_troops = yes
+		}	
+		AZR = {
+			every_core_state = {
+				limit = { is_owned_and_controlled_by = AZR }
+				add_core_of = SOV
+			}
+		}		
+	}
+
+}
+
+#referandums fail#
+country_event = {
+	id = ussr.30
+	title = ussr.30.t
+	desc = ussr.30.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #bruh idiot#
+	option = {
+		name = ussr.30.a
+		add_political_power = -300
+	}
+
+}
+
+#new union treaty signed#
+country_event = {
+	id = ussr.31
+	title = ussr.31.t
+	desc = ussr.31.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #omg so wholesomeee chungus#
+	option = {
+		name = ussr.31.a
+		set_cosmetic_tag = SOV_gorby_cool
+			release_puppet_on_controlled = BLR
+			BLR = {
+			set_cosmetic_tag = BLR_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = KAZ
+			KAZ = {
+			set_cosmetic_tag = KAZ_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = GEO
+			GEO = {
+			set_cosmetic_tag = GEO_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = TMS
+			TMS = {
+			set_cosmetic_tag = TMS_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = UZB
+			UZB = {
+			set_cosmetic_tag = UZB_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = KYR
+			KYR = {
+			set_cosmetic_tag = KYR_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = TAJ
+			TAJ = {
+			set_cosmetic_tag = TAJ_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+			release_puppet_on_controlled = MOL
+			MOL = {
+			set_cosmetic_tag = MOL_com_puppet
+			add_ideas = ussr_aligned_nation
+			}
+	}
+
+}
+
+#gorbachev gets couped by putin#
+country_event = {
+	id = ussr.32
+	title = ussr.32.t
+	desc = ussr.32.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #bruh#
+	option = {
+		name = ussr.32.a
+		retire_country_leader = yes
+		promote_character = SOV_vladimir_putin
+		load_focus_tree = ussr_putin_focus
+	}
+
+}
+
+### PUGO ###
+
+#Hear no evil#
+country_event = {
+	id = ussr.35
+	title = ussr.35.t
+	desc = ussr.35.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #bruh#
+	option = {
+		name = ussr.35.a
+
+	}
+
+}
+
+###Gensec Choose###
+country_event = {
+	id = ussr.102
+	title = ussr.102.t
+	desc = ussr.102.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+
+   option = {
+		name = ussr.102.a
+		trigger = {
+		check_variable = {pugo_udaltsov_influence_var > pugo_zyuganov_influence_var}
+		}
+		retire_country_leader = yes
+		promote_character = SOV_nina_andreyeva
+		add_political_power = 25
+		set_country_flag = pugo_successor_chosen
+		complete_national_focus = SOV_pugo_andreyeva
+		mark_focus_tree_layout_dirty = yes
+		news_event = {id = old_times_news.261}
+	}
+ option = {
+		name = ussr.102.b
+		trigger = {
+		check_variable = {pugo_zyuganov_influence_var > pugo_udaltsov_influence_var}
+		}
+		retire_country_leader = yes
+		promote_character = SOV_gennady_zyuganov
+		add_political_power = 25
+		set_country_flag = pugo_successor_chosen
+		complete_national_focus = SOV_pugo_zyuganov
+		mark_focus_tree_layout_dirty = yes
+		news_event = {id = old_times_news.171}
+	}
+}
+country_event = {
+	id = ussr.103
+	title = ussr.103.t
+	desc = ussr.103.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	option = {
+		name = ussr.103.a
+	}
+}
+country_event = {
+	id = ussr.104
+	title = ussr.104.t
+	desc = ussr.104.d
+	picture = GFX_report_event_SOV_stalin
+	
+	is_triggered_only = yes
+	option = {
+		name = ussr.104.a
+		hidden_effect = {
+			country_event = {
+				id = ussr_pugo_policy.10 days = 7
+			}
+		}
+	}
+}
+#report but pugo#
+country_event = {
+	id = ussr.48
+	title = ussr.48.t
+	desc = ussr.48.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.48.a
+		add_political_power = 25
+
+	}
+
+}
+
+#putin comes#
+country_event = {
+	id = ussr.75
+	title = ussr.75.t
+	desc = ussr.75.d
+	picture = GFX_report_event_SOV_comrade_putin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.75.a
+
+	}
+
+}
+
+#report but putin#
+country_event = {
+	id = ussr.60
+	title = ussr.60.t
+	desc = ussr.60.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.60.a
+			add_political_power = 35
+			add_stability = 0.2
+			add_war_support = -0.2
+
+	}
+
+}
+
+#New Guard#
+country_event = {
+	id = ussr.39
+	title = ussr.39.t
+	desc = ussr.39.d
+	picture = GFX_report_event_guard
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.39.a
+	}
+
+}
+
+#Putin's Call#
+country_event = {
+	id = ussr.51
+	title = ussr.51.t
+	desc = ussr.51.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.51.a
+		add_political_power = 15
+	}
+
+}
+
+###PUTIN###
+
+#putin collapsse#
+country_event = {
+	id = ussr.1919
+	title = ussr.1919.t
+	desc = ussr.1919.d
+	picture = GFX_report_event_SOV_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.1919.a
+		load_focus_tree = ussr_putin_collapse_focus
+	}
+}
+
+#Mongolian SSR#
+country_event = {
+	id = ussr.74
+	title = ussr.74.t
+	desc = ussr.74.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.74.a
+		annex_country = {
+		    target = MON
+		    transfer_troops = yes
+		}
+		news_event = { id = old_times_news.102 days = 1 }
+	}
+
+}
+
+#Rival on Adriatic#
+country_event = {
+	id = ussr.83
+	title = ussr.83.t
+	desc = ussr.83.d
+	picture = GFX_report_event_YUG_depressed
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.83.a
+	}
+
+}
+
+#Putin wholesome ending :)#
+country_event = {
+	id = ussr.85
+	title = ussr.85.t
+	desc = ussr.85.d
+	picture = GFX_report_event_morning_in_moscow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.85.a
+		custom_effect_tooltip = thanks_for_playing_tooltip
+	}
+
+}
+
+#Yugoslav Ambition#
+country_event = {
+	id = ussr.76
+	title = ussr.76.t
+	desc = ussr.76.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.76.a
+            if = {
+	          limit = { 
+		  tag = YUG
+	          }
+		annex_country = {
+		    target = BUL
+		    transfer_troops = yes
+		}
+	    }
+	}
+
+}
+
+#Putin denounces GKChP#
+country_event = {
+	id = ussr.52
+	title = ussr.52.t
+	desc = ussr.52.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.52.a
+		news_event = { id = old_times_news.86 days = 1 }
+
+	}
+
+}
+
+#31st Party Congress Putin#
+country_event = {
+	id = ussr.53
+	title = ussr.53.t
+	desc = ussr.53.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.53.a
+			SOV = {
+				country_event = { id = ussr.68 days = 1 }
+			}
+	}
+	option = {
+		name = ussr.53.b
+		trigger = {
+			NOT = {is_ai = yes}
+		}
+		custom_effect_tooltip = sov_putin_against
+		hidden_effect = {
+			SOV = {
+				country_event = { id = ussr.54 days = 1 }
+			}
+		}
+	}
+
+}
+
+#End Begins#
+country_event = {
+	id = ussr.54
+	title = ussr.54.t
+	desc = ussr.54.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.54.a
+		custom_effect_tooltip = sov_putin_collapse
+		hidden_effect = {
+			load_focus_tree = ussr_putin_collapse_focus
+		}
+
+	}
+
+}
+
+#Leningrad Conference#
+country_event = {
+	id = ussr.56
+	title = ussr.56.t
+	desc = ussr.56.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.56.a
+			SOV = {
+				country_event = { id = ussr.59 days = 3 }
+			}
+	}
+
+}
+
+#Leningrad Conference 2#
+country_event = {
+	id = ussr.59
+	title = ussr.59.t
+	desc = ussr.59.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.59.a
+			swap_ideas = {
+				remove_idea = SOV_putin_slipping_grip_4
+				add_idea = SOV_putin_slipping_grip_5
+			}
+	}
+
+}
+
+#Eurasia or Soviets#
+country_event = {
+	id = ussr.67
+	title = ussr.67.t
+	desc = ussr.67.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.67.a
+		trigger = {
+			NOT = {is_ai = yes}
+		}
+		set_country_flag = putin_eurasia_path_chosen
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = ussr.67.b
+		set_country_flag = putin_communist_path_chosen
+		mark_focus_tree_layout_dirty = yes
+	}
+
+}
+
+#Putin Succesful#
+country_event = {
+	id = ussr.68
+	title = ussr.68.t
+	desc = ussr.68.d
+	picture = GFX_report_event_SOV_the_meeting
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.68.a
+		custom_effect_tooltip = sov_putin_part_two
+		hidden_effect = {
+			load_focus_tree = ussr_putin_part_two_focus
+		}
+	}
+
+}
+
+#Chaos in Moscow#
+country_event = {
+	id = ussr.64
+	title = ussr.64.t
+	desc = ussr.64.d
+	picture = GFX_report_event_SOV_moscow_riots
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.64.a
+	}
+}
+
+#Zyuganov phone call#
+country_event = {
+	id = ussr.66
+	title = ussr.66.t
+	desc = ussr.66.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.66.a
+	}
+}
+
+#FINLAND#
+
+#civ gov#
+country_event = {
+	id = ussr.90
+	title = ussr.90.t
+	desc = ussr.90.d
+	#picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.90.a
+		FIN = {
+			promote_character = FIN_yrjo_hakanen 
+			set_popularities = {
+				communism = 55
+				socialism = 5
+				paternal_autocracy = 30
+			}
+			set_cosmetic_tag = FIN_com_puppet_2
+		}
+	}
+
+	option = {
+		name = ussr.90.b
+		add_political_power = -100
+		add_stability = -0.15
+		FIN = {
+			add_stability = -0.15
+		}
+	}
+
+}
+
+## CIVIL WAR STUFF ##
+
+#Baltics join Lukashenko#
+country_event = {
+	id = ussr.72
+	title = ussr.72.t
+	desc = ussr.72.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.72.a
+		BLR = {
+			annex_country = { 
+				target = BSO
+				transfer_troops = yes
+			}
+			BSO = {
+				every_core_state = {
+					remove_core_of = BSO
+					add_core_of = BLR
+				}
+			}
+			set_country_flag = BLR_annexed_BSO
+		}
+		BSO = {
+			set_nationality = {
+				target_country = BLR
+				character = BSO_vladimir_boldyrev
+				character = BSO_jonas_andriskevicius
+			}
+		}
+	}
+}
+
+#Lukashenko trolling#
+country_event = {
+	id = ussr.65
+	title = ussr.65.t
+	desc = ussr.65.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.65.a
+        BLR = {
+			set_cosmetic_tag = BLR_lukh_troll
+        }
+
+		BLR = {
+             transfer_state = 224
+             transfer_state = 243
+             transfer_state = 210
+	     }
+
+		BLR = {
+             add_state_core = 224
+             add_state_core = 243
+             add_state_core = 210
+	     }
+		SOV = {
+			country_event = { id = ussr_cw.4 }
+		}
+	}
+
+}
+
+#Battle of Moscow#
+country_event = {
+	id = ussr.61
+	title = ussr.61.t
+	desc = ussr.61.d
+	picture = GFX_report_event_SOV_moscow_riots
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.61.a
+            add_ideas = SOV_unions_one_true_leader
+                SOV = {
+            	    set_politics = {
+            	        ruling_party = paternal_autocracy
+            	        elections_allowed = no
+            	        last_election = "2000.12.17"
+            	        election_frequency = 48
+            	        long_name = SOV_paternal_autocracy_2_party_long
+						name = SOV_paternal_autocracy_2_party
+            	    }
+                }
+			add_country_leader_role = {
+				character = SOV_vladimir_putin
+				promote_leader = yes
+				country_leader = {
+					ideology = pseudo_communism
+					traits = {}
+					expire = "2050.3.1.1"
+					id = -1
+				}
+			}
+			set_portraits = {
+				character = SOV_vladimir_putin
+				civilian = { large ="gfx/leaders/SOV/Vladimir_Putin_uniform.dds" }
+			}
+		hidden_effect = {
+			set_cosmetic_tag = SOV_putin_russia_cosmetic
+			remove_ideas = SOV_putin_slipping_grip_2
+			remove_ideas = SOV_putin_new_constitution
+			remove_ideas = SOV_putin_opening_up_the_party_1
+			remove_ideas = SOV_putin_limited_market_soc
+			remove_ideas = SOV_put_kgb_6
+			retire_character = SOV_sergey_sokolov
+			retire_character = SOV_vladimir_bakin
+                set_country_flag = SOV_putin_survives
+				country_event = {id = ussr_cw.1 days = 5}
+				country_event = {id = ussr_cw.3 days = 2}	
+		}
+		complete_national_focus = SOV_put_heil_the_nightmare
+
+	}
+	option = {
+		name = ussr.61.b
+            add_ideas = SOV_true
+	        retire_country_leader = yes
+	        promote_character = SOV_party
+			set_country_flag = sov_party_victorious
+			country_event = {id = ussr_cw.1 days = 5}
+		hidden_effect = {
+			remove_ideas = SOV_putin_slipping_grip_2
+			remove_ideas = SOV_putin_new_constitution
+			remove_ideas = SOV_putin_opening_up_the_party_1
+			remove_ideas = SOV_putin_limited_market_soc
+			remove_ideas = SOV_put_kgb_6
+			news_event = { id = old_times_news.94 hours = 6 }
+			SOV = {
+				country_event = { id = ussr.63 days = 3 }
+			}
+			BLR = {
+				country_event = {id = ussr.72 days = 2}
+			}
+            add_popularity = {
+                ideology = communism
+                popularity = 0.1
+            }
+			SOV = {
+				country_event = { id = ussr_cw.3 days = 5 }
+			}
+                                add_popularity = {
+                                    ideology = communism
+                                    popularity = 0.1
+                                }
+		}
+		complete_national_focus = SOV_put_heil_the_nightmare
+	}
+	option = {
+		name = ussr.61.c
+	        retire_country_leader = yes
+	        promote_character = SOV_collapsed_government
+			219 = { set_demilitarized_zone = yes }
+		hidden_effect = {
+			remove_ideas = SOV_putin_slipping_grip_2
+			remove_ideas = SOV_putin_new_constitution
+			remove_ideas = SOV_putin_opening_up_the_party_1
+			remove_ideas = SOV_putin_limited_market_soc
+			remove_ideas = SOV_put_kgb_6
+			retire_character = SOV_sergey_sokolov
+			retire_character = SOV_vladimir_bakin
+			news_event = { id = old_times_news.93 hours = 6 }
+			SOV = {
+				country_event = { id = ussr.62 days = 3 }
+			}
+
+            add_popularity = {
+                ideology = fascism 
+                popularity = 0.1
+            }
+
+            add_popularity = {
+                ideology = anarchism
+                popularity = 0.1
+            }
+		}
+		complete_national_focus = SOV_put_heil_the_nightmare
+	}
+
+}
+
+#Storm Clears#
+country_event = {
+	id = ussr.62
+	title = ussr.62.t
+	desc = ussr.62.d
+	picture = GFX_report_event_SOV_minsk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.62.a
+	            promote_character = SOV_limnov
+	            add_ideas = SOV_new_revolution
+
+				set_politics = {
+				    ruling_party = fascism
+				    elections_allowed = no
+				    last_election = "2000.12.17"
+				    election_frequency = 48
+			 	    long_name = SOV_fascism_party_long2
+			    	    name = SOV_fascism_party_russian2
+				}
+
+                add_popularity = {
+                    ideology = fascism 
+                    popularity = 0.15
+                }
+		hidden_effect = {
+			set_cosmetic_tag = SOV_nazbol_russia_cosmetic
+	    }
+		country_event = {id = ussr.71 days = 1}
+	}
+	option = {
+		name = ussr.62.b
+	        add_ideas = SOV_iron_leader
+				set_politics = {
+				    ruling_party = fascism
+				    elections_allowed = no
+				    last_election = "2000.12.17"
+				    election_frequency = 48
+			 	    long_name = SOV_fascism_party_long
+			    	    name = SOV_fascism_party_russian1
+				}
+
+                add_popularity = {
+                    ideology = fascism 
+                    popularity = 0.15
+                }
+			country_event = {id = ussr.71 days = 1}	
+		hidden_effect = {
+			set_cosmetic_tag = SOV_russian_state
+ 			retire_character = SOV_sergey_shoigu	
+		}			
+	}
+
+}
+
+#Revolution Secured#
+country_event = {
+	id = ussr.63
+	title = ussr.63.t
+	desc = ussr.63.d
+	picture = GFX_report_event_SOV_minsk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.63.a
+	        retire_country_leader = yes
+	        promote_character = SOV_oleg_baklanov
+	}
+	option = {
+		name = ussr.63.b
+	        retire_country_leader = yes
+	        promote_character = SOV_gennady_zyuganov
+	}
+
+}
+
+
+#leningrad rejoins moscow#
+country_event = {
+	id = ussr_cw.1
+	title = ussr_cw.1.t
+	desc = ussr_cw.1.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.1.a
+		annex_country = {
+			target = TFL
+			transfer_troops = yes
+		}
+	}
+}
+
+
+#RSF decides#
+country_event = {
+	id = ussr_cw.2
+	title = ussr_cw.2.t
+	desc = ussr_cw.2.d
+	picture = GFX_report_event_SOV_rsf
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr_cw.2.a	
+                 remove_ideas = RSF_unity
+	}
+
+	option = {
+		name = ussr_cw.2.b
+		custom_effect_tooltip = rsf_udaltsov
+		hidden_effect = {
+                 RSF = {
+                 remove_ideas = RSF_soviet_nationalism
+                 remove_ideas = RSF_unity
+                 add_ideas = RSF_new_october
+            	        set_politics = {
+            	        ruling_party = communism
+            	        elections_allowed = no
+            	        last_election = "2000.12.17"
+            	        election_frequency = 48
+            	        long_name = RSF_communism_party_long
+            	        name = RSF_communism_party
+            	       }
+                    }
+		}
+	}
+}
+
+#GKChP revolt#
+country_event = {
+	id = ussr_cw.3
+	title = ussr_cw.3.t
+	desc = ussr_cw.3.d
+	picture = GFX_report_event_SOV_moscow_coup
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			BLR = {
+			country_event = {id = ussr.72 days = 2}
+			}
+				TFM = {
+					 transfer_state = 254
+					 transfer_state = 223
+					 transfer_state = 205
+					 transfer_state = 222
+					 transfer_state = 258
+					 transfer_state = 257
+					 transfer_state = 252
+					 transfer_state = 220
+					 transfer_state = 239
+					 transfer_state = 260
+					 transfer_state = 240
+					 transfer_state = 265
+					 transfer_state = 250
+					 transfer_state = 255
+					 transfer_state = 256
+					 add_state_core = 254
+					 add_state_core = 223
+					 add_state_core = 205
+					 add_state_core = 222
+					 add_state_core = 258
+					 add_state_core = 257
+					 add_state_core = 252
+					 add_state_core = 220
+					 add_state_core = 239
+					 add_state_core = 260
+					 add_state_core = 240
+					 add_state_core = 265
+					 add_state_core = 250
+					 add_state_core = 255
+					 add_state_core = 256			 
+				}
+			if = {
+			limit = { 
+				has_country_flag = patrushev
+			}
+				TFM = {
+				retire_country_leader = yes
+				promote_character = TFM_patrushev
+				}
+			}
+
+
+			transfer_units_fraction= {
+				target = TFM
+				size = 0.4
+				stockpile_ratio = 0.4
+				army_ratio = 0.4
+			}
+
+			transfer_units_fraction= {
+				target = TFL
+				size = 0.2
+				stockpile_ratio = 0.2
+				army_ratio = 0.2
+			}
+
+			if = {
+			limit = { 
+				has_country_flag = SOV_putin_survives
+			}
+			SOV = {retire_character = SOV_vladimir_bakin}
+			SOV = {retire_character = SOV_sergey_sokolov}
+				TFM = {
+					set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+					last_election = "2000.12.17"
+					election_frequency = 48
+					long_name = TFM_communism_party_long
+					name = TFM_communism_party
+						}
+					add_ideas = TFM_leadership
+					add_ideas = TFM_oleg_baklanov
+					add_ideas = TFM_gennady_zyuganov
+					add_ideas = TFM_grigory_romanov
+				}
+			}
+			if = {
+				  limit = { 
+			  has_country_flag = sov_party_victorious
+			}
+				TFM = {
+					set_cosmetic_tag = TFM_putin
+					retire_country_leader = yes
+					promote_character = TFM_putin
+					retire_character = TFM_vladimir_bakin	
+					retire_character = TFM_sergey_sokolov
+					remove_ideas = TFM_last_defenders
+					remove_ideas = TFM_leadership		
+					remove_ideas = TFM_vladimir_bakin_advisor
+					add_ideas = TFM_putin
+					set_party_name = {
+					ideology = paternal_autocracy
+					long_name = TFM_paternal_autocracy_party_1_long
+					name = TFM_paternal_autocracy_party_1
+					}
+				}			
+			}
+			TFM = {
+				declare_war_on = {
+					type = annex_everything
+					target = SOV
+				}
+				load_focus_tree = scw_tree
+			}	
+			TFL = {
+				declare_war_on = {
+					type = annex_everything
+					target = SOV
+				}
+			}				
+		}
+	}	
+	
+	option = {
+		name = ussr_cw.3.a
+
+	}
+
+	option = {
+		name = ussr_cw.3.b
+        TFM = { change_tag_from = SOV }
+	}
+}
+
+#Lukashenko trolling but only for Moscow#
+country_event = {
+	id = ussr_cw.4
+	title = ussr_cw.4.t
+	desc = ussr_cw.4.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.4.a
+	}
+}
+
+#udaltsov komsmol#
+country_event = {
+	id = ussr_cw.5
+	title = ussr_cw.5.t
+	desc = ussr_cw.5.d
+	picture = GFX_report_event_SOV_armored_car
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.5.a
+	}
+}
+
+#tajik trouble#
+country_event = {
+	id = ussr_cw.6
+	title = ussr_cw.6.t
+	desc = ussr_cw.6.d
+	picture = GFX_report_event_SOV_tajikistan
+	
+	immediate = {
+		hidden_effect = {
+			UZB = {
+				set_cosmetic_tag = UZB_islamic_emirate
+				transfer_state = 742
+				add_state_core = 742
+				transfer_state = 585
+				add_state_core = 585
+				transfer_state = 830
+				add_state_core = 830
+				promote_character = UZB_samir_suwalim
+				set_politics = {
+					ruling_party = paternal_autocracy
+				}
+				set_popularities = {
+					paternal_autocracy = 47
+					fascism = 34
+					democratic = 1
+					neutrality = 18
+				}
+				declare_war_on = {
+					type = annex_everything
+					target = KAZ
+				}
+				set_party_name = {
+					ideology = paternal_autocracy
+					name = UZB_paternal_autocracy_islam_party
+					long_name = UZB_paternal_autocracy_islam_party
+				}
+				inherit_technology = KAZ
+				load_oob = UZB_cw
+				load_focus_tree = scw_tree
+			}
+			UZB = { set_province_controller = 4549 }
+			UZB = { set_province_controller = 5003 }
+			UZB = { set_province_controller = 4958 }
+			UZB = { set_province_controller = 756 }
+			UZB = { set_province_controller = 4482 }
+			UZB = { set_province_controller = 1532 }
+			RKA = {
+				transfer_state = 882
+				transfer_state = 590
+				transfer_state = 583
+				transfer_state = 881
+				transfer_state = 588
+				inherit_technology = KAZ
+				add_state_core = 407
+				add_state_core = 406
+				add_state_core = 402
+				add_state_core = 587
+				add_state_core = 404
+				add_state_core = 586
+				add_state_core = 589
+				add_state_core = 882
+				add_state_core = 590
+				add_state_core = 583
+				add_state_core = 881
+				add_state_core = 588	
+				declare_war_on = {
+					type = annex_everything
+					target = KAZ
+				}			
+				load_oob = RKA_cw
+				load_focus_tree = scw_tree
+			}			
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.6.a
+	}
+	
+	option = {
+		name = ussr_cw.6.b
+		UZB = { change_tag_from = KAZ }
+
+	}
+	
+	option = {
+		name = ussr_cw.6.c
+		RKA = { change_tag_from = KAZ }
+
+	}	
+}
+
+#chinese ships#
+country_event = {
+	id = ussr_cw.7
+	title = ussr_cw.7.t
+	desc = ussr_cw.7.d
+	picture = GFX_report_event_SOV_friend_in_need
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.7.a
+	}
+}
+
+#where to go
+country_event = {
+	id = ussr_cw.8
+	title = ussr_cw.8.t
+	desc = ussr_cw.8.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = { #stay here
+		name = ussr_cw.8.a
+	}
+	option = { #go to luka
+		name = ussr_cw.8.b
+		BLR = { change_tag_from = FROM }
+	}	
+	option = { #go to caucasia
+		name = ussr_cw.8.c
+		country_event = {id = ussr_cw.10}
+	}	
+	option = { #go to ukraine
+		name = ussr_cw.8.de
+		country_event = {id = ussr_cw.9}
+	}		
+	option = { #go to east
+		name = ussr_cw.8.e
+		country_event = {id = ussr_cw.11}
+	}			
+}
+
+#where to go ukraine
+country_event = {
+	id = ussr_cw.9
+	title = ussr_cw.9.t
+	desc = ussr_cw.9.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = { #UCR
+		name = ussr_cw.9.a
+		UCR = { change_tag_from = FROM }
+	}
+	option = { #OUN
+		name = ussr_cw.9.b
+		OUN = { change_tag_from = FROM }
+	}	
+	option = { #UKR
+		name = ussr_cw.9.c
+		UKR = { change_tag_from = FROM }
+	}	
+	option = { #DPR
+		name = ussr_cw.9.de
+		DPR = { change_tag_from = FROM }
+	}		
+	option = { #go back
+		name = ussr_cw.9.e
+		country_event = {id = ussr_cw.8}
+	}			
+}
+
+#where to go caucasia
+country_event = {
+	id = ussr_cw.10
+	title = ussr_cw.10.t
+	desc = ussr_cw.10.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = { #SMC
+		name = ussr_cw.10.a
+		SMC = { change_tag_from = FROM }
+	}
+	option = { #RSF
+		name = ussr_cw.10.b
+		RSF = { change_tag_from = FROM }
+	}
+	option = { #GEO
+		name = ussr_cw.10.c
+		GEO = { change_tag_from = FROM }
+	}	
+	option = { #GOP
+		name = ussr_cw.10.de
+		GOP = { change_tag_from = FROM }
+	}		
+	option = { #go back
+		name = ussr_cw.10.e
+		country_event = {id = ussr_cw.8}
+	}		
+}
+
+#where to go east
+country_event = {
+	id = ussr_cw.11
+	title = ussr_cw.11.t
+	desc = ussr_cw.11.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = { #SOE
+		name = ussr_cw.11.a
+		SOE = { change_tag_from = FROM }
+	}
+	option = { #RPR
+		name = ussr_cw.11.b
+		RPR = { change_tag_from = FROM }
+	}
+	option = { #go east-er
+		name = ussr_cw.11.c
+		country_event = {id = ussr_cw.12}
+	}		
+	option = { #go back
+		name = ussr_cw.11.de
+		country_event = {id = ussr_cw.8}
+	}		
+}
+
+#where to go easter
+country_event = {
+	id = ussr_cw.12
+	title = ussr_cw.12.t
+	desc = ussr_cw.12.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = { #VDV FAO
+		name = ussr_cw.12.a
+		FAO = { change_tag_from = FROM }
+	}
+	option = { #RNF
+		name = ussr_cw.12.b
+		RNF = { change_tag_from = FROM }
+	}
+	option = { #KAZ
+		name = ussr_cw.12.c
+		KAZ = { change_tag_from = FROM }
+	}	
+	option = { #go east-er-er
+		name = ussr_cw.12.de
+		FEG = { change_tag_from = FROM }
+	}		
+	option = { #go back
+		name = ussr_cw.12.e
+		country_event = {id = ussr_cw.11}
+	}		
+}
+
+#SMC - choose a monarch#
+country_event = {
+	id = ussr_cw.13
+	title = ussr_cw.13.t
+	desc = ussr_cw.13.d
+	picture = GFX_report_event_sunrise
+	
+	is_triggered_only = yes
+	
+	option = { #Maria I
+		name = ussr_cw.13.a
+		remove_ideas = SMC_monarch
+		promote_character = SMC_maria_vladimirovna
+		set_politics = {
+			ruling_party = paternal_autocracy
+		}
+		set_popularities = {
+			paternal_autocracy = 41
+			fascism = 39
+			neutrality = 10
+			democratic = 10
+		}
+	}
+	
+	option = { #Nicholas III
+		name = ussr_cw.13.b
+		remove_ideas = SMC_monarch
+		promote_character = SMC_nicholas_romanov
+		set_politics = {
+			ruling_party = paternal_autocracy
+		}	
+		set_popularities = {
+			paternal_autocracy = 41
+			fascism = 39
+			neutrality = 10
+			democratic = 10
+		}		
+	}	
+}
+
+#KGB coup Crimea#
+country_event = {
+	id = ussr_cw.14
+	title = ussr_cw.14.t
+	desc = ussr_cw.14.d
+	picture = GFX_report_event_SOV_rsf
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = ussr_cw.14.b	
+                 remove_ideas = TFK_kgb
+	}
+
+	option = {
+		name = ussr_cw.14.a
+                 TFK = {
+		 set_cosmetic_tag = TFK_kgb
+                 remove_ideas = TFK_navy_generic_rule
+                 retire_country_leader = yes
+                 promote_character = TFK_natalia_poklonskaya
+		  set_party_name = {
+		  ideology = paternal_autocracy
+		  long_name = TFK_paternal_autocracy_party_1_long
+		  name = TFK_paternal_autocracy_party_1
+		  }
+            	 }
+	}
+}
+
+#gkchp chooses#
+country_event = {
+	id = ussr_cw.15
+	title = ussr_cw.15.t
+	desc = ussr_cw.15.d
+	picture = GFX_report_event_meet_the_ministers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_cw.15.a
+		custom_effect_tooltip = tfm_choose
+		hidden_effect = {
+		retire_country_leader = yes
+		promote_character = TFM_gennady_zyuganov
+		add_ideas = SOV_true
+		set_party_name = {
+				ideology = communism
+				long_name = TFM_communism_party_1_long
+				name = TFM_communism_party_1
+		}
+            	 TFM = {
+			set_cosmetic_tag = SOV_putin_russia_cosmetic
+            	 }
+                }
+	}
+	option = {
+		name = ussr_cw.15.b
+		custom_effect_tooltip = tfm_choose
+		hidden_effect = {
+		retire_country_leader = yes
+		promote_character = TFM_oleg_baklanov
+		add_ideas = SOV_true
+		set_party_name = {
+				ideology = communism
+				long_name = TFM_communism_party_1_long
+				name = TFM_communism_party_1
+		}
+            	 TFM = {
+			set_cosmetic_tag = SOV_putin_russia_cosmetic
+            	 }
+                }
+	}
+}
+
+#The Crossroads#
+country_event = {
+	id = ussr_cw.16
+	title = ussr_cw.16.t
+	desc = ussr_cw.16.d
+	picture = GFX_report_event_vdv
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = ussr_cw.16.a
+	}	
+}
+
+#REAL BATTLE OF MOSCOW#
+country_event = {
+	id = ussr.71
+	title = ussr.71.t
+	desc = ussr.71.d
+	picture = GFX_report_event_SOV_moscow_riots
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			BLR = {
+			country_event = {id = ussr.72 days = 2}
+			}
+			TFM = {
+				 transfer_state = 254
+				 transfer_state = 223
+				 transfer_state = 205
+				 transfer_state = 222
+				 transfer_state = 258
+				 transfer_state = 257
+				 transfer_state = 252
+				 transfer_state = 220
+				 transfer_state = 239
+				 transfer_state = 260
+				 transfer_state = 240
+				 transfer_state = 265
+				 transfer_state = 250
+				 transfer_state = 255
+				 transfer_state = 256
+				 add_state_core = 254
+				 add_state_core = 223
+				 add_state_core = 205
+				 add_state_core = 222
+				 add_state_core = 258
+				 add_state_core = 257
+				 add_state_core = 252
+				 add_state_core = 220
+				 add_state_core = 239
+				 add_state_core = 260
+				 add_state_core = 240
+				 add_state_core = 265
+				 add_state_core = 250
+				 add_state_core = 255
+				 add_state_core = 256			 
+			}
+
+		transfer_units_fraction= {
+			target = TFM
+			size = 0.4
+			stockpile_ratio = 0.4
+			army_ratio = 0.4
+		}
+
+		transfer_units_fraction= {
+			target = TFL
+			size = 0.2
+			stockpile_ratio = 0.2
+			army_ratio = 0.2
+		}
+		}
+	}
+	
+	option = {
+		name = ussr.71.a
+
+            if = {
+	          limit = { 
+		  has_country_flag = SOV_putin_survives
+	          }
+	          SOV = { 
+		  retire_character = SOV_vladimir_bakin
+		  retire_character = SOV_sergey_sokolov
+	          }
+                  TFM = {
+            	        set_politics = {
+            	        ruling_party = communism
+            	        elections_allowed = no
+            	        last_election = "2000.12.17"
+            	        election_frequency = 48
+            	        long_name = TFM_communism_party_long
+            	        name = TFM_communism_party
+            	       }
+                    }
+            }
+
+
+        if = {
+	          limit = { 
+		  has_country_flag = sov_party_victorious
+	    }
+	    TFM = {
+	        set_cosmetic_tag = TFM_putin
+	        retire_country_leader = yes
+	        promote_character = TFM_putin
+ 		retire_character = TFM_vladimir_bakin	
+ 		remove_ideas = TFM_last_defenders	
+ 		remove_ideas = TFM_vladimir_bakin_advisor
+		retire_character = TFM_sergey_sokolov
+	    }	
+	}
+
+	TFM = {
+	    declare_war_on = {
+            type = annex_everything
+            target = SOV
+            }
+	  }
+	TFL = {
+	    declare_war_on = {
+            type = annex_everything
+            target = SOV
+            }
+	  }	  
+	}
+
+
+	option = {
+		name = ussr.71.b
+        TFM = { change_tag_from = SOV }
+
+        if = {
+	          limit = { 
+		  has_country_flag = SOV_putin_survives
+	    }
+                  TFM = {
+            	        set_politics = {
+            	        ruling_party = communism
+            	        elections_allowed = no
+            	        last_election = "2000.12.17"
+            	        election_frequency = 48
+            	        long_name = TFM_communism_party_long
+            	        name = TFM_communism_party
+            	       }
+                    }
+		  }
+
+        if = {
+	          limit = { 
+		  has_country_flag = sov_party_victorious
+	    }
+	    TFM = {
+	     set_cosmetic_tag = TFM_putin
+	    }
+	    TFM = {
+	        retire_country_leader = yes
+	        promote_character = TFM_putin
+ 		retire_character = TFM_vladimir_bakin	
+ 		remove_ideas = TFM_last_defenders	
+ 		remove_ideas = TFM_vladimir_bakin_advisor
+		retire_character = TFM_sergey_sokolov
+	    }	
+	}
+
+	TFM = {
+	    declare_war_on = {
+            type = annex_everything
+            target = SOV
+            }
+	  }
+	TFL = {
+	    declare_war_on = {
+            type = annex_everything
+            target = SOV
+            }
+	  }	  	  
+	}
+
+}
+
+#So it begins!!! (CIVIL WAR)#
+country_event = {
+	id = ussr.70
+	title = ussr.70.t
+	desc = ussr.70.d
+	picture = GFX_report_event_radio
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.70.a
+		custom_effect_tooltip = sov_putin_civil_war
+		hidden_effect = {
+		news_event = { id = old_times_news.90 hours = 6 }
+		remove_ideas = SOV_memories_of_august_coup
+		remove_ideas = SOV_militarised_industry
+		country_event = {id = ussr_cw.8}
+		add_equipment_to_stockpile = {
+			type = fighter_equipment_3
+			amount = -99000
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = attacker_equipment_2
+			amount = -99000
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = strike_bomber_equipment_1
+			amount = -99000
+			producer = SOV
+		}	
+		add_equipment_to_stockpile = {
+			type = strategic_bomber_equipment_1
+			amount = -99000
+			producer = SOV
+		}				
+		delete_unit_template_and_units = {
+			division_template = "Bronetankovaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Motostrelkovaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Desantno-shturmovaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Tyazhelaya Artilleriyskaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Artilleriyskaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Diviziya Morskoy Pekhoty"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Vozdushno-desantnaya Diviziya"
+			disband = yes
+		}
+		delete_unit_template_and_units = {
+			division_template = "Diviziya Spetsnaza"
+			disband = yes
+		}
+		SOV = {
+			load_oob = SOV_cw
+		}			
+			remove_ideas = SOV_yuri_maslyukov
+			add_ideas = SOV_collapsed_government_advisor
+
+			remove_ideas = SOV_alexander_bessmertnykh
+			add_ideas = SOV_collapsed_government_advisor
+            if = {
+	          limit = { 
+		  has_country_flag = bortnikov
+	          }
+			remove_ideas = SOV_bortnikov_advisor
+			add_ideas = SOV_collapsed_government_advisor
+		  }
+
+            if = {
+	          limit = { 
+		  has_country_flag = patrushev
+	          }
+			remove_ideas = SOV_patrushev_advisor
+			add_ideas = SOV_collapsed_government_advisor
+		  }
+	    set_global_flag = ussr_putin_collapse
+	    set_cosmetic_tag = SOV_putin_russia_cosmetic
+            		if = {
+	            		limit = { 
+		            		has_country_flag = SOV_putin_survives
+		            		has_country_flag = sov_party_victorious
+	            		}
+            		}
+	SOV = {dismantle_faction = yes}
+	MON = {dismantle_faction = yes}
+		653 = { set_demilitarized_zone = no }
+		572 = { set_demilitarized_zone = no }
+		403 = { set_demilitarized_zone = no }
+		571 = { set_demilitarized_zone = no }
+		578 = { set_demilitarized_zone = no }
+		570 = { set_demilitarized_zone = no }
+		569 = { set_demilitarized_zone = no }
+		568 = { set_demilitarized_zone = no }
+		329 = { set_demilitarized_zone = no }
+		567 = { set_demilitarized_zone = no }
+		566 = { set_demilitarized_zone = no }
+		564 = { set_demilitarized_zone = no }
+
+		dismantle_faction = yes
+		every_other_country = {
+			limit = { has_idea = east_europe_eastern_threat }
+			remove_ideas = east_europe_eastern_threat
+		}
+		release = MOL
+
+		release = KAZ
+        retire_character = SOV_valery_gerasimov
+        retire_character = SOV_dmitry_bulgakov
+        retire_character = SOV_sergey_akhromeyev
+        retire_character = SOV_sergey_akhromeyev_advisor
+        retire_character = SOV_grigory_romanov
+        retire_character = SOV_vladislav_achalov
+        remove_ideas = SOV_grigory_romanov_advisor
+        remove_ideas = SOV_sergey_akhromeyev_advisor
+        remove_ideas = SOV_boris_pugo
+		KAZ = {
+			set_cosmetic_tag = KAZ_schizo
+			inherit_technology = SOV
+	    }
+		KAZ = {
+			add_ideas = KAZ_islamists
+			add_ideas = KAZ_grigory_romanov_advisor
+			add_ideas = KAZ_sergey_akhromeyev_advisor
+			country_event = {id = ussr_cw.6 days = 7}
+			load_oob = KAZ_cw
+	     }
+
+            if = {
+				limit = { has_country_flag = SOV_pugo_survives_purge }
+				KAZ = {
+					set_cosmetic_tag = KAZ_schizo
+                 	add_ideas = KAZ_pugo
+					retire_character = KAZ_yazov
+				}
+				KAZ = {
+            	    set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+						last_election = "2000.12.17"
+						election_frequency = 48
+						long_name = SOV_communism_party_long
+						name = SOV_communism_party
+					}
+                }
+				KAZ = {
+					retire_country_leader = yes
+					promote_character = KAZ_boris_pugo
+				}
+			}
+
+            if = {
+				limit = { has_country_flag = SOV_yazov_survives_purge }
+				KAZ = {
+                  	set_cosmetic_tag = KAZ_schizo_yazov
+					add_ideas = KAZ_dmitry_yazov
+				}
+                SOV = { retire_character = SOV_dmitry_yazov }
+				KAZ = {
+            	    set_politics = {
+						ruling_party = communism
+						elections_allowed = no
+						last_election = "2000.12.17"
+						election_frequency = 48
+						long_name = SOV_communism_party_long
+						name = SOV_communism_party
+            	    }
+                }
+			}
+			KAZ = {
+				transfer_state = 1046
+				transfer_state = 1047
+				transfer_state = 584
+				transfer_state = 832 
+				transfer_state = 823
+				transfer_state = 831
+				transfer_state = 585
+				transfer_state = 830
+				transfer_state = 405
+				transfer_state = 742
+				transfer_state = 732
+				transfer_state = 829
+				transfer_state = 401
+				SE_core_every_state = yes
+			}
+	PER = { transfer_state = 1045 add_state_core = 1045 }
+	release = BLR
+	BLR = {inherit_technology = SOV}
+	BLR = {add_ideas = BLR_batka}
+	retire_character = SOV_sergey_surovikin
+    retire_character = SOV_vladimir_lobov
+    retire_character = SOV_gennady_troshev
+    if = {
+	    limit = { SOV = {has_country_flag = SOV_putin_survives} }
+        SOV = {retire_character = SOV_albert_makashov}
+	}
+    if = {
+	    limit = { SOV = {has_country_flag = sov_party_victorious} }
+		BLR = {retire_character = BLR_albert_makashov}
+	}
+    if = {
+	    limit = { SOV = {has_country_flag = sov_moscow_has_fallen} }
+        SOV = {retire_character = SOV_albert_makashov}
+	}
+	BLR = {
+		set_cosmetic_tag = BLR_com_puppet
+		set_politics = {
+		    ruling_party = paternal_autocracy
+		    elections_allowed = no
+		    last_election = "2000.12.17"
+		    election_frequency = 48
+		    long_name = BLR_paternal_autocracy_party_long
+		    name = BLR_paternal_autocracy_party
+		}
+		load_oob = BLR_cw
+		country_event = { id = ussr.65 days = 3 }
+	}
+	release = UKR
+	UKR = { set_capital = {state = 226} }
+	OUN = { set_capital = {state = 91} }
+	UKR = { set_cosmetic_tag = UKR_com_puppet }
+	UKR = { transfer_state = 766 }
+
+		UKR = {
+			set_politics = {
+			    ruling_party = communism
+			    elections_allowed = no
+			    last_election = "2000.12.17"
+			    election_frequency = 48
+			    long_name = UKR_communism_party_long
+			    name = UKR_communism_party
+			}
+		}
+
+		UKR = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.41
+			} 
+			add_popularity = {
+				ideology = reformed_communism
+				popularity = 0.1
+			}
+		}
+	UKR = {add_ideas = UKR_true}
+	retire_character = SOV_nikolai_yevmenov
+	MNO = {
+        transfer_state = 213
+        transfer_state = 722
+        transfer_state = 215
+        transfer_state = 147
+	}
+	MNO = {
+        add_state_core = 213
+        add_state_core = 722
+        add_state_core = 215
+        add_state_core = 147
+	}
+	retire_character = SOV_vladimir_masorin
+	TFK = { transfer_state = 137 }
+	TFK = {
+		inherit_technology = SOV
+        add_state_core = 137
+		load_oob = TFK_cw
+		TFK = {country_event = { id = ussr_cw.14 days = 32 }}
+	}
+		retire_character = SOV_konstantin_sidenko
+		retire_character = SOV_boris_gromov
+		retire_character = SOV_arkady_bakhin
+		retire_character = SOV_Leonty_Kuznetsov
+        remove_ideas = SOV_boris_gromov
+        remove_ideas = SOV_arkady_bakhin
+        remove_ideas = SOV_Leonty_Kuznetsov
+		SSR = {
+            transfer_state = 566
+            transfer_state = 567
+            transfer_state = 568
+            transfer_state = 329
+            transfer_state = 576
+            transfer_state = 516
+            transfer_state = 878
+	    }
+		SSR = {
+			inherit_technology = SOV
+            add_state_core = 566
+            add_state_core = 567
+            add_state_core = 568
+            add_state_core = 329
+            add_state_core = 576
+            add_state_core = 516
+            add_state_core = 878
+			load_oob = SSR_cw
+	    }
+        retire_character = SOV_mikhail_kolesnikov
+		SOE = {
+            transfer_state = 398
+            transfer_state = 399
+            transfer_state = 581
+            transfer_state = 397
+            transfer_state = 262
+            transfer_state = 825
+            transfer_state = 400
+            transfer_state = 833
+	    }
+	SOE = {
+			inherit_technology = SOV
+             add_state_core = 398
+             add_state_core = 399
+             add_state_core = 581
+             add_state_core = 397
+             add_state_core = 262
+             add_state_core = 825
+             add_state_core = 400
+             add_state_core = 833
+	     }
+	RPR = {		
+			inherit_technology = SOV
+             transfer_state = 652
+             transfer_state = 651
+             transfer_state = 249
+             transfer_state = 251
+             transfer_state = 582
+			 load_oob = RPR_cw
+	     }
+	RPR = {
+             add_state_core = 652
+             add_state_core = 651
+             add_state_core = 249
+             add_state_core = 251
+             add_state_core = 582
+	}		 
+		SOV = {
+			set_nationality = {
+				target_country = RPR
+				character = SOV_Pavel_Grachev
+			}
+		}
+		RSF = {
+			inherit_technology = SOV
+             transfer_state = 233
+             transfer_state = 827
+             transfer_state = 828
+             transfer_state = 232
+             transfer_state = 235
+             transfer_state = 237
+             transfer_state = 236
+             transfer_state = 217
+             transfer_state = 821
+	     }
+		RSF = {		
+			load_oob = RSF_cw
+             add_state_core = 233
+             add_state_core = 827
+             add_state_core = 828
+             add_state_core = 232
+             add_state_core = 235
+             add_state_core = 237
+             add_state_core = 236
+             add_state_core = 217
+             add_state_core = 821
+	     }
+		SOE = {
+			load_oob = SOE_cw
+			declare_war_on = {
+				target = RPR
+				type = annex_everything
+			}
+		}
+	RHR = {
+			inherit_technology = SOV
+             add_state_core = 563
+             add_state_core = 565
+             add_state_core = 564
+             add_state_core = 575
+             add_state_core = 876
+	     }
+	RHR = {
+             transfer_state = 563
+             transfer_state = 565
+             transfer_state = 564
+             transfer_state = 575
+             transfer_state = 876
+	     }
+
+	RHR = {
+		load_oob = RHR_cw
+	    declare_war_on = {
+            type = annex_everything
+            target = SSR
+            }
+	  }
+
+	retire_character = SOV_anatoly_kvashnin 
+	retire_character = SOV_konstantin_pulikovsky
+        remove_ideas = SOV_anatoly_kvashnin 
+
+	RNF = {
+			inherit_technology = SOV
+             transfer_state = 571
+             transfer_state = 403
+             transfer_state = 570
+             transfer_state = 578
+             transfer_state = 577
+             transfer_state = 824
+             transfer_state = 579
+             transfer_state = 580
+             transfer_state = 40
+             transfer_state = 569
+             transfer_state = 654
+	     }
+	RNF = {
+             add_state_core = 571
+             add_state_core = 403
+             add_state_core = 570
+             add_state_core = 578
+             add_state_core = 577
+             add_state_core = 824
+             add_state_core = 579
+             add_state_core = 580
+             add_state_core = 40
+             add_state_core = 569
+             add_state_core = 654
+			 load_oob = RNF_cw
+	     }
+	retire_character = SOV_aleksandr_galkin
+	SMC = {
+			inherit_technology = SOV
+             transfer_state = 218
+             transfer_state = 234
+             transfer_state = 238
+             transfer_state = 245
+	     }
+	SMC = {
+			load_oob = SMC_cw
+             add_state_core = 218
+             add_state_core = 234
+             add_state_core = 238
+             add_state_core = 245
+	     }
+	retire_character = SOV_vladimir_shamanov
+	retire_character = SOV_anatoly_kornukov
+	FAO = {
+	     country_event = {id = ussr_cw.16 days = 7}
+             transfer_state = 573
+             transfer_state = 572
+             transfer_state = 653
+	     }
+	FAO = {
+			inherit_technology = SOV
+             add_state_core = 573
+             add_state_core = 572
+             add_state_core = 653
+			load_oob = FAO_cw
+	     }
+	RNF = {
+	    declare_war_on = {
+            type = annex_everything
+            target = FAO
+            }
+	  }
+	FEG = {
+             transfer_state = 408
+             transfer_state = 409
+             transfer_state = 655
+             transfer_state = 537
+             transfer_state = 555
+             transfer_state = 560
+             transfer_state = 562
+             transfer_state = 874
+             transfer_state = 637
+             transfer_state = 657
+             transfer_state = 875
+             transfer_state = 822
+             transfer_state = 644
+             transfer_state = 877
+             transfer_state = 574
+             transfer_state = 561
+	     }
+	FEG = {
+			inherit_technology = SOV
+			load_oob = FEG_cw
+             add_state_core = 408
+             add_state_core = 409
+             add_state_core = 655
+             add_state_core = 537
+             add_state_core = 555
+             add_state_core = 560
+             add_state_core = 562
+             add_state_core = 874
+             add_state_core = 637
+             add_state_core = 657
+             add_state_core = 875
+             add_state_core = 822
+             add_state_core = 644
+             add_state_core = 877
+             add_state_core = 574
+             add_state_core = 561
+	     }
+
+	TFL = {
+             transfer_state = 195
+             transfer_state = 244
+             transfer_state = 208
+             transfer_state = 146
+             transfer_state = 216
+	     }
+	TFL = {
+             add_state_core = 195
+             add_state_core = 244
+             add_state_core = 208
+             add_state_core = 146
+             add_state_core = 216
+	     }
+
+
+	OUN = {
+        transfer_state = 91
+        transfer_state = 93
+        transfer_state = 199
+		transfer_state = 197
+	}
+	OUN = {
+        add_state_core = 91
+        add_state_core = 93
+        add_state_core = 199
+        add_state_core = 197
+		add_ideas = hidden_be_aggressive		
+		load_oob = OUN_cw
+		inherit_technology = SOV
+	}
+
+	UCR = {
+        transfer_state = 202
+        transfer_state = 203
+        transfer_state = 198
+        transfer_state = 834
+        transfer_state = 201
+        transfer_state = 966
+	}
+	UCR = {	
+        add_state_core = 202
+        add_state_core = 203
+        add_state_core = 198
+        add_state_core = 834
+        add_state_core = 201
+        add_state_core = 966
+		add_ideas = hidden_be_aggressive		
+		load_oob = UCR_cw
+		inherit_technology = SOV		
+	}
+
+	DPR = {
+             transfer_state = 228
+             transfer_state = 227
+             transfer_state = 221
+	     }
+	DPR = {
+        add_state_core = 228
+        add_state_core = 227
+        add_state_core = 221
+		add_ideas = hidden_be_aggressive		
+		load_oob = DPR_cw	 
+		inherit_technology = SOV
+	}
+
+	UKR = {
+		add_ideas = hidden_be_aggressive
+		give_military_access = DPR
+		diplomatic_relation = {
+			country = DPR
+			relation = non_aggression_pact
+			active = yes
+		}
+		inherit_technology = SOV
+		load_oob = UKR_cw
+	}
+
+	DPR = {
+	    give_military_access = UKR
+	    declare_war_on = {
+            type = annex_everything
+            target = UCR
+            }
+	  }
+
+	DPR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = OUN
+            }
+	  }
+
+	UKR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = UCR
+            }
+	  }
+
+	UKR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = OUN
+            }
+	  }
+
+	OUN = {
+	    declare_war_on = {
+            type = annex_everything
+            target = UCR
+            }
+	  }
+
+	OUN = {
+	    declare_war_on = {
+            type = annex_everything
+            target = UKR
+            }
+	  }
+
+	OUN = {
+	    declare_war_on = {
+            type = annex_everything
+            target = DPR
+            }
+	  }
+
+	UCR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = DPR
+            }
+	  }
+
+	UCR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = UKR
+            }
+	  }
+
+	UCR = {
+	    declare_war_on = {
+            type = annex_everything
+            target = OUN
+            }
+	  }
+
+
+	BSO = {
+             transfer_state = 814
+             transfer_state = 813
+             transfer_state = 812
+             transfer_state = 811
+             transfer_state = 810
+             transfer_state = 809
+             transfer_state = 808
+             transfer_state = 815
+             transfer_state = 13
+             transfer_state = 12
+             transfer_state = 11
+             transfer_state = 191
+             transfer_state = 190
+             transfer_state = 189
+             transfer_state = 784
+             transfer_state = 188
+             transfer_state = 763
+			load_oob = BSO_cw
+	     }
+	BSO = {
+             add_state_core = 814
+             add_state_core = 813
+             add_state_core = 812
+             add_state_core = 811
+             add_state_core = 810
+             add_state_core = 809
+             add_state_core = 808
+             add_state_core = 815
+             add_state_core = 13
+             add_state_core = 12
+             add_state_core = 11
+             add_state_core = 191
+             add_state_core = 190
+             add_state_core = 189
+             add_state_core = 784
+             add_state_core = 188
+             add_state_core = 763
+	     }
+	retire_character = SOV_vladimir_boldyrev
+	retire_character = SOV_jonas_andriskevicius
+
+	release = ARM
+		ARM = {
+	            	retire_country_leader = yes
+	            	promote_character = ARM_serzh_sargsyan
+		    }
+
+		ARM = {
+	            	remove_ideas = east_europe_eastern_threat
+		    }
+
+		release_on_controlled = AZR
+
+		AZR = {
+			retire_country_leader = yes
+	        promote_character = AZR_ilham_aliyev
+			set_politics = {
+				ruling_party = democratic
+			}
+		}
+		AZR = { remove_ideas = AZR_enemies_from_within }
+		AZR = { country_event = { id = azr.2 days = 20 } }
+
+		release = GEO
+		GEO = {
+	        add_ideas = GEO_russian_separatism
+	        add_ideas = GEO_mafia_state
+			inherit_technology = SOV
+		}
+             GEO = {
+            	 set_politics = {
+            	 ruling_party = paternal_autocracy
+            	 elections_allowed = no
+            	 last_election = "2000.12.17"
+            	 election_frequency = 48
+            	}
+				set_party_name = {
+					ideology = paternal_autocracy
+					long_name = GEO_paternal_autocracy_1_party_long
+					name = GEO_paternal_autocracy_1_party
+				}
+				load_oob = "GEO_cw"
+				every_core_state = {
+					add_core_of = GOP
+				}
+            }
+
+			GOP = {
+				inherit_technology = SOV
+				transfer_state = 1014
+				transfer_state = 1013
+				declare_war_on = {
+					type = annex_everything
+					target = GEO
+				}		
+				load_oob = "GOP_cw"
+			}
+
+			RSF = {
+				declare_war_on = {
+					type = annex_everything
+					target = SMC
+					}
+			 }
+
+			SOV = {add_ideas = SOV_darkets_night}
+			BLR = {add_ideas = SOV_darkets_night}
+			TFM = {add_ideas = SOV_darkets_night}
+			TFL = {add_ideas = SOV_darkets_night}
+			KAZ = {add_ideas = SOV_darkets_night}
+			RHR = {add_ideas = SOV_darkets_night}
+			SSR = {add_ideas = SOV_darkets_night}
+			BSO = {add_ideas = SOV_darkets_night}
+			SOE = {add_ideas = SOV_darkets_night}
+			UCR = {add_ideas = SOV_darkets_night}
+			FAO = {add_ideas = SOV_darkets_night}
+			RNF = {add_ideas = SOV_darkets_night}
+			FEG = {add_ideas = SOV_darkets_night}
+			UKR = {add_ideas = SOV_darkets_night}
+			DPR = {add_ideas = SOV_darkets_night}
+			UCR = {add_ideas = SOV_darkets_night}
+			OUN = {add_ideas = SOV_darkets_night}
+			SMC = {add_ideas = SOV_darkets_night}
+			RPR = {add_ideas = SOV_darkets_night}
+			MNO = {add_ideas = SOV_darkets_night}
+			DPR = {add_ideas = SOV_darkets_night}
+			TFK = {add_ideas = SOV_darkets_night}
+			RSF = {add_ideas = SOV_darkets_night}
+			GEO = {add_ideas = SOV_darkets_night}
+			AZR = {add_ideas = SOV_darkets_night}
+			ARM = {add_ideas = SOV_darkets_night}
+			RKA = {add_ideas = SOV_darkets_night}
+			UZB = {add_ideas = SOV_darkets_night}
+			GOP = {add_ideas = SOV_darkets_night}
+			every_country = {
+				limit = {has_idea = SOV_darkets_night}
+				load_focus_tree = scw_tree
+			}
+			MON = {
+				set_politics = {
+					ruling_party = reformed_communism
+				}
+				set_popularities = {
+					reformed_communism = 65
+					communism = 35
+				}
+				remove_ideas = MON_split
+				replace_alignment_to_PRC = yes
+			}
+		}	
+	}
+}
+
+	
+
+
+#End#
+country_event = {
+	id = ussr.55
+	title = ussr.55.t
+	desc = ussr.55.d
+	picture = GFX_report_event_SOV_end
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.55.a
+		custom_effect_tooltip = sov_putin_goodbye
+		hidden_effect = {
+
+		remove_ideas = SOV_putin_slipping_grip_5
+
+			release = UKR
+			release = EST
+			release = LAT
+			release = LIT
+			release = GEO
+			release = ARM
+			release_on_controlled = AZR
+			release = KAZ
+			release = UZB
+			release = TMS
+			release = KYR
+			release = TAJ
+			release = MOL
+
+		AZR = {
+	        retire_country_leader = yes
+	        promote_character = AZR_ilham_aliyev
+		}
+		PER = { transfer_state = 1045 add_state_core = 1045 }
+		ARM = {
+	            	retire_country_leader = yes
+	            	promote_character = ARM_serzh_sargsyan
+		    }
+
+            			  EST= {
+            				set_politics = {
+            				ruling_party = liberalism
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = EST_liberalism_1_party_long
+            				name = EST_liberalism_1_party
+            			    }
+            			}
+
+            			  LAT= {
+            				set_politics = {
+            				ruling_party = socialism
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = LAT_socialism_1_party_long
+            				name = LAT_socialism_1_party
+            			    }
+            			}
+
+            			  LIT = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = LIT_paternal_autocracy_long
+            				name = LIT_paternal_autocracy
+            			    }
+                                    add_popularity = {
+                                        ideology = paternal_autocracy 
+                                        popularity = 0.21
+                                    }
+            			}
+
+            			  GEO = {
+            				set_politics = {
+            				ruling_party = social_democracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = GEO_social_democracy_long
+            				name = GEO_social_democracy
+            			    }
+            			}
+
+		UKR = {
+			set_politics = {
+			    ruling_party = neutrality
+			    elections_allowed = no
+			    last_election = "2000.12.17"
+			    election_frequency = 48
+			    long_name = UKR_neutrality_party_long
+			    name = UKR_neutrality_party
+			}
+		    }
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            			  ARM = {
+            				add_ideas = ussr_aligned_nation
+            				set_politics = {
+            				 ruling_party = reformed_communism
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = ARM_reformed_communism_party_long
+            				name = ARM_reformed_communism_party
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+	            		}
+            			  KAZ = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = KAZ_paternal_autocracy_long
+            				name = KAZ_paternal_autocracy_party
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+	            		}
+            			  TMS = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = TMS_paternal_autocracy_long
+            				name = TMS_paternal_autocracy
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            			  TMS = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = TMS_paternal_autocracy_long
+            				name = TMS_paternal_autocracy
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+	            		}
+            			  KYR = {
+            				set_politics = {
+            				ruling_party = democratic
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = KYR_conservatism_long
+            				name = KYR_conservatism
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+	            		}
+            			  UZB = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = UZB_paternal_autocracy_long
+            				name = UZB_paternal_autocracy
+            			    }
+            			}
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            			  UZB = {
+            				set_politics = {
+            				ruling_party = paternal_autocracy
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = UZB_paternal_autocracy_long
+            				name = UZB_paternal_autocracy
+            			    }
+            			}
+            		}
+
+
+		give_guarantee = UKR
+
+		    SOV = {
+		    	add_to_faction = MOL
+		    }
+		    SOV = {
+		    	add_to_faction = MON
+		    }
+		    SOV = {
+		    	add_to_faction = ARM
+		    }
+		    SOV = {
+		    	add_to_faction = KAZ
+		    }
+		    SOV = {
+		    	add_to_faction = KYR
+		    }
+		    SOV = {
+		    	add_to_faction = TMS
+		    }
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            		 KYR = {
+            		    add_ideas = ussr_aligned_nation
+			    set_cosmetic_tag = KYR_com_puppet
+            		   }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            		 TMS = {
+            		    add_ideas = ussr_aligned_nation
+			    set_cosmetic_tag = TMS_com_puppet
+            		   }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            		 KAZ = {
+            		    add_ideas = ussr_aligned_nation
+			    set_cosmetic_tag = KAZ_com_puppet
+            		   }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            		 ARM = {
+			    set_cosmetic_tag = ARM_com_puppet
+            		   }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+            		 MOL = {
+			    set_cosmetic_tag = MOL_com_puppet
+            		    add_ideas = ussr_aligned_nation
+            				set_politics = {
+            				 ruling_party = communism
+            				elections_allowed = no
+            				last_election = "2000.12.17"
+            				election_frequency = 48
+            				long_name = MOL_communism_party_long
+            				name = MOL_communism_party
+            			    }
+            		   }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+	            		}
+			set_cosmetic_tag = KYR_com_puppet
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_communist_choice
+		            		has_country_flag = sov_two_state_solution
+	            		}
+			set_cosmetic_tag = SOV_putin_russia_cosmetic
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+		            		has_country_flag = sov_two_state_solution
+	            		}
+            		SOV = {
+			set_cosmetic_tag = SOV_putin_federation
+            		  }
+            		}
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_union_state_solution
+	            		}
+            		SOV = {
+			set_cosmetic_tag =  SOV_putin_union_cosmetic
+            		  }
+            		}
+
+		news_event = { id = old_times_news.70 days = 1 }
+
+            		if = {
+	            		limit = { 
+		            		has_country_flag = sov_nationalist_choice
+	            		}
+					add_country_leader_role = {
+						character = SOV_vladimir_putin
+						promote_leader = yes
+						country_leader = {
+							ideology = paternal_autocracy_sub
+							traits = {}
+							expire = "2050.3.1.1"
+							id = -1
+						}
+					}
+					set_portraits = {
+						character = SOV_vladimir_putin
+						civilian = { large ="gfx/leaders/SOV/Vladimir_Putin_autocratic.dds" }
+					}
+
+				set_politics = {
+				    ruling_party = paternal_autocracy
+				    elections_allowed = no
+				    last_election = "2000.12.17"
+				    election_frequency = 48
+			 	    long_name = SOV_paternal_autocracy_party_long
+			    	    name = SOV_paternal_autocracy_party_1
+				}
+            		}
+		}
+
+	}
+
+}
+
+#Yazov's death#
+country_event = {
+	id = ussr.58
+	title = ussr.58.t
+	desc = ussr.58.d
+	picture = GFX_report_event_SOV_army_purge
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.58.a
+		retire_character = SOV_dmitry_yazov
+		retire_character = SOV_grigory_romanov
+		remove_ideas = SOV_grigory_romanov_advisor
+		remove_ideas = SOV_dmitry_yazov
+
+	}
+
+}
+
+#Pugo's death#
+country_event = {
+	id = ussr.57
+	title = ussr.57.t
+	desc = ussr.57.d
+	picture = GFX_report_event_SOV_pugo_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.57.a
+		retire_character = SOV_boris_pugo 
+		remove_ideas = SOV_boris_pugo
+
+	}
+
+}
+
+
+#Speech#
+country_event = {
+	id = ussr.40
+	title = ussr.40.t
+	desc = ussr.40.d
+	picture = GFX_report_event_SOV_pugo_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.40.a
+
+	}
+
+}
+
+#Final Judgement#
+country_event = {
+	id = ussr.36
+	title = ussr.36.t
+	desc = ussr.36.d
+	picture = GFX_report_event_gorby_diplo
+	
+	is_triggered_only = yes
+	
+	
+    #bruh#
+	option = {
+		name = ussr.36.a
+		add_stability = -0.05
+		add_political_power = 50
+		retire_character = SOV_vladimir_putin
+	}
+	
+	option = {
+		name = ussr.36.b
+		add_stability = 0.05
+		add_political_power = -50
+	}
+
+}
+
+
+#Dust to Dust#
+country_event = {
+	id = ussr.37
+	title = ussr.37.t
+	desc = ussr.37.d
+	picture = GFX_report_event_gorby_diplo
+	
+	trigger = {
+	original_tag = SOV
+	check_variable = {putin_power_support > 499}
+	NOT = {has_country_flag = pugo_power_struggle_ended}
+	}
+	
+	fire_only_once = yes
+	
+    #bruh#
+	option = {
+		name = ussr.37.a
+		retire_country_leader = yes
+		promote_character = SOV_vladimir_putin
+		load_focus_tree = generic_focus
+		set_country_flag = pugo_power_struggle_ended
+		news_event = {id = old_times_news.25}
+	}
+
+}
+
+#Get it done Vladimir#
+country_event = {
+	id = ussr.38
+	title = ussr.38.t
+	desc = ussr.38.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	
+    #bruh#
+	option = {
+		name = ussr.38.a
+			add_stability = 0.05
+			add_political_power = 15
+			custom_effect_tooltip = soviet_purge_tooltip
+			#hidden_effect = { unlock_decision_category_tooltip = sov_purging }
+	}
+
+}
+
+#Congress Preparation#
+country_event = {
+	id = ussr_pugo_policy.1
+	title = ussr_pugo_policy.1.t
+	desc = ussr_pugo_policy.1.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	
+    #zyuganov#
+	option = {
+		name = ussr_pugo_policy.1.a
+		add_to_variable = {pugo_zyuganov_influence_var = 5}
+			custom_effect_tooltip = pugos_policies_zyuganov_influence_increase
+	}
+	
+	#udaltsov#
+	option = {
+		name = ussr_pugo_policy.1.b
+		add_to_variable = {pugo_udaltsov_influence_var = 5}
+			custom_effect_tooltip = pugos_policies_udaltsov_influence_increase
+	}
+
+}
+
+#Adressing dometic issues#
+country_event = {
+	id = ussr_pugo_policy.2
+	title = ussr_pugo_policy.2.t
+	desc = ussr_pugo_policy.2.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	
+    #ok buddy#
+	option = {
+		name = ussr_pugo_policy.2.a
+		add_dynamic_modifier = {modifier = SOV_pugos_policies}
+		set_variable = {sov_pugo_policy_compliance_gain_var = 0.075}
+	}
+
+}
+
+#State of Religion#
+country_event = {
+	id = ussr_pugo_policy.3
+	title = ussr_pugo_policy.3.t
+	desc = ussr_pugo_policy.3.d
+	picture = GFX_report_event_state_of_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_pugo_policy.3.a
+	}
+
+}
+#Ethnic stuff
+country_event = {
+	id = ussr_pugo_policy.4
+	title = ussr_pugo_policy.4.t
+	desc = ussr_pugo_policy.4.d
+	picture = GFX_report_event_SOV_economy
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.4.a
+	}
+
+}
+#Rename Stalingrad 1
+country_event = {
+	id = ussr_pugo_policy.5
+	title = ussr_pugo_policy.5.t
+	desc = ussr_pugo_policy.5.d
+	picture = GFX_report_event_SOV_stalingrad
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.5.a
+		        hidden_effect = {
+			news_event = { id =  old_times_news.168 }
+		}
+	}
+
+}
+#MPE
+country_event = {
+	id = ussr_pugo_policy.6
+	title = ussr_pugo_policy.6.t
+	desc = ussr_pugo_policy.6.d
+	picture = GFX_report_event_SOV_stalingrad
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.6.a
+	}
+
+}
+#Transylvania Problem
+country_event = {
+	id = ussr_pugo_policy.7
+	title = ussr_pugo_policy.7.t
+	desc = ussr_pugo_policy.7.d
+	picture = GFX_report_event_transyvalia_map
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.7.a
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = HUN
+					tag = ROM
+				}
+			}
+			add_stability = 0.05
+			add_political_power = -100
+		}
+	}
+	
+	option = {
+		name = ussr_pugo_policy.7.b
+		
+		add_opinion_modifier = {
+			target = HUN
+			modifier = small_increase
+		}
+		add_opinion_modifier = {
+			target = ROM
+			modifier = small_decrease
+		}
+		
+		HUN = {
+			transfer_state = 76
+			add_stability = -0.1
+		}
+		ROM  = {
+			add_opinion_modifier = {
+				target = HUN
+				modifier = small_decrease
+			}
+			add_war_support = 0.1
+		}
+	}
+
+}
+#The Question Of China
+country_event = {
+	id = ussr_pugo_policy.8
+	title = ussr_pugo_policy.8.t
+	desc = ussr_pugo_policy.8.d
+	picture = GFX_report_event_SOV_friend_in_need
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.8.a
+		set_autonomy = {
+			target = PRC
+			autonomous_state = autonomy_free
+		}
+		add_to_faction = PRC
+		PRC = {
+			set_cosmetic_tag = PRC
+			annex_country = { target = MAN }
+			annex_country = { target = ETR }
+			annex_country = { target = TIB }
+		}
+	}
+	
+	option = {
+		name = ussr_pugo_policy.8.b
+		end_puppet = ETR
+		end_puppet = TIB
+		set_autonomy = {
+			target = PRC
+			autonomous_state = autonomy_free
+		}
+		add_to_faction = PRC
+		PRC = {
+			set_cosmetic_tag = PRC
+			annex_country = { target = MAN }
+			set_autonomy = {
+				target = ETR
+				autonomous_state = autonomy_special_administrative_region
+			}
+			set_autonomy = {
+				target = TIB
+				autonomous_state = autonomy_special_administrative_region
+			}			
+		}	
+		hidden_effect = {
+			
+			ETR = {
+				set_politics = {
+					ruling_party = communism
+				}			
+				set_popularities = {
+					communism = 45
+					reformed_communism = 20
+					socialism = 20
+					paternal_autocracy = 15
+				}
+				set_cosmetic_tag = ETR
+			}
+			TIB = {
+				set_politics = {
+					ruling_party = communism
+				}
+				set_popularities = {
+					communism = 40
+					reformed_communism = 35
+					socialism = 5
+					paternal_autocracy = 20
+				}
+				set_cosmetic_tag = TIB
+			}			
+		}
+	}
+
+}
+#Mongolian SSR
+country_event = {
+	id = ussr_pugo_policy.9
+	title = ussr_pugo_policy.9.t
+	desc = ussr_pugo_policy.9.d
+	picture = GFX_report_event_mongolia
+	
+	is_triggered_only = yes
+	
+
+	option = {
+		name = ussr_pugo_policy.9.a
+		MON = {
+			hidden_effect = {
+				every_owned_state = {
+					add_dynamic_modifier = {modifier = SOV_ssr_modifier}
+				}
+			}
+		}
+		annex_country = { target = MON }
+	}
+	
+	option = {
+		name = ussr_pugo_policy.9.b
+		puppet = MON
+		MON = {
+			hidden_effect = {
+				set_cosmetic_tag = MON_SSR
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = "Communist Party of Mongolia"
+				name = "Communist Party of Mongolia"
+			}
+		}
+		news_event = { id = old_times_news.102}
+	}
+	option = {
+		name = ussr_pugo_policy.9.c
+	}
+
+}
+
+#Alksnis's Note
+country_event = {
+	id = ussr_pugo_policy.10
+	title = ussr_pugo_policy.10.t
+	desc = ussr_pugo_policy.10.d
+	picture = GFX_report_event_Alksnis_note
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_pugo_policy.10.a
+		hidden_effect = {
+			country_event = {
+				id = ussr_pugo_policy.11 days = 7
+			}
+		}
+	}
+
+}
+
+#Alksnis's Note 2
+country_event = {
+	id = ussr_pugo_policy.11
+	title = ussr_pugo_policy.11.t
+	desc = ussr_pugo_policy.11.d
+	picture = GFX_report_event_Alksnis_note
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr_pugo_policy.11.a
+	}
+
+}
+#Wilno incident#
+country_event = {
+	id = ussr_rebel.1
+	title = ussr_rebel.1.t
+	desc = ussr_rebel.1.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##oops##
+	option = {
+		name = ussr_rebel.1.a
+		add_stability = -0.30
+		add_political_power = -150
+		clr_country_flag = crackdown_lithuenia
+		set_country_flag = finished_crackdown_lithuenia
+		LIT = {
+				transfer_state = 784
+				transfer_state = 11
+				transfer_state = 815
+				transfer_state = 814
+				transfer_state = 189
+				transfer_state = 188
+				load_oob = LIT_rebellion						
+		}
+		    declare_war_on = {
+            type = annex_everything
+            target = LIT
+            }
+	}
+
+}
+
+#rip rebels in lithuania##
+country_event = {
+	id = ussr_rebel.2
+	title = ussr_rebel.2.t
+	desc = ussr_rebel.2.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##yay##
+	option = {
+		name = ussr_rebel.2.a
+		add_stability = 0.01
+		add_political_power = 10
+		set_country_flag = finished_crackdown_lithuenia
+		clr_country_flag = crackdown_lithuenia
+		
+	}
+
+}
+
+#chechen uprising##
+country_event = {
+	id = ussr_rebel_cin.1
+	title = ussr_rebel_cin.1.t
+	desc = ussr_rebel_cin.1.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##k bruh##
+	option = {
+		name = ussr_rebel_cin.1.a
+		add_stability = -0.10
+		add_political_power = -50
+		set_country_flag = finished_crackdown_chechenya	
+		clr_country_flag = crackdown_chechenya		
+		CIN = {
+				transfer_state = 821		
+				load_oob = CIN_rebellion		
+		}
+		    declare_war_on = {
+            type = annex_everything
+            target = CIN
+            }
+		
+	}
+
+}
+
+#rip rebels in chechenya##
+country_event = {
+	id = ussr_rebel_cin.2
+	title = ussr_rebel_cin.2.t
+	desc = ussr_rebel_cin.2.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##yay##
+	option = {
+		name = ussr_rebel_cin.2.a
+		set_country_flag = finished_crackdown_chechenya	
+		clr_country_flag = crackdown_chechenya	
+		add_stability = 0.01
+		add_political_power = 10
+		
+		
+	}
+
+}
+
+#ukraine uprising##
+country_event = {
+	id = ussr_rebel_ukr.1
+	title = ussr_rebel_ukr.1.t
+	desc = ussr_rebel_ukr.1.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##shi-##
+	option = {
+		name = ussr_rebel_ukr.1.a
+		add_stability = -0.20
+		add_political_power = -150
+		set_country_flag = finished_crackdown_ukraine			
+		clr_country_flag = crackdown_ukraine	
+		UKR = {
+				transfer_state = 89
+				transfer_state = 73
+				transfer_state = 199
+				transfer_state = 93
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 834
+				transfer_state = 766
+				transfer_state = 197
+				transfer_state = 203
+				transfer_state = 202
+				inherit_technology = SOV
+				load_oob = UKR_rebellion
+				set_party_name = {
+					ideology = fascism
+					name = UKR_rebellion_party
+					long_name = UKR_rebellion_party
+				}
+				set_party_name = {
+					ideology = neutrality
+					name = UKR_rebellion_party
+					long_name = UKR_rebellion_party
+				}	
+				set_party_name = {
+					ideology = democratic
+					name = UKR_rebellion_party
+					long_name = UKR_rebellion_party
+				}							
+				hidden_effect = {
+							add_ideas = hidden_army_buff_core #this is here so ukraine doesnt die in 3 seconds but rather 10.
+				}
+		}
+		    declare_war_on = {
+            type = annex_everything
+            target = UKR
+            }
+		
+	}
+
+}
+
+#rip rebels in ukraine##
+country_event = {
+	id = ussr_rebel_ukr.2
+	title = ussr_rebel_ukr.2.t
+	desc = ussr_rebel_ukr.2.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##yay##
+	option = {
+		name = ussr_rebel_ukr.2.a
+		set_country_flag = finished_crackdown_ukraine		
+		clr_country_flag = crackdown_ukraine	
+		add_stability = 0.01
+		add_political_power = 10
+		
+		
+	}
+
+}
+
+#phone lines tap succes#
+country_event = {
+	id = ussr_rebel.3
+	title = ussr_rebel.3.t
+	desc = ussr_rebel.3.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##pog##
+	option = {
+		name = ussr_rebel.2.a
+		add_stability = 0.01
+		add_political_power = 15
+		add_to_variable = { lit_resistance = -5 }
+		custom_effect_tooltip = decrase_var_res_5
+		
+		
+	}
+
+}
+
+#phone lines tap opeartion goes bad#
+country_event = {
+	id = ussr_rebel.4
+	title = ussr_rebel.4.t
+	desc = ussr_rebel.4.d
+	picture = GFX_report_resistance
+	
+	is_triggered_only = yes
+	
+		##oops##
+	option = {
+		name = ussr_rebel.4.a
+		add_stability = -0.01
+		add_political_power = -15
+		add_to_variable = { lit_stab_level = -5 }
+		custom_effect_tooltip = decrase_var_stab_5
+		
+	}
+
+}
+
+
+#EVENTS FOR STABILITY DECRASING#
+
+#for lithueania#
+country_event = {
+	id = ussr_rebel.999
+	title = ussr_rebel.999.t
+	desc = ussr_rebel.999.d
+	picture = GFX_report_resistance
+	hidden = yes
+	
+	fire_only_once = yes
+	
+	trigger = { 
+	check_variable = { lit_stab_level < 31 } NOT = {has_country_flag = ok_bad_stab_event_wont_be_again_lit} 
+	}
+	
+	is_triggered_only = no
+	
+		##whoops :\##
+	option = {
+		name = ussr_rebel.999.a
+		add_to_variable = { lit_resistance = 25 }
+		custom_effect_tooltip = incrase_var_res_25
+		set_country_flag = ok_bad_stab_event_wont_be_again_lit
+	}
+
+}
+
+#for Chechens#
+country_event = {
+	id = ussr_rebel.998
+	title = ussr_rebel.998.t
+	desc = ussr_rebel.998.d
+	picture = GFX_report_resistance
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = { 
+	check_variable = { lit_stab_level < 31 } NOT = {has_country_flag = ok_bad_stab_event_wont_be_again_chechen} 
+	}
+	
+	is_triggered_only = no
+	
+		##whoops :\##
+	option = {
+		name = ussr_rebel.998.a
+		add_to_variable = { lit_resistance = 25 }
+		custom_effect_tooltip = incrase_var_res_25
+		set_country_flag = ok_bad_stab_event_wont_be_again_chechen
+	}
+
+}
+
+#for Ukraine#
+country_event = {
+	id = ussr_rebel.997
+	title = ussr_rebel.997.t
+	desc = ussr_rebel.997.d
+	picture = GFX_report_resistance
+	hidden = yes
+	fire_only_once = yes
+
+	trigger = { 
+	check_variable = { lit_stab_level < 31 }  NOT = {has_country_flag = ok_bad_stab_event_wont_be_again_ukr} 
+	}
+	
+	is_triggered_only = no
+	
+		##whoops :\##
+	option = {
+		name = ussr_rebel.997.a
+		add_to_variable = { lit_resistance = 25 }
+		custom_effect_tooltip = incrase_var_res_25
+		set_country_flag = ok_bad_stab_event_wont_be_again_ukr
+	}
+
+}
+
+
+
+##FOREIGN POLICY / PLUS PLANNING EVENTS FOR POSTWAR BORDERS ####
+
+#reunify czechoslovakia?#
+country_event = {
+	id = ussr_foreign_policy.1
+	title = ussr_foreign_policy.1.t
+	desc = ussr_foreign_policy.1.d
+	picture = GFX_report_event_SOV_form_czechoslovakia
+
+	trigger = {
+	original_tag = SOV
+	CZE = {is_puppet_of = SOV}
+		OR = {
+		SLO = {is_puppet_of = SOV}
+		CZE = {owns_state = 70}
+		}
+	}
+	
+	fire_only_once = yes
+	
+		##yes##
+	option = {
+		name = ussr_foreign_policy.1.a
+		ai_chance = {
+		base = 100
+		}
+		CZE = {
+		set_cosmetic_tag = CZE_united_with_SLO
+			annex_country = {
+				target = SLO
+				transfer_troops = yes
+			}
+			SLO = {
+			every_core_state = {add_core_of = CZE}
+			}
+		}
+	}
+	
+	option = {
+		name = ussr_foreign_policy.1.b
+		trigger = {
+			NOT = {CZE = {owns_state = 70}}
+		}
+		ai_chance = {
+		base = 0
+		}
+		
+	}
+
+}
+
+#influencing North Korea#
+country_event = {
+	id = ussr_foreign_policy.2
+	title = ussr_foreign_policy.2.t
+	desc = ussr_foreign_policy.2.d
+	picture = GFX_report_event_SOV_influence_north_korea
+	
+	is_triggered_only = yes
+	
+	##yes##
+	option = {
+		name = ussr_foreign_policy.2.a
+		unlock_decision_category_tooltip = sov_influencing_north_korea
+		set_global_flag = influencing_north_korea
+		set_variable = { sov_influence_on_north_korea = 20}
+		set_variable = { sov_influence_points = 15}
+		set_variable = { prc_influence_on_north_korea = 15}
+		set_variable = { prc_influence_points = 10}
+		
+		ai_chance = {
+		base = 100
+		}
+
+	}
+
+}
+
+#Yugoslavia declines joining the warsaw pact#
+country_event = {
+	id = ussr_foreign_policy.3
+	title = ussr_foreign_policy.3.t
+	desc = ussr_foreign_policy.3.d
+	picture = GFX_report_event_SOV_international
+	
+	is_triggered_only = yes
+	
+	##bruh, invade 'em##
+	option = {
+		name = ussr_foreign_policy.3.a
+		
+			declare_war_on = {
+				target = YUG
+				type = puppet_wargoal_focus
+			}
+		news_event = {id = old_times_news.69}
+		
+		ai_chance = {
+		base = 100
+		}
+
+	}
+
+}
+
+#USSR invites us to COMECON#
+country_event = {
+	id = ussr_foreign_policy.4
+	title = ussr_foreign_policy.4.t
+	desc = ussr_foreign_policy.4.d
+	picture = GFX_report_event_SOV_international
+	
+	is_triggered_only = yes
+	
+	##hell yeah##
+	option = {
+		name = ussr_foreign_policy.4.a
+		
+		add_ideas = cold_war_comecon
+		
+				add_opinion_modifier = {
+					target = SOV
+					modifier = SOV_comecon_opinion
+				}
+		
+		ai_chance = {
+		base = 45
+		}
+
+	}
+	
+	##hell nah bruh##
+	option = {
+		name = ussr_foreign_policy.4.a
+		
+		ai_chance = {
+		base = 45
+			modifier = {
+				factor = 99999
+				has_government = liberalism
+				has_government = democratic
+				has_government = neutrality
+				has_government = paternal_autocracy
+				has_government = fascism
+				
+			}
+		}
+
+	}	
+
+}
+
+#A Kurd State?#
+country_event = {
+	id = ussr_foreign_policy.5
+	title = ussr_foreign_policy.5.t
+	desc = ussr_foreign_policy.5.d
+	picture = GFX_report_event_SOV_international
+	
+	trigger = {
+		original_tag = SOV
+		TUR = {is_puppet_of = SOV}
+		has_war = no
+		NOT = {country_exists = KUR}
+	}
+	
+	fire_only_once = yes
+	
+	##sure why not##
+	option = {
+		name = ussr_foreign_policy.5.a
+		trigger = {
+			OR = {
+				SOV = {
+					owns_state = 350
+					owns_state = 352
+					owns_state = 800
+					owns_state = 353
+				}
+				TUR = {
+					owns_state = 350
+					owns_state = 352
+					owns_state = 800
+					owns_state = 353
+				}
+			}
+		}
+		TUR = {
+			add_stability = -0.05
+			add_political_power = -100
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+		}		
+		
+		puppet = KUR
+		
+		KUR = {
+			set_cosmetic_tag = KUR_com_puppet
+			set_politics = {
+				ruling_party = communism
+			}	
+			set_popularities = {
+				communism = 35
+				socialism = 25
+				reformed_communism = 10
+				social_democracy = 10
+				fascism = 20
+			}
+			transfer_state = 350
+			transfer_state = 352
+			transfer_state = 800
+			transfer_state = 353
+		}
+		ai_chance = { base = 35 }
+	}
+
+	##reform turkey##
+	option = {
+		name = ussr_foreign_policy.5.b
+		
+		TUR = {
+			set_cosmetic_tag = TUR_reformed
+			add_political_power = -200
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.05
+			}			
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.10
+			}
+		}
+		
+		ai_chance = { base = 25 }
+	}
+
+	##status-quo turkey##
+	option = {
+		name = ussr_foreign_policy.5.c
+		TUR = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_chance = { base = 10 }
+	}
+}
+
+#Poland accepted#
+country_event = {
+	id = ussr_foreign_policy.6
+	title = ussr_foreign_policy.6.t
+	desc = ussr_foreign_policy.6.d
+	picture = GFX_report_event_SOV_international
+	
+	is_triggered_only = yes
+	
+	##oh yeah##
+	option = {
+		name = ussr_foreign_policy.6.a
+		set_country_flag = sov_pol_accepted
+		
+		
+		ai_chance = {
+		base = 45
+		}
+
+	}	
+
+}
+
+#Poland rejected#
+country_event = {
+	id = ussr_foreign_policy.7
+	title = ussr_foreign_policy.7.t
+	desc = ussr_foreign_policy.7.d
+	picture = GFX_report_event_SOV_international
+	
+	is_triggered_only = yes
+	
+	##oh no##
+	option = {
+		name = ussr_foreign_policy.7.a
+		
+		ai_chance = {
+		base = 45
+		}
+
+	}	
+
+}
+
+#install communist puppet gov in poland?#
+country_event = {
+	id = ussr_foreign_policy.8
+	title = ussr_foreign_policy.8.t
+	desc = ussr_foreign_policy.8.d
+	picture = GFX_report_event_SOV_international
+	
+	is_triggered_only = yes
+	
+	##yeah##
+	option = {
+		name = ussr_foreign_policy.8.a
+		
+		puppet = POL
+		
+		POL = {
+			set_cosmetic_tag = POL_com_puppet
+			set_party_name = {
+				ideology = communism
+				name = POL_communism_restored_party
+				long_name = POL_communism_restored_party_long
+			}
+			set_party_name = {
+				ideology = reformed_communism
+				name = POL_reformed_communism_restored_party
+				long_name = POL_reformed_communism_restored_party_long
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+				last_election = "2000.12.17"
+				election_frequency = 48
+			}	
+			set_popularities = {
+				communism = 50
+				reformed_communism = 45
+				socialism = 5
+			}
+		}
+
+		
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 65
+				POL = {
+					OR = {
+						has_government = democratic
+						has_government = liberalism
+					}
+				}
+				
+			}
+		}
+
+	}	
+
+	##yeah but keep the soc guy##
+	option = {
+		name = ussr_foreign_policy.8.b
+		trigger = {POL = {has_government = socialism}}
+		
+		puppet = POL
+		
+		POL = {
+			set_cosmetic_tag = POL_com_puppet
+			set_party_name = {
+				ideology = communism
+				name = POL_communism_restored_party
+				long_name = POL_communism_restored_party_long
+			}
+			set_party_name = {
+				ideology = reformed_communism
+				name = POL_reformed_communism_restored_party
+				long_name = POL_reformed_communism_restored_party_long
+			}
+			set_politics = {
+				ruling_party = socialism
+				elections_allowed = no
+				last_election = "2000.12.17"
+				election_frequency = 48
+			}	
+			set_popularities = {
+				social_democracy = 20
+				reformed_communism = 25
+				socialism = 55
+			}
+		}	
+		
+		ai_chance = {
+			base = 20
+		}
+
+	}	
+
+	##no.##
+	option = {
+		name = ussr_foreign_policy.8.c
+		POL = {add_political_power = 100 add_stability = 0.30}
+		
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 65
+				POL = {
+					has_government = socialism
+				}
+				
+			}
+		}
+
+	}	
+
+}
+
+## cold war stuff ##
+
+#Ethiopia requests extra divisions#
+country_event = {
+	id = ussr_cold_war.1
+	title = ussr_cold_war.1.t
+	desc = ussr_cold_war.1.d
+	picture = GFX_report_event_sov_kgb
+	
+	trigger = {
+		date > 2000.1.10
+		original_tag = SOV
+	}	
+	
+	fire_only_once = yes
+	
+	##of course##
+	option = {
+		name = ussr_cold_war.1.a
+		add_manpower = -8500
+		ETH = {add_manpower = 8500}
+		add_to_variable = {sov_militarist_influence_var = 5}
+		custom_effect_tooltip = army_5_influence_increase
+		add_timed_idea = {
+			idea = cold_war_increased_volunteers
+			days = 50
+		}
+		add_political_power = -50
+		ai_chance = {
+		base = 75
+		}
+
+	}
+	
+	##they already have enough##
+	option = {
+		name = ussr_cold_war.1.b
+		add_political_power = -25
+		ai_chance = {
+		base = 25
+		}
+
+	}
+}
+
+#Politburo's Deadline#
+country_event = {
+	id = ussr_cold_war.2
+	title = ussr_cold_war.2.t
+	desc = ussr_cold_war.2.d
+	picture = GFX_report_event_sov_kgb
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = ussr_cold_war.2.a
+		
+		activate_mission = sov_timer_clock_eew
+	}
+}
+
+
+#War in ME#
+country_event = {
+	id = ussr_cold_war.3
+	title = ussr_cold_war.3.t
+	desc = ussr_cold_war.3.d
+	picture = GFX_report_event_sov_kgb
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = ussr_cold_war.3.a
+		every_country = {
+				limit = {
+					OR = {
+                       tag = SOV
+                       is_in_faction_with = SOV
+                   }
+				}
+				 rd_volunteers_add_override_start = yes
+		         set_temp_variable = { temp = DYR }
+		         rd_volunteers_add_override = yes
+			}
+		trigger = {
+			country_exists = DYR 
+		}
+		news_event = old_times_news.432
+	}
+	option = {
+		name = ussr_cold_war.3.b
+		every_country = {
+				limit = {
+					OR = {
+                       tag = SOV
+                       is_in_faction_with = SOV
+                   }
+				}
+				rd_volunteers_add_override_start = yes
+		         set_temp_variable = { temp = BGD }
+		         rd_volunteers_add_override = yes
+			}
+		trigger = {
+			NOT = { country_exists = DYR }
+		}
+		news_event = old_times_news.432
+	}
+
+}
+
+
+
+country_event = {
+	id = ussr.111
+	title = ussr.111.t
+	desc = ussr.111.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+
+   option = {
+		name = ussr.111.a
+		trigger = {
+		}
+		add_political_power = 25
+	}
+	}
+	country_event = {
+	id = ussr.112
+	title = ussr.112.t
+	desc = ussr.112.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+
+   option = {
+		name = ussr.112.a
+		trigger = {
+		}
+		add_political_power = 25
+	}
+}
+	
+country_event = {
+	id = ussr.113
+	title = ussr.113.t
+	desc = ussr.113.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.113.a
+		add_political_power = 25
+	}
+}
+###MEME###
+
+#I hate TNO#
+country_event = {
+	id = ussr.47
+	title = ussr.47.t
+	desc = ussr.47.d
+	picture = GFX_report_event_SOV_yazov_meme
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.47.a
+		add_political_power = -500
+
+	}
+
+}
+
+##WAR WITH USA STUFF#
+
+
+#losing ww3 pretty badly#
+country_event = {
+	id = ussr.106
+	title = ussr.106.t
+	desc = ussr.106.d
+	picture = GFX_report_event_morning_in_moscow
+	
+	trigger = {
+		original_tag = SOV
+		has_war_with = USA
+		NOT = {controls_state = 219}
+		NOT = {controls_state = 195}
+		NOT = {controls_state = 217}
+	}
+	
+	fire_only_once = yes
+	
+	option = { #flee to vladivostok - be supported by china if relations are good and controls vladivostok
+		name = ussr.106.a
+		trigger = {
+			controls_state = 408
+			NOT = {PRC = {is_in_faction_with = USA}}
+			OR = {
+				has_government = reformed_communism
+				has_completed_focus = SOV_put_sinosovcoop
+				has_completed_focus = SOV_pugo_reconciliation
+			}
+		}
+		dismantle_faction = yes
+		generic_soviet_lose_east_europe = yes
+
+						
+						every_country = {
+							remove_ideas = ussr_aligned_nation
+						}						
+						
+							
+						SOV = {
+							load_focus_tree = generic_focus
+							remove_ideas = nation_status_superpower
+							
+							release = UKR							
+							release = EST
+							release = LIT
+							release = LAT							
+							release = GEO
+							release_on_controlled = AZR
+							release = ARM
+							release = KAZ
+							release = UZB
+							release = KYR
+							release = TMS
+							release = TAJ
+							release = BLR
+							release = MOL
+							release = MON #putin annexes mongolia
+						}	
+						
+						USA = { add_to_faction = UKR }
+						USA = { add_to_faction = EST }
+						USA = { add_to_faction = LIT }
+						USA = { add_to_faction = LAT }						
+						USA = { add_to_faction = GEO }
+						USA = { add_to_faction = AZR }
+						USA = { add_to_faction = ARM }
+						USA = { add_to_faction = KAZ }
+						USA = { add_to_faction = UZB }
+						USA = { add_to_faction = KYR }
+						USA = { add_to_faction = TMS }
+						USA = { add_to_faction = TAJ }
+						USA = { add_to_faction = BLR }
+						USA = { add_to_faction = MOL }
+						
+						RPR = {
+							annex_country = {
+								target = SOV
+								transfer_troops = yes
+							}
+							SOV = {
+								every_core_state = {
+									add_core_of = RPR
+								}
+							}
+						}
+						USA = { add_to_faction = RPR }
+							
+						
+						set_nationality = {
+							target_country = UKR
+							character = UCR_viktor_yushchenko
+						}
+						UKR = {
+							transfer_state = 137
+							set_politics = {
+								ruling_party = liberalism
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+							set_popularities = {
+								fascism = 12
+								liberalism  = 39
+								democratic = 21
+								neutrality = 13
+								social_democracy = 15
+							}
+						}
+						
+						GEO = {
+							set_politics = {
+								ruling_party = social_democracy
+								elections_allowed = no
+								last_election = "2000.12.17"
+								election_frequency = 48
+							}
+						}
+						
+						UZB = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}
+						
+						KAZ = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}					
+
+						TMS = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}
+						
+						EST= {
+							set_politics = {
+								ruling_party = liberalism
+								elections_allowed = no
+								long_name = EST_liberalism_1_party_long
+								name = EST_liberalism_1_party
+							}
+							set_popularities = {
+								social_democracy = 25
+								liberalism = 40
+								democratic = 25
+								fascism = 10
+							}
+						}					
+					
+						KYR = {
+							set_politics = {
+								ruling_party = democratic
+							}	
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 10
+								neutrality = 15
+								liberalism = 25
+								social_democracy = 20
+							}
+						}
+						
+						BLR= {
+							set_politics = {
+								ruling_party = liberalism
+								elections_allowed = no
+							}
+							set_popularities = {
+								social_democracy = 15
+								liberalism = 40
+								democratic = 25
+								fascism = 20
+							}
+						}							
+	
+						RKA = {
+							annex_country = {
+							target = KAZ
+							transfer_troops = no
+							}
+
+						}
+						
+						KAZ = {
+							every_core_state = {
+								remove_core_of = KAZ
+								add_core_of = RKA
+							}	
+						}						
+						RKA = {
+							set_politics = {
+								ruling_party = liberalism
+							}			
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 13
+								neutrality = 10
+								social_democracy = 15
+								liberalism = 32
+							}
+						}
+						USA = { add_to_faction = RKA }
+						UZB = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 23
+								neutrality = 0
+								fascism = 15
+								liberalism = 22
+								social_democracy = 10
+							}
+						}
+						TAJ = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 40
+								paternal_autocracy = 23
+								neutrality = 12
+								liberalism = 25
+								liberalism = 0
+								social_democracy = 0
+							}
+						}
+						KYR = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 10
+								neutrality = 25
+								liberalism = 15
+								social_democracy = 25
+							}
+						}	
+						TMS = {
+							set_politics = {
+								ruling_party = liberalism
+							}
+							set_popularities = {
+								liberalism = 35
+								paternal_autocracy = 15
+								neutrality = 10
+								democratic = 25
+								social_democracy = 15
+							}
+						}		
+						MON = {
+							set_politics = {
+								ruling_party = reformed_communism
+							}
+							set_popularities = {
+								reformed_communism = 65
+								communism = 35
+							}
+							remove_ideas = MON_split
+							replace_alignment_to_PRC = yes
+						}
+						replace_alignment_to_PRC = yes
+						SOV = {
+							transfer_state = 408
+							transfer_state = 409
+							transfer_state = 564
+							transfer_state = 563
+							transfer_state = 565
+							transfer_state = 561
+							transfer_state = 574
+							transfer_state = 562
+							transfer_state = 560
+							transfer_state = 657
+							transfer_state = 874
+							transfer_state = 637
+							transfer_state = 555
+							transfer_state = 655
+							transfer_state = 537
+							transfer_state = 555
+							
+							transfer_state = 824
+							transfer_state = 577
+							transfer_state = 578
+							transfer_state = 570
+							transfer_state = 40
+							transfer_state = 569
+							transfer_state = 654
+							transfer_state = 568
+							transfer_state = 329
+							transfer_state = 567
+							transfer_state = 566
+							transfer_state = 516
+							transfer_state = 576
+							transfer_state = 876
+							transfer_state = 575
+							transfer_state = 877
+							transfer_state = 644
+							transfer_state = 822
+							transfer_state = 822
+							transfer_state = 875
+							transfer_state = 878
+						}
+						PRC = {create_faction = faction_shanghai_pact}
+						PRC = { add_to_faction = MON }
+						PRC = { add_to_faction = SOV }		
+						news_event = {id = old_times_news.263}
+	}
+	
+	option = { #keep fighting! - will lead to coup
+		name = ussr.106.b
+		add_political_power = -100
+		add_war_support = 0.01
+		country_event = {id = ussr.114 days = 3}
+		if = {
+			limit = {PRC = {is_puppet_of = SOV}}
+			end_puppet = PRC
+			PRC = {
+				annex_country = {
+					target = MAN
+					transfer_troops = yes					
+				}
+				annex_country = {
+					target = ETR
+					transfer_troops = yes					
+				}	
+				annex_country = {
+					target = TIB
+					transfer_troops = yes					
+				}		
+				hidden_effect = {
+					set_faction_leader = no # This was the issue causing them to overtake the faction, however China still is put as the main leader of the USSR faction making them take it over if the USSR loses
+				}
+				#leave_faction = yes # This was the solution
+				#drop_cosmetic_tag = yes
+				#clr_country_flag = PRC_com_puppet
+			}
+			SOV = { set_faction_leader = yes } # This is what causes china to dismantle the faction, but will still be at war with the USA
+		}
+	}	
+}
+
+#coup
+country_event = {
+	id = ussr.114
+	title = ussr.114.t
+	desc = ussr.114.d
+	picture = GFX_report_event_SOV_generic
+	
+	immediate = {
+		hidden_effect = {
+			retire_country_leader = yes
+			hidden_effect = {
+				add_country_leader_role = {
+					character = SOV_leonid_khabarov
+					promote_leader = yes
+					country_leader = {
+						ideology = marxism_leninism
+					}
+				}
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.114.a
+						news_event = {id = old_times_news.247}
+						dismantle_faction = yes
+						generic_soviet_lose_east_europe = yes
+						
+						every_country = {
+							remove_ideas = ussr_aligned_nation
+						}						
+						
+							
+						SOV = {
+							dismantle_faction = yes
+							remove_ideas = nation_status_superpower
+							
+							release = UKR							
+							release = EST
+							release = LIT
+							release = LAT							
+							release = GEO
+							release_on_controlled = AZR
+							release = ARM
+							release = KAZ
+							release = UZB
+							release = KYR
+							release = TMS
+							release = TAJ
+							release = BLR
+							release = MOL
+						}	
+						
+						USA = { add_to_faction = UKR }
+						USA = { add_to_faction = EST }
+						USA = { add_to_faction = LIT }
+						USA = { add_to_faction = LAT }						
+						USA = { add_to_faction = GEO }
+						USA = { add_to_faction = AZR }
+						USA = { add_to_faction = ARM }
+						USA = { add_to_faction = KAZ }
+						USA = { add_to_faction = UZB }
+						USA = { add_to_faction = KYR }
+						USA = { add_to_faction = TMS }
+						USA = { add_to_faction = TAJ }
+						USA = { add_to_faction = BLR }
+						USA = { add_to_faction = MOL }
+						USA = { add_to_faction = MON }
+
+						# WW3 IF CHINA IS PUPPETED
+						#SOV = { end_puppet = PRC }
+						# SEE EVENT ussr.106
+
+						# IF CHINA IS THE FACTION LEADER
+						if = {
+							limit = {
+								PRC = { is_in_faction = yes }
+							}
+							USA = {
+								white_peace = PRC
+							}
+							PRC = {
+								drop_cosmetic_tag = yes
+								clr_country_flag = PRC_com_puppet
+								dismantle_faction = yes
+							}
+						}
+						
+						# IF THE USSR IS DEFEATED BUT CHINA IS STILL AT WAR
+						if = {
+							limit = {
+								PRC = { has_war_with = USA }
+							}
+							USA = {
+								white_peace = PRC
+							}
+							PRC = {
+								drop_cosmetic_tag = yes
+								clr_country_flag = PRC_com_puppet
+								dismantle_faction = yes
+							}
+						}
+
+
+						# IF CHINA IS THE FACTION LEADER
+						if = {
+							limit = {
+								MON = { is_in_faction = no }
+							}
+							USA = { add_to_faction = MON }
+						}
+						
+						RPR = {
+							annex_country = {
+								target = SOV
+								transfer_troops = yes
+							}
+							SOV = {
+								every_core_state = {
+									add_core_of = RPR
+								}
+							}
+						}
+						USA = { add_to_faction = RPR }
+						PER = { transfer_state = 1045 add_state_core = 1045 }
+						MON = {	
+							add_ideas = usa_aligned_nation
+							remove_ideas = MON_split
+						}
+						
+						set_nationality = {
+							target_country = UKR
+							character = UCR_viktor_yushchenko
+						}
+						UKR = {
+							transfer_state = 137
+							set_politics = {
+								ruling_party = liberalism
+								last_election = "1936.1.1"
+								election_frequency = 48
+								elections_allowed = no
+							}
+							set_popularities = {
+								fascism = 12
+								liberalism  = 39
+								democratic = 21
+								neutrality = 13
+								social_democracy = 15
+							}
+						}
+						
+						GEO = {
+							set_politics = {
+								ruling_party = social_democracy
+								elections_allowed = no
+								last_election = "2000.12.17"
+								election_frequency = 48
+							}
+						}
+						
+						UZB = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}
+						
+						KAZ = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}					
+
+						TMS = {
+							set_politics = {
+								ruling_party = paternal_autocracy
+								elections_allowed = no
+							}
+						}
+						
+						EST= {
+							set_politics = {
+								ruling_party = liberalism
+								elections_allowed = no
+								long_name = EST_liberalism_1_party_long
+								name = EST_liberalism_1_party
+							}
+							set_popularities = {
+								social_democracy = 25
+								liberalism = 40
+								democratic = 25
+								fascism = 10
+							}
+						}					
+					
+						KYR = {
+							set_politics = {
+								ruling_party = democratic
+							}	
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 10
+								neutrality = 15
+								liberalism = 25
+								social_democracy = 20
+							}
+						}
+						
+						BLR= {
+							set_politics = {
+								ruling_party = liberalism
+								elections_allowed = no
+							}
+							set_popularities = {
+								social_democracy = 15
+								liberalism = 40
+								democratic = 25
+								fascism = 20
+							}
+						}							
+	
+						RKA = {
+							annex_country = {
+							target = KAZ
+							transfer_troops = no
+							}
+
+						}
+						
+						KAZ = {
+							every_core_state = {
+								remove_core_of = KAZ
+								add_core_of = RKA
+							}	
+						}						
+						RKA = {
+							set_politics = {
+								ruling_party = liberalism
+							}			
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 13
+								neutrality = 10
+								social_democracy = 15
+								liberalism = 32
+							}
+						}
+						USA = { add_to_faction = RKA }
+						UZB = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 23
+								neutrality = 0
+								fascism = 15
+								liberalism = 22
+								social_democracy = 10
+							}
+						}
+						TAJ = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 40
+								paternal_autocracy = 23
+								neutrality = 12
+								liberalism = 25
+								liberalism = 0
+								social_democracy = 0
+							}
+						}
+						KYR = {
+							set_politics = {
+								ruling_party = democratic
+							}
+							set_popularities = {
+								democratic = 30
+								paternal_autocracy = 10
+								neutrality = 25
+								liberalism = 15
+								social_democracy = 25
+							}
+						}	
+						TMS = {
+							set_politics = {
+								ruling_party = liberalism
+							}
+							set_popularities = {
+								liberalism = 35
+								paternal_autocracy = 15
+								neutrality = 10
+								democratic = 25
+								social_democracy = 15
+							}
+						}		
+						MON = {
+							set_politics = {
+								ruling_party = liberalism
+							}
+							set_popularities = {
+								liberalism = 40
+								paternal_autocracy = 0
+								neutrality = 0
+								democratic = 30
+								social_democracy = 30
+							}							
+						}
+						if = {
+							limit = {
+								PRC = {is_in_faction_with = USA}
+							}
+							USA = {add_to_faction = MON}
+						}
+						if = {
+							limit = {
+								country_exists = MAN
+							}
+							PRC = {
+								annex_country = {
+								target = MAN
+								transfer_troops = no
+								}						
+							}
+						}						
+	}
+}
+country_event = {
+	id = ussr.115
+	title = ussr.115.t
+	desc = ussr.115.d
+	picture = GFX_report_event_lenin_dawn
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.115.a
+		custom_effect_tooltip = SOV_ty_for_playing_pugo
+	}
+}
+
+#Mao And Deng#
+country_event = {
+	id = ussr.116
+	title = ussr.116.t
+	desc = ussr.116.d
+	picture = GFX_report_event_SOV_generic
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.116.a
+	}
+}
+
+#Andropov#
+country_event = {
+	id = ussr.117
+	title = ussr.117.t
+	desc = ussr.117.d
+	picture = GFX_report_event_Andropov
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.117.a
+	}
+}
+
+#latvia - a tragedy #
+country_event = {
+	id = ussr.118
+	title = ussr.118.t
+	desc = ussr.118.d
+	picture = GFX_report_event_latvia_1
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.118.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.119 days = 2
+			}
+		}
+	}
+}
+
+#latvia - a tragedy 2#
+country_event = {
+	id = ussr.119
+	title = ussr.119.t
+	desc = ussr.119.d
+	picture = GFX_report_event_latvia_2
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.119.a
+	}
+}
+
+#Pugo's Speech#
+country_event = {
+	id = ussr.120
+	title = ussr.120.t
+	desc = ussr.120.d
+	picture = GFX_report_event_SOV_pugo_speech
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.120.a
+	}
+}
+
+#CPSU Lession - 1#
+country_event = {
+	id = ussr.121
+	title = ussr.121.t
+	desc = ussr.121.d
+	picture = GFX_report_event_gorbachev_failure
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.121.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.122 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 2#
+country_event = {
+	id = ussr.122
+	title = ussr.122.t
+	desc = ussr.122.d
+	picture = GFX_report_event_gorbachev_failure
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.122.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.123 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 3#
+country_event = {
+	id = ussr.123
+	title = ussr.123.t
+	desc = ussr.123.d
+	picture = GFX_report_event_cpsu_lesson
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.123.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.124 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 4#
+country_event = {
+	id = ussr.124
+	title = ussr.124.t
+	desc = ussr.124.d
+	picture = GFX_report_event_corruption_in_ussr
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.124.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.125 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 5#
+country_event = {
+	id = ussr.125
+	title = ussr.125.t
+	desc = ussr.125.d
+	picture = GFX_report_event_corruption_in_ussr
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.125.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.126 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 6#
+country_event = {
+	id = ussr.126
+	title = ussr.126.t
+	desc = ussr.126.d
+	picture = GFX_report_event_soviet_teen
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.126.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.127 days = 15
+			}
+		}
+	}
+}
+
+#CPSU Lession - 6#
+country_event = {
+	id = ussr.127
+	title = ussr.127.t
+	desc = ussr.127.d
+	picture = GFX_report_event_army_betrayed
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.127.a
+	}
+}
+
+#Question of The Army#
+country_event = {
+	id = ussr.128
+	title = ussr.128.t
+	desc = ussr.128.d
+	picture = GFX_report_event_army_betrayed
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.128.a
+	}
+}
+
+#The Women of Steel#
+country_event = {
+	id = ussr.129
+	title = ussr.129.t
+	desc = ussr.129.d
+	picture = GFX_report_event_nina
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.129.a
+	}
+}
+
+#Zyuganov#
+country_event = {
+	id = ussr.130
+	title = ussr.130.t
+	desc = ussr.130.d
+	picture = GFX_report_event_zyuganov
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.130.a
+	}
+}
+
+#Hungary 1956 part 1#
+country_event = {
+	id = ussr.131
+	title = ussr.131.t
+	desc = ussr.131.d
+	picture = GFX_report_event_Hungary_1956
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.131.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.132 days = 5
+			}
+		}
+	}
+}
+
+#Hungary 1956 part 2#
+country_event = {
+	id = ussr.132
+	title = ussr.132.t
+	desc = ussr.132.d
+	picture = GFX_report_event_Hungary_1956
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.132.a
+	}
+}
+
+#Yazov Resign#
+country_event = {
+	id = ussr.133
+	title = ussr.133.t
+	desc = ussr.133.d
+	picture = GFX_report_event_SOV_pugo_medal
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.133.a
+	}
+}
+
+#31st Congress#
+country_event = {
+	id = ussr.134
+	title = ussr.134.t
+	desc = ussr.134.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.134.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.135 days = 1
+			}
+		}
+	}
+}
+
+#Pugo Reelected#
+country_event = {
+	id = ussr.135
+	title = ussr.135.t
+	desc = ussr.135.d
+	picture = GFX_report_event_pugo_elected
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.135.a
+	}
+}
+
+#Pugo Health decrease#
+country_event = {
+	id = ussr.136
+	title = ussr.136.t
+	desc = ussr.136.d
+	picture = GFX_report_event_SOV_end
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.136.a
+		hidden_effect = {
+			country_event = {
+				id = ussr.137 days = 2
+			}
+		}
+	}
+}
+
+#Pugo death#
+country_event = {
+	id = ussr.137
+	title = ussr.137.t
+	desc = ussr.137.d
+	picture = GFX_report_event_pugo_death
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.137.a
+		kill_country_leader = yes
+		promote_character = SOV_party_1
+		news_event = {
+			id = old_times_news.245 hours = 12
+		}
+        hidden_effect = {
+			country_event = {
+				id = ussr.102 days = 3
+			}
+		}
+	}
+}
+
+#Collective Leadership#
+country_event = {
+	id = ussr.138
+	title = ussr.138.t
+	desc = ussr.138.d
+	picture = GFX_report_event_SOV_the_meeting_con
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.138.a
+	}
+}
+
+#NewSoveitMan#
+country_event = {
+	id = ussr.139
+	title = ussr.139.t
+	desc = ussr.139.d
+	picture = GFX_report_event_soviet_man
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.139.a
+		custom_effect_tooltip = thanks_for_playing_tooltip
+	}
+}
+
+#Peace, Morning and Coffee#
+country_event = {
+	id = ussr.140
+	title = ussr.140.t
+	desc = ussr.140.d
+	picture = GFX_report_event_putin_pic
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.140.a
+		add_political_power = 20
+	}
+}
+
+#Bortnikov#
+country_event = {
+	id = ussr.141
+	title = ussr.141.t
+	desc = ussr.141.d
+	picture = GFX_report_event_bortnikov
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.141.a
+	}
+}
+
+#Patrushev#
+country_event = {
+	id = ussr.142
+	title = ussr.142.t
+	desc = ussr.142.d
+	picture = GFX_report_event_patrushev
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.142.a
+	}
+}
+
+#KGB report Limonov#
+country_event = {
+	id = ussr.143
+	title = ussr.143.t
+	desc = ussr.143.d
+	picture = GFX_report_event_limonov
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.143.a
+	}
+}
+
+#Ryzhkov nodeal#
+country_event = {
+	id = ussr.144
+	title = ussr.144.t
+	desc = ussr.144.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.144.a
+	}
+}
+
+#Ryzhkov deal#
+country_event = {
+	id = ussr.145
+	title = ussr.145.t
+	desc = ussr.145.d
+	picture = GFX_report_event_SOV_cycle_begins_anew
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.145.a
+	}
+}
+
+#50 shades of CPSU#
+country_event = {
+	id = ussr.146
+	title = ussr.146.t
+	desc = ussr.146.d
+	picture = GFX_report_event_SOV_lenin_statue
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.146.a
+	}
+}
+
+#gorby pardoned - putin#
+country_event = {
+	id = ussr.147
+	title = ussr.147.t
+	desc = ussr.147.d
+	picture = GFX_report_event_gorbachev_pardon
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.147.a
+		hidden_effect = {
+			news_event = { id = old_times_news.145 hours = 6 }
+		}
+	}
+}
+
+#maybe china good#
+country_event = {
+	id = ussr.148
+	title = ussr.148.t
+	desc = ussr.148.d
+	picture = GFX_report_event_xeng_diaoping
+	
+	is_triggered_only = yes
+
+	option = {
+		name = ussr.148.a
+	}
+}
+
+#rip pizza hut person#
+country_event = {
+	id = ussr.149
+	title = ussr.149.t
+	desc = ussr.149.d
+	picture = GFX_report_event_gorby_gone
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.149.a
+		add_stability = -0.01
+		news_event = { id = old_times_news.260 }
+	}
+
+}
+
+#yazov end#
+country_event = {
+	id = ussr.150
+	title = ussr.150.t
+	desc = ussr.150.d
+	picture = GFX_report_event_yazov_end
+	
+	is_triggered_only = yes
+	
+	option = {
+		custom_effect_tooltip = thanks_for_playing_tooltip
+		name = ussr.150.a
+	}
+
+}
+
+#yazov speech#
+country_event = {
+	id = ussr.151
+	title = ussr.151.t
+	desc = ussr.151.d
+	picture = GFX_report_event_SOV_yazov_protest
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.151.a
+	}
+
+}
+
+#incriminate yazov#
+country_event = {
+	id = ussr.152
+	title = ussr.152.t
+	desc = ussr.152.d
+	picture = GFX_report_event_SOV_yazov_boss
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.152.a
+	}
+
+}
+
+#incriminate pugo#
+country_event = {
+	id = ussr.153
+	title = ussr.153.t
+	desc = ussr.153.d
+	picture = GFX_report_event_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.153.a
+	}
+
+}
+
+#an heir to zhukov#
+country_event = {
+	id = ussr.154
+	title = ussr.154.t
+	desc = ussr.154.d
+	picture = GFX_report_event_SOV_heir_to_zhukov
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.154.a
+	}
+
+}
+
+#yakovlev rejected#
+country_event = {
+	id = ussr.155
+	title = ussr.155.t
+	desc = ussr.155.d
+	picture = GFX_report_event_SOV_yakovlev
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.155.a
+	}
+
+}
+
+#alone#
+country_event = {
+	id = ussr.156
+	title = ussr.156.t
+	desc = ussr.156.d
+	picture = GFX_report_event_office
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.156.a
+	}
+
+}
+
+#Patrolling Duty#
+country_event = {
+	id = ussr.157
+	title = ussr.157.t
+	desc = ussr.157.d
+	picture = GFX_report_event_SOV_second_coup_1
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.157.a
+	}
+
+}
+
+#August All Over Again#
+country_event = {
+	id = ussr.158
+	title = ussr.158.t
+	desc = ussr.158.d
+	picture = GFX_report_event_SOV_tanks_in_moscow
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ussr.158.a
+		custom_effect_tooltip = thanks_for_playing_tooltip
+	}
+
+}

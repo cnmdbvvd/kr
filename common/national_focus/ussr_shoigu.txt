@@ -1,0 +1,255 @@
+focus_tree = {
+	id = ussr_shoigu
+	country = {
+		factor = 0
+		modifier = {
+		add = 1000
+		tag = SOV
+		}
+	}
+	continuous_focus_position = {
+		x = 4
+		y = 1500
+	}
+
+	focus = {
+		id = SOV_hello_shoigu
+		icon = SOV_hello_shoigu
+		x = 4
+		y = 0
+		cost = 4
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = SOV_increase_military_spending
+		icon = SOV_increase_military_spending
+		x = 4
+		y = 1
+		cost = 4
+		prerequisite ={
+			focus = SOV_hello_shoigu
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_increase_military_spending_tt
+			add_to_variable = {
+				CCCP_civilian_factory_use = -3
+			}
+			add_to_variable = {
+				CCCP_consumer_goods_expected_value = 0.025
+			}
+			add_to_variable = {
+				CCCP_line_change_production_efficiency_factor = 0.2
+			}
+			add_to_variable = {
+				CCCP_production_factory_max_efficiency_factor = 0.2
+			}
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.2
+			}
+			add_to_variable = {
+				CCCP_production_factory_start_efficiency_factor = 0.2
+			}
+			add_to_variable = {
+				CCCP_industrial_capacity_factory = 0.05
+			}
+			add_to_variable = {
+				CCCP_research_speed_factor = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SOV_increase_quality_of_equipment
+		icon = SOV_increase_quality_of_equipment
+		x = 3
+		y = 2
+		cost = 4
+		prerequisite = {
+			focus = SOV_increase_military_spending
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_increase_quality_of_equipment_tt
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.05
+			}
+			add_to_variable = {
+				CCCP_industrial_capacity_factory = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SOV_rerun_military_industrial_complex
+		icon = SOV_rerun_military_industrial_complex
+		x = 5
+		y = 2
+		cost = 4
+		prerequisite = {
+			focus = SOV_increase_military_spending
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_rerun_military_industrial_complex_tt
+			add_to_variable = {
+				CCCP_line_change_production_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_max_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_start_efficiency_factor = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SOV_reforming_ministry_of_defence
+		icon = SOV_reforming_ministry_of_defence
+		x = 4
+		y = 3
+		cost = 4
+		prerequisite = {
+			focus = SOV_increase_quality_of_equipment
+		}
+		prerequisite = {
+			focus = SOV_rerun_military_industrial_complex
+		}
+		completion_reward = {
+			remove_ideas = SOV_Backward_technical_equipment
+		}
+	}
+	focus = {
+		id = SOV_reforming_military_industry
+		icon = SOV_reforming_military_industry
+		x = 2
+		y = 4
+		cost = 4
+		prerequisite = {
+			focus = SOV_reforming_ministry_of_defence
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_reforming_military_industry_tt
+			add_to_variable = {
+				CCCP_industrial_capacity_factory = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_max_efficiency_factor = 0.15
+			}
+		}
+	}
+	
+	focus = {
+		id = SOV_fight_against_corruption
+		icon = SOV_fight_against_corruption
+		x = 6
+		y = 4
+		cost = 4
+		prerequisite = {
+			focus = SOV_reforming_ministry_of_defence
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_fight_against_corruption_tt
+			add_to_variable = {
+				CCCP_consumer_goods_expected_value = 0.05
+			}
+			add_to_variable = {
+				CCCP_civilian_factory_use = 5
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_improve_resource_utilization
+		icon = SOV_improve_resource_utilization
+		x = 3
+		y = 5
+		cost = 4
+		prerequisite = {
+			focus = SOV_reforming_military_industry
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_improve_resource_utilization_tt
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.2
+			}
+			add_to_variable = {
+				CCCP_industrial_capacity_factory = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SOV_increase_research_of_equipment
+		icon = SOV_increase_research_of_equipment
+		x = 5
+		y = 5
+		cost = 4
+		prerequisite = {
+			focus = SOV_fight_against_corruption
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_increase_research_of_equipment_tt
+			add_to_variable = {
+				CCCP_research_speed_factor = 0.2
+			}
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SOV_increase_output_of_military_industry
+		icon = SOV_increase_output_of_military_industry
+		x = 4
+		y = 6
+		cost = 4
+		prerequisite = {
+			focus = SOV_increase_research_of_equipment
+		}
+		prerequisite = {
+			focus = SOV_improve_resource_utilization
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_increase_output_of_military_industry_tt
+			add_to_variable = {
+				CCCP_line_change_production_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_max_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_start_efficiency_factor = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_a_machine_runs_again
+		icon = SOV_a_machine_runs_again
+		x = 4
+		y = 7
+		cost = 4
+		prerequisite = {
+			focus = SOV_increase_output_of_military_industry
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_a_machine_runs_again_tt
+			add_to_variable = {
+				CCCP_line_change_production_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_max_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_efficiency_gain_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_production_factory_start_efficiency_factor = 0.1
+			}
+			add_to_variable = {
+				CCCP_industrial_capacity_factory = 0.2
+			}
+		}
+	}
+}

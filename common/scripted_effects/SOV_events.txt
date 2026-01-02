@@ -1,0 +1,4 @@
+#军事检查事件触发
+SOV_JSJC_events_effects = {
+	country_event = { id = cccp.10 days = 275 }
+}

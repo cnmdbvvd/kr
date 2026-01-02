@@ -1,0 +1,1660 @@
+characters = {
+	
+	## Country Leaders ##
+	SOV_nina_andreyeva = {
+		name = "Nina Andreyeva"
+		portraits = {
+			civilian = {
+			    large = "gfx/leaders/SOV/nina_andreyeva.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_valentin_pavlov = {
+		name = "Valentin Pavlov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Valentin_Pavlov.dds"
+			}
+		}
+		country_leader = {
+		    desc = PAVLOV_DESC
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_aleksandr_korzhakov = {
+		name = "Aleksandr Korzhakov"
+		portraits = {
+			civilian = {
+				#large = "gfx/leaders/SOV/Aleksandr_Korzhakov.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_grigory_romanov = {
+		name = "Grigory Romanov"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/Grigory_Romanov_advisor.dds"
+				large = "gfx/leaders/SOV/Grigory_Romanov.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_grigory_romanov_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				yazovs_civilian_face
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_collapsed_government = {
+		name = "Collapsed Government"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/collapsed_government.dds"
+				small = "gfx/leaders/SOV/post_putin/collapsed_government_advisor.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_collapsed_government_advisor
+			allowed = {
+				original_tag = SOV
+				has_completed_focus = SOV_put_battle_of_moscow
+			}
+			traits = {
+				collapsed_government
+			}
+		}		
+	}
+	SOV_oleg_baklanov = {
+		name = "Oleg Baklanov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/post_putin/Oleg_Baklanov.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_alexei_navalny = {
+		name = "Alexei Navalny"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/post_putin/Alexei_Navalny.dds"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_dmitry_yazov = {
+		name = "Dmitry Yazov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/yazov_new.dds"
+				small = "gfx/leaders/SOV/yazov_new_small.dds"
+			}
+			army = {
+				large = "gfx/leaders/SOV/yazov_new_general.dds"
+			}
+		}
+		country_leader = {
+		    desc = YAZOV_DESC
+			ideology = vanguard_stratocracy
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}		
+		advisor={
+			cost = 75			
+			slot = army_chief
+			idea_token = SOV_dmitry_yazov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_chief_offensive_1
+			}
+		}
+		field_marshal={
+			traits={offensive_doctrine}
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+	SOV_anatoly_chernyaev = {
+		name = "Anatoly Chernyaev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Anatoly_Chernyaev.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_boris_pugo = {
+		name = "Boris Pugo"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Boris_Pugo.dds"
+				small = "gfx/leaders/SOV/pugo_advisor.dds"
+			}
+		}
+		country_leader = {
+		    desc = PUGO_DESC
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_boris_pugo
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				party_hardliner
+			}
+		}
+	}
+	SOV_nikolay_ryzhkov = {
+		name = "Nikolai Ryzhkov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Nikolay_Ryzhkov.dds"
+			}
+		}
+		country_leader = {
+		    desc = RYZHKOV_DESC
+			ideology = market_socialism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_mikhail_gorbachev1 = {
+		name = "Mikhail Gorbachev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Mikhail_Gorbachev.dds"
+			}
+		}
+		country_leader = {
+			ideology = social_democracy_sub
+			traits = {reformist}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_vladimir_based = {
+		name = "Vladimir Zhirinovsky"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Vladimir_Zhirinovsky.dds"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_limnov = {
+		name = "Eduard Limonov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/post_putin/Eduard_Limonov.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazbolism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_vladimir_putin = {
+		name = "Vladimir Putin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Vladimir_Putin.dds"
+				small = "gfx/leaders/SOV/putin_advisor.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_vladimir_putin
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				leader_of_the_intelligance_network 
+			}
+		}
+		
+	}
+	SOV_party = {
+		name = "Communist Party of the Soviet Union"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/party.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+        SOV_party_1 = {
+		name = "Communist Party of the Soviet Union"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/party.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+	SOV_gennady_zyuganov = {
+		name = "Gennady Zyuganov"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/post_putin/gennady_zyuganov.dds"
+				small = "gfx/leaders/SOV/post_putin/gennady_zyuganov_small.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_gennady_zyuganov
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				party_hardliner
+			}
+		}			
+	}
+	SOV_ivan_sil = {
+		name = "Ivan Silayev"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Ivan_Silayev.dds"
+			}
+		}
+		country_leader = {
+			ideology = democratic_socialism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+
+	SOV_nina_andreyeva = {
+		name = "Nina Andreyeva"
+		portraits = {
+			civilian = {
+			    large = "gfx/leaders/SOV/nina_andreyeva.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}	
+	SOV_sergei_udaltsov = {
+		name = "Sergei Udaltsov"
+		portraits = {
+			civilian = {
+			    small = "gfx/leaders/SOV/sergrei_udaltsov_advisor.dds"
+				large = "gfx/leaders/SOV/Sergei_Udaltsov.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}
+
+	## Advisors ##
+
+	SOV_yuri_maslyukov = {
+		name = "Yuri Maslyukov"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/yuri_maslyukov.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_yuri_maslyukov
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				chief_of_industry 
+			}
+		}
+	}
+
+	SOV_dugin = {
+		name = "Aleksandr Dugin"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/dugin_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_dugin_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = SOV_dugin_available_tt
+					has_country_flag = SOV_dugin_available
+				}
+			}
+			traits = {
+				eurasianist_theorist
+			}
+		}
+	}
+
+	SOV_bortnikov = {
+		name = "Alexander Bortnikov"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/bortnikov_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_bortnikov_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				putins_right_hand
+			}
+		}
+	}
+
+	SOV_patrushev = {
+		name = "Nikolai Patrushev"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/patrushev_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_patrushev_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				kgb_buerocrat
+			}
+		}
+	}
+
+	SOV_alexander_bessmertnykh = {
+		name = "Alexander Bessmertnykh"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/alexander_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_alexander_bessmertnykh
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				foreign_minister 
+			}
+		}
+	}
+
+	SOV_alexander_lukashenko = {
+		name = "Alexander Lukashenko"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/Lukashenko_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_alexander_lukashenko
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				useful_bureaucrat
+			}
+		}
+	}
+	
+	SOV_nikolai_ryzhkov_advisor = {
+		name = "Nikolai Ryzhkov"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/ryzhkov_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_nikolai_ryzhkov
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				leader_of_the_council_of_ministers 
+			}
+		}
+	}
+
+	SOV_nikolai_ryzhkov_advisor_economic = {
+		name = "Nikolai Ryzhkov"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/ryzhkov_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_nikolai_ryzhkov_advisor_economic
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				economic_reformist 
+			}
+		}
+	}
+
+	SOV_rutskoy_advisor = {
+		name = "Alexander Rutskoy"
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/rutskoy_advisor.dds"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_rutskoy_advisor
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				soviet_patriot
+			}
+		}
+	}
+	
+	SOV_anatoly_lukyanov = {
+		name = "Anatoly Lukyanov" 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/anatoly_lukyanov.png"
+				small = "gfx/leaders/SOV/anatoly_lukyanov_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_anatoly_lukyanov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_country_leader = {
+					character = SOV_nikolay_ryzhkov
+					ruling_only = yes
+				}			
+			}
+			traits = {
+				reformist_advisor 
+			}
+		}
+	}
+	
+	SOV_gennady_timchenko = {
+		name = "Gennady Timchenko" 
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/timchenko_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_gennady_timchenko
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				OR = {
+				has_completed_focus = SOV_put_stomp_rich
+				has_completed_focus = SOV_ryz_our_new_friends
+				}
+			}
+			traits = {
+				wealthy_businessman 
+			}
+		}
+	}	
+	
+	SOV_nikolay_kolomeitsev = {
+		name = "Nikolay Kolomeitsev" 
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/kolomeitsev_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_nikolay_kolomeitsev
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				minister_of_finance 
+			}
+		}
+	}	
+	
+	SOV_alexy_2 = { 
+		name = "Patriarch Alexy II"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/alexy_2.png" 
+				small = "gfx/leaders/SOV/alexy_2_small.png" 
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = political_advisor
+			idea_token = SOV_alexy_2
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_pugo_ally_with_the_religious
+			}
+			visible = {
+			}
+			
+			traits = {
+				religious_leader
+
+			}
+			
+		}
+		country_leader = {
+			ideology = paternal_autocracy_sub
+			traits = {}
+			expire = "2050.3.1.1"
+			id = -1
+		}
+	}	
+	
+	SOV_oleg_shenin = {
+		name = "Oleg Shenin" 
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/oleg_shenin_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_oleg_shenin
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				ideologue 
+			}
+		}
+	}
+
+	SOV_viktor_anpilov = {
+		name = "Viktor Anpilov" 
+		portraits = {
+			civilian = {
+				small = "gfx/leaders/SOV/viktor_anpilov_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = SOV_viktor_anpilov
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+			}
+			traits = {
+				trade_unionist
+			}
+		}
+	}		
+	## Generals / Field Marshals ##
+
+	SOV_sergey_shoigu = {
+		name = "Sergey Shoygu"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Sergey_Shoigu_general.dds"
+				small = "gfx/leaders/SOV/Sergey_Shoigu_small.dds"
+			}
+		}
+		advisor={
+			cost = 75			
+			slot = army_chief
+			idea_token = SOV_sergey_shoigu
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_chief_organizational_2
+			}
+		}
+		field_marshal={
+			traits={defensive_doctrine}
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_sergey_sokolov = {
+		name = "Sergey Sokolov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Sergey_Sokolov.dds"
+			}
+		}
+		field_marshal={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_sergey_akhromeyev = {
+		name = "Sergey Akhromeyev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Sergey_Akhromeyev_general.dds"
+				small = "gfx/leaders/SOV/Sergey_Akhromeyev_advisor.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/SOV/Sergey_Akhromeyev.dds"
+				small = "gfx/leaders/SOV/Sergey_Akhromeyev_advisor.dds"
+			}
+		}	
+		field_marshal={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	SOV_vasily_petrov = {
+		name = "Vasily Petrov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vasily_Petrov.dds"
+			}
+		}
+		field_marshal={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_mikhail_malofeev = {
+		name = "Mikhail Malofeev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Mikhail_Malofeev.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+
+	SOV_vladimir_shamanov = {
+		name = "Vladimir Shamanov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/post_putin/Vladimir_Shamanov_normal_general.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_bakin = {
+		name = "Vladimir Bakin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Bakin.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_aleksandr_galkin = {
+		name = "Aleksandr Galkin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Aleksandr_Galkin.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_boris_gromov = {
+		name = "Boris Gromov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/boris_gromov.png"
+				small = "gfx/leaders/SOV/Boris_Gromov_advisor.png"
+			}
+		}
+		advisor={
+			cost = 75			
+			slot = army_chief
+			idea_token = SOV_boris_gromov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_chief_defensive_2
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_nikolay_yegorovich_makarov = {
+		name = "Nikolay Yegorovich Makarov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Nikolay_Yegorovich_Makarov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_jonas_andriskevicius = {
+		name = "Jonas Andriskevicius"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Jonas_Andriskevicius.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_viktor_chechevatov = {
+		name = "Viktor Chechevatov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Viktor_Chechevatov.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_gennady_troshev = {
+		name = "Gennady Troshev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Gennady_Troshev.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_konstantin_pulikovsky = {
+		name = "Konstantin Pulikovsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Konstantin_Pulikovsky.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_anatoly_kostenko = {
+		name = "Anatoly Kostenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Anatoly_Kostenko.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_lobov = {
+		name = " Vladimir Lobov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Lobov.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_anatoly_kulikov = {
+		name = "Anatoly Kulikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Anatoly_Kulikov.dds"
+			}
+		}
+		field_marshal={
+			traits={ }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_mikhail_kolesnikov = {
+		name = "Mikhail Kolesnikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Mikhail_Kolesnikov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_Pavel_Grachev = {
+		name = "Pavel Grachev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Pavel_Grachev.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_albert_makashov = {
+		name = "Albert Makashov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Albert_Makashov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_aleksandr_baranov = {
+		name = "Aleksandr Baranov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Aleksandr_Baranov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_anatoly_kvashnin = {
+		name = "Anatoly Kvashnin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Anatoly_Kvashnin.dds"
+				small = "gfx/leaders/SOV/Anatoly_Kvashnin_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = SOV_anatoly_kvashnin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_concealment_2
+			}
+		}		
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_arkady_bakhin = {
+		name = "Arkady Bakhin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Arkady_Bakhin.dds"
+				small = "gfx/leaders/SOV/Arkady_Bakhin_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = SOV_arkady_bakhin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_infantry_1
+			}
+		}		
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_Leonty_Kuznetsov = {
+		name = "Leonty Kuznetsov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Leonty_Kuznetsov.png"
+				small = "gfx/leaders/SOV/Leonty_Kuznetsov_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = SOV_Leonty_Kuznetsov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_regrouping_2
+			}
+		}			
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_dmitry_bulgakov = {
+		name = "Dmitry Bulgakov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Dmitry_Bulgakov.dds"
+				small = "gfx/leaders/SOV/Dmitry_Bulgakov_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = SOV_dmitry_bulgakov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_logistics_2
+			}
+		}	
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SOV_valery_gerasimov = {
+		name = "Valery Gerasimov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Valery_Gerasimov.dds"
+				small = "gfx/leaders/SOV/Valery_Gerasimov_small.png"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = SOV_valery_gerasimov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				army_armored_1
+			}
+		}	
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_boldyrev = {
+		name = "Vladimir Boldyrev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Boldyrev_general.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_viktor_kazantsev = {
+		name = "Viktor Kazantsev"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Viktor_Kazantsev.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_anatoly_kornukov = {
+		name = "Anatoly Kornukov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Anatoly_Kornukov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_sergey_surovikin = {
+		name = "Sergey Surovikin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Sergey_Surovikin.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladislav_achalov = {
+		name = "Vladislav Achalov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladislav_Achalov.dds"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_valentin_varennikov = {
+		name = "Valentin Varennikov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/valentin_varennikov.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_leonid_khabarov = {
+		name = "Leonid Khabarov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/leonid_khaborov.png"
+			}
+		}
+		corps_commander={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	} 
+	
+	#air force
+	
+	SOV_vladimir_mikhaylov = {
+		name = "Vladimir Mikhaylov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/vladimir_mikhaylov.png"
+				small = "gfx/leaders/SOV/vladimir_mikhaylov_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = air_chief
+			idea_token = SOV_vladimir_mikhaylov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				air_chief_ground_support_2
+			}
+		}
+	}	
+
+	SOV_sergey_dronov = {
+		name = "Sergey Dronov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/sergey_dronov.png"
+				small = "gfx/leaders/SOV/sergey_dronov_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = air_chief
+			idea_token = SOV_sergey_dronov
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				air_chief_reform_2
+			}
+		}
+	}	
+
+	SOV_alexander_zelin = {
+		name = "Alexander Zelin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/alexander_zelin.png"
+				small = "gfx/leaders/SOV/alexander_zelin_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = air_chief
+			idea_token = SOV_alexander_zelin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				air_close_air_support_2
+			}
+		}
+	}	
+	
+	## Admirals ##
+
+	SOV_alexey_sorokin = {
+		name = "Alexey Sorokin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Alexey_Sorokin.dds"
+				small = "gfx/leaders/SOV/Alexey_Sorokin_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = navy_chief
+			idea_token = SOV_alexey_sorokin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+		}			
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_ivan_kapitanets = {
+		name = "Ivan Kapitanets"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Ivan_Kapitanets.dds"
+				small = "gfx/leaders/SOV/Ivan_Kapitanets_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = navy_chief
+			idea_token = SOV_alexey_sorokin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				navy_chief_maneuver_2
+			}
+		}				
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_nikolai_yevmenov = {
+		name = "Nikolai Yevmenov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Nikolai_Yevmenov_general.dds"
+				small = "gfx/leaders/SOV/Nikolai_Yevmenov_small.png"
+			}
+		}
+		advisor={
+			cost = 100			
+			slot = navy_chief
+			idea_token = SOV_alexey_sorokin
+			allowed = {
+				original_tag = SOV
+			}
+			
+			traits = {
+				navy_amphibious_assault_2
+			}
+		}				
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_konstantin_sidenko = {
+		name = "Konstantin Sidenko"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Konstantin_Sidenko_general.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_chernavin = {
+		name = "Vladimir Chernavin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Chernavin.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_korolyov = {
+		name = "Vladimir Korolyov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Korolyov.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_kuroyedov = {
+		name = "Vladimir Kuroyedov"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Kuroyedov.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_masorin = {
+		name = "Vladimir Masorin"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Masorin.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SOV_vladimir_vysotsky = {
+		name = "Vladimir Vysotsky"
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOV/Vladimir_Vysotsky_.dds"
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+
+	
+}
