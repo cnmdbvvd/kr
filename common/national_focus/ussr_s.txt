@@ -264,7 +264,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = SOV_Brand_new_fourteen_Five-Year_Plan
+	id = SOV_Brand_new_fourteen_Five_Year_Plan
 	icon = GFX_focus_SOV_Brand_new_fourteen_Five
 	x = -2
 	y = 1
@@ -291,4 +291,530 @@ shared_focus = {
 		set_variable = { USSR_industrial_capacity_factory = 0.07}
 		set_variable = { USSR_industrial_capacity_dockyard = 0.07}
 	}
+}
+
+# 全苏维埃信息化计划：
+shared_focus = {
+    id = SOV_League_wide_Informatization_Plan
+    icon = GFX_SOV_League_wide_Informatization_Plan
+    x = 0
+    y = 1
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    completion_reward = {
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_League_wide_Informatization_Plan"
+		add_to_variable = {
+			USSR_political_power_factor = 0.1
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_global_building_slots = 1
+			tooltip = global_building_slots_tt
+		}
+		
+    }
+}
+
+# 计算机帮助生产：
+shared_focus = {
+    id = SOV_Computers_assist_in_production
+    icon = GFX_SOV_Computers_assist_in_production
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 0
+    y = 2
+    cost = 4.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 1
+        focus = SOV_League_wide_Informatization_Plan
+    }
+	bypass = {
+		has_tech = tech_basic_automation
+	}
+    completion_reward = {
+        set_technology = {
+			tech_basic_automation = 1
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOV_Computers_assist in production"
+    }
+}
+
+# 集成电路部门：
+shared_focus = {
+    id = SOV_Integrated_Circuit_Department
+    icon = GFX_SOV_Integrated_Circuit_Department
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 0
+    y = 3
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 2
+        focus = SOV_Computers_assist_in_production
+    }
+    completion_reward = {
+        add_to_variable = {
+			USSR_political_power_factor = 0.1
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_research_speed_factor = 0.05
+			tooltip = research_speed_factor_tt
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOV_Integrated_Circuit_Department"
+    }
+}
+
+# 扩大计算机人才培养：
+shared_focus = {
+    id = SOV_Expand_computer_talent_development
+    icon = GFX_SOV_Expand_computer_talent_development
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -2
+    y = 4
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 3
+        focus = SOV_Integrated_Circuit_Department
+    }
+    completion_reward = {
+        add_timed_idea = {
+    		idea = SOV_expand_academy
+    		days = 80
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOV_Expand_computer_talent_development"
+    }
+}
+
+# 学习外国先进计划：
+shared_focus = {
+    id = SOV_Studying_advanced_foreign_programs
+    icon = GFX_SOV_Studying_advanced_foreign_programs
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 2
+    y = 4
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 4
+        focus = SOV_Integrated_Circuit_Department
+    }
+    completion_reward = {
+		add_opinion_modifier = {
+			target = ENG
+			modifier = small_increase
+		}
+		add_opinion_modifier = {
+			target = JAP
+			modifier = small_increase
+		}
+		add_opinion_modifier = {
+			target = USA
+			modifier = small_increase
+		}
+		add_opinion_modifier = {
+			target = FRA
+			modifier = small_increase
+		}
+		ENG = {
+			add_ideas = SOV_trade
+		}
+		JAP = {
+			add_ideas = SOV_trade
+		}
+		FRA = {
+			add_ideas = SOV_trade
+		}
+		USA = {
+			add_ideas = SOV_trade
+		}
+		add_tech_bonus = {
+		name = SOV_Expand_computer_talent_development
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 1
+		category = computing_tech
+		}
+		if = {
+			limt = {
+				has_tech = computing_tech_2010
+			}
+			complete_national_focus = SOV_Paperless_office
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Studying_advanced_foreign_programs"
+    }
+}
+
+# 无纸化办公：
+shared_focus = {
+    id = SOV_Paperless_office
+    icon = GFX_OV_Paperless_office
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 0
+    y = 5
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 5
+        focus = SOV_Expand_computer_talent_development
+    }
+    prerequisite = { # 前置组 6
+        focus = SOV_Studying_advanced_foreign_programs
+    }
+	
+    completion_reward = {
+        add_to_variable = {
+			USSR_political_power_factor = 0.15
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_civilian_factory_use = 3
+			tooltip = civilian_factory_use_tt
+		}
+		add_to_variable = {
+			USSR_global_building_slots_factor = 0.05
+			tooltip = global_building_slots_factor_tt
+		}
+		add_to_variable = {
+			USSR_production_speed_buildings_factor = 0.05
+			tooltip = production_speed_buildings_factor_tt
+		}
+		add_to_variable = {
+			USSR_mobilization_speed = 0.05
+			tooltip = mobilization_speed_tt
+		}
+		add_to_variable = {
+			USSR_industry_air_damage_factor = 0.15
+			tooltip = industry_air_damage_factor_tt
+		}
+		if = {
+			limt = {
+				NOT = {
+					has_tech = computing_tech_2010
+				}
+			}
+			set_technology = {computing_tech_2010 = 1}
+		}
+		log = "[GetDateText]: [Root.GetName]: Focus SOV_Paperless_office"
+    }
+}
+
+# 重启大规模工程：
+shared_focus = {
+    id = SOV_Restart_large_scale_project
+    icon = GFX_SOV_Restart_large_scale_project
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -4
+    y = 0
+    cost = 2.000
+    completion_reward = {
+		add_to_variable = {
+			USSR_political_power_factor = 0.1
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_global_building_slots = 1
+			tooltip = global_building_slots_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Restart_large_scale_project"
+    }
+}
+
+# 完善核能利用：
+shared_focus = {
+    id = SOV_Improve_use_of_nuclear_energy
+    icon = GFX_SOV_Improve_use_of_nuclear_energy
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -8
+    y = 0
+    cost = 2.000
+    completion_reward = {
+		202 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = nuclear_reactor
+				level = 1
+			}
+		}
+		195 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = nuclear_reactor
+				level = 1
+			}
+		}
+		586 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = nuclear_reactor
+				level = 1
+			}
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Improve_use_of_nuclear_energy"
+    }
+}
+
+# 扩大前沿重工业：
+shared_focus = {
+    id = SOV_Expand_advanced_heavy_industry
+    icon = GFX_SOV_Expand_advanced_heavy_industry
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -6
+    y = 2
+    cost = 4.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 7
+        focus = SOV_Improve_use_of_nuclear_energy
+    }
+    prerequisite = { # 前置组 8
+        focus = SOV_Restart_large_scale_project
+    }
+    completion_reward = {
+		add_tech_bonus = {
+		name = SOV_Expand_advanced_heavy_industry
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 1
+		category = electronics
+		}
+		add_tech_bonus = {
+		name = SOV_Expand_advanced_heavy_industry
+		bonus = 0.5
+		uses = 1
+		ahead_reduction = 2
+		category = industry
+		}
+		add_to_variable = {
+			USSR_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = {
+			USSR_line_change_production_efficiency_factor = 0.05
+			tooltip = line_change_production_efficiency_factor_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Expand_advanced_heavy_industry"
+    }
+}
+
+# 新西伯利亚计划：
+shared_focus = {
+    id = SOV_Novosibirsk_Plan
+    icon = GFX_SOV_Novosibirsk_Plan
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -4
+    y = 3
+    cost = 10.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 9
+        focus = SOV_Restart_large_scale_project
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_mobilization_speed = 0.05
+			tooltip = mobilization_speed_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Novosibirsk_Plan"
+    }
+}
+
+# 新合作社法案：
+shared_focus = {
+    id = SOV_New_Cooperative_Law
+    icon = GFX_SOV_New_Cooperative_Law
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -6
+    y = 4
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 10
+        focus = SOV_Expand_advanced_heavy_industry
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_local_resources_factor = 0.05
+			tooltip = local_resources_factor_tt
+		}
+		add_to_variable = {
+			USSR_production_factory_start_efficiency_factor = 0.05
+			tooltip = production_factory_start_efficiency_factor_tt
+		}
+		add_to_variable = {
+			USSR_research_speed_factor = 0.05
+			tooltip = research_speed_factor_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_New_Cooperative_Law"
+    }
+}
+
+# 中亚新工业区：
+shared_focus = {
+    id = SOV_New_Industrial_Zone_in_Central_Asia
+    icon = GFX_SOV_New_Industrial_Zone_in_Central_Asia
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = -4
+    y = 5
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 11
+        focus = SOV_Novosibirsk_Plan
+    }
+    prerequisite = { # 前置组 12
+        focus = SOV_New_Cooperative_Law
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_mobilization_speed = 0.05
+			tooltip = mobilization_speed_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_New_Industrial_Zone in_Central_Asia"
+    }
+}
+
+# 重启斯大林的大自然改造计划：
+shared_focus = {
+    id = SOV_Restart_Stalin_nature_transformation_plan
+    icon = GFX_SOV_Restart_Stalin_nature_transformation_plan
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x =4
+    y = 0
+    cost = 2.000
+    completion_reward = {
+		add_to_variable = {
+			USSR_political_power_factor = 0.1
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_global_building_slots = 1
+			tooltip = global_building_slots_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Restart_Stalin_nature_transformation_plan"
+    }
+}
+
+# 优化军费支出：
+shared_focus = {
+    id = SOV_Optimize_military_spending
+    icon = GFX_SOV_Optimize_military_spending
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 8
+    y = 0
+    cost = 2.000
+    completion_reward = {
+		add_to_variable = {
+			USSR_political_power_factor = 0.1
+			tooltip = political_power_factor_tt
+		}
+		add_to_variable = {
+			USSR_global_building_slots = 1
+			tooltip = global_building_slots_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Optimize_military_spending"
+    }
+}
+
+# 劳动生产率指标：
+shared_focus = {
+    id = SOV_Labor_productivity_indicator
+    icon = GFX_Labor_productivity_indicator
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x =6
+    y = 2
+    cost = 4.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 13
+        focus = SOV_Restart_Stalin_nature_transformation_plan
+    }
+    prerequisite = { # 前置组 14
+        focus = SOV_Optimize_military_spending
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_line_change_production_efficiency_factor = 0.15
+			tooltip = line_change_production_efficiency_factor
+		}
+		add_to_variable = {
+			USSR_production_factory_efficiency_gain_factor = 0.1
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		add_to_variable = {
+			USSR_industry_free_repair_factor = 0.25
+			tooltip = industry_free_repair_factor_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Labor_productivity_indicator"
+    }
+}
+
+# 减少外国粮食进口：
+shared_focus = {
+    id = SOV_Reduce_imports_foreign_grain
+    icon = GFX_SOV_Reduce_imports_foreign_grain
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 4
+    y = 3
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 15
+        focus = SOV_Restart_Stalin_nature_transformation_plan
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_min_export = -0.025
+			tooltip = min_export_tt
+		}
+		add_to_variable = {
+			USSR_civilian_factory_use = 2
+			tooltip = civilian_factory_use_tt
+		}
+		add_to_variable = {
+			USSR_consumer_goods_factor = -0.15
+			tooltip = consumer_goods_factor_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Reduce_imports_foreign_grain"
+    }
+}
+
+# 重启技术交流：
+shared_focus = {
+    id = SOV_Restart_Technical_Exchange
+    icon = GFX_SOV_Restart_Technical_Exchange
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 6
+    y = 4
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 16
+        focus = SOV_Labor_productivity_indicator
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_production_factory_max_efficiency_factor = 0.05
+			tooltip = production_factory_max_efficiency_factor_tt
+		}
+		add_to_variable = {
+			USSR_production_factory_efficiency_gain_factor = 0.1
+			tooltip = production_factory_efficiency_gain_factor_tt
+		}
+		
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Restart_Technical_Exchange"
+    }
+}
+
+# 农业信息化：
+shared_focus = {
+    id = SOV_Agricultural_Informatization
+    icon = GFX_SOV_Agricultural_Informatization
+    relative_position_id = SOV_League_wide_Informatization_Plan
+    x = 4
+    y = 5
+    cost = 3.000
+	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
+    prerequisite = { # 前置组 17
+        focus = SOV_Restart_Technical_Exchange
+    }
+    prerequisite = { # 前置组 18
+        focus = SOV_Reduce_imports_foreign_grain
+    }
+    completion_reward = {
+		add_to_variable = {
+			USSR_mobilization_speed = 0.05
+			tooltip = USSR_mobilization_speed_tt
+		}
+        log = "[GetDateText]: [Root.GetName]: Focus SOV_Agricultural_Informatization"
+    }
 }

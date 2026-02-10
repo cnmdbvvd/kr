@@ -157,5 +157,34 @@ ideas = {
                 }
 			}
 		}
+		SOV_trade = {
+			removal_cost = -1
+			picture = SOV_trade_icon
+			allowed = {
+				always = no
+			}
+			modifier = {
+				communism_acceptance = 15
+				consumer_goods_factor = -0.25
+				local_resources_factor = 0.25
+			}
+		}
+		SOV_expand_academy = {
+			removal_cost = -1
+			picture = SOV_expand_academy_icon
+			allowed = {
+				always = no
+			}
+			on_remove = { 
+				add_to_variable = {
+					USSR_electronics_research = 0.2
+				}
+				add_research_slot = 1
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				civilian_factory_use = 3
+			}
+		}
 	}
 }
