@@ -1,0 +1,29 @@
+ceshi = { #三年计划
+	cma = { #落实劳动条例
+		icon = gfx_xx_oo
+		cost = 50 #政治点数消耗
+		days_remove = 30 #任务持续时间
+		days_re_enable = 30 #决议冷却时间
+		modifier = { #决议过程中获得的效果
+			political_power_gain = 0.2 #每天政治点数获得+0.2
+		}
+		complete_effect = { #点击决议后获得的效果
+			add_to_variable = { #先去国策中定义变量后实现改革受挫效果增减
+				var = x
+				value = x
+				}
+		
+	}
+			
+	remove_effect = { #决议完成效果
+		add_days_mission_timeout = { #增加任务时间
+			mission = me #改革受挫
+			days = 7 #增加7天
+		}
+		add_to_variable = { #增加变量
+			var = x #改革受挫
+			value = -5 #减少5
+		}
+	}
+		}
+	}
