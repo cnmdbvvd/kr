@@ -107,4 +107,133 @@ spriteTypes = {
 		name = "GFX_USSR_red_army"
 		texturefile = "gfx/interface/ideas/SOV_shared_army_spirit.dds"
 	}
+	spriteType = {
+		name = "GFX_focus_Three_Year_Plan_for_Economic_Revival"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_Three_Year_Plan_for_Economic_Revival.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_The_Return_of_the_Accounting_Ruble"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_The_Return_of_the_Accounting_Ruble.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Reform_the_State_Planning_Commission"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Reform_the_State_Planning_Commission.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Reform_the_State_Planning_Commission"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Reform_the_State_Planning_Commission.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Revising_the_textbook_of_political_economy"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Revising_the_textbook_of_political_economy.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Oriented_towards_the_tertiary_industry"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Oriented_towards_the_tertiary_industry.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_The_economic_sector_is_completely_renewed"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_The_economic_sector_is_completely_renewed.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Optimize_enterprise_accounting_mechanisms"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Optimize_enterprise_accounting_mechanisms.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Technical_cadres_decide_everything"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Technical_cadres_decide_everything.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Soviet_economic_statistical_system"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Soviet_economic_statistical_system.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Clarify_the_principles_of_physical_indicators"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Clarify_the_principles_of_physical_indicators.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Encourage_technological_innovation"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Encourage_technological_innovation.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Brand_new_fourteen_Five"
+		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Brand_new_fourteen_Five.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_League_wide_Informatization_Plan"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_League_wide_Informatization_Plan.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Computers_assist_in_production"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Computers_assist_in_production.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Integrated_Circuit_Department"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Integrated_Circuit_Department.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Expand_computer_talent_development"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Expand_computer_talent_development.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Studying_advanced_foreign_programs"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Studying_advanced_foreign_programs.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_OV_Paperless_office"
+		texturefile = "gfx/interface/goals/SOV/GFX_OV_Paperless_office.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Restart_large_scale_project"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Restart_large_scale_project.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Improve_use_of_nuclear_energy"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Improve_use_of_nuclear_energy.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Expand_advanced_heavy_industry"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Expand_advanced_heavy_industry.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Novosibirsk_Plan"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Novosibirsk_Plan.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_New_Cooperative_Law"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_New_Cooperative_Law.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_New_Industrial_Zone_in_Central_Asia"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_New_Industrial_Zone_in_Central_Asia.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Restart_Stalin_nature_transformation_plan"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Restart_Stalin_nature_transformation_plan.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Optimize_military_spending"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Optimize_military_spending.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_Labor_productivity_indicator"
+		texturefile = "gfx/interface/goals/SOV/GFX_Labor_productivity_indicator.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Reduce_imports_foreign_grain"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Reduce_imports_foreign_grain.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Restart_Technical_Exchange"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Restart_Technical_Exchange.png"
+	}
+	spriteType = {
+		name = "gfx/interface/goals/SOV/GFX_SOV_Agricultural_Informatization"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Agricultural_Informatization.png"
+	}
+
 }
