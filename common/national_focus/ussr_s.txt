@@ -8,9 +8,10 @@ shared_focus = {
 		
 	}
 }
+
 shared_focus = {
 	id = SOV_The_Return_of_the_Accounting_Ruble
-	icon = GFX_focus_SOV_The_Return_of_the_Accounting_Ruble
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_The_Return_of_the_Accounting_Ruble
 	x = -1
 	y = 1
 	cost = 2
@@ -32,7 +33,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Reform_the_State_Planning_Commission
-	icon = GFX_focus_SOV_Reform_the_State_Planning_Commission
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Reform_the_State_Planning_Commission
 	x = 1
 	y = 1
 	cost = 2
@@ -51,7 +52,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Eliminate_economic_parasites
-	icon = GFX_focus_SOV_Reform_the_State_Planning_Commission
+	icon = gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites
 	x = -1
 	y = 1
 	cost = 3
@@ -60,10 +61,10 @@ shared_focus = {
 		focus = SOV_The_Return_of_the_Accounting_Ruble
 	}
 	completion_reward = {
-		custom_effect_tooltip = USSR_Economic_collapse
+		custom_effect_tooltip = USSR_Economic_collapse_tt
         add_to_variable = {
-			SOV_consumer_goods_expected_value = -0.25
-			tooltip = consumer_goods_expected_value_tt
+			SOV_consumer_goods_factor = -0.25
+			tooltip = consumer_goods_factor_tt
 		}
         add_to_variable = {
 			SOV_production_speed_buildings_factor = 0.075
@@ -73,7 +74,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Revising_the_textbook_of_political_economy
-	icon = GFX_focus_SOV_Revising_the_textbook_of_political_economy
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Revising_the_textbook_of_political_economy
 	x = 0
 	y = 1
 	cost = 3
@@ -89,13 +90,13 @@ shared_focus = {
 		custom_effect_tooltip = USSR_Economic_collapse_tt
         add_to_variable = {
 			SOV_stability_factor = 0.05
-			tooltip = SOV_stability_factor_tt
+			tooltip = stability_factor_tt
 		}
 	}
 }
 shared_focus = {
 	id = SOV_Oriented_towards_the_tertiary_industry
-	icon = GFX_focus_SOV_Oriented_towards_the_tertiary_industry
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Oriented_towards_the_tertiary_industry
 	x = 0
 	y = 1
 	cost = 2
@@ -104,26 +105,22 @@ shared_focus = {
 		focus = SOV_Revising_the_textbook_of_political_economy
 	}
 	completion_reward = {
-		119 = {
+		219 = {
 			add_building_construction = {
 				type = industrial_complex
 				level = 2
-			}
-			add_building_construction = {
-				type = global_building_slots
-				level = 4
 			}
 		}
 		custom_effect_tooltip = USSR_Economic_collapse_tt
         add_to_variable = {
 			SOV_stability_factor = 0.1
-			tooltip = SOV_stability_factor_tt
+			tooltip = stability_factor_tt
 		}
 	}
 }
 shared_focus = {
 	id = SOV_The_economic_sector_is_completely_renewed
-	icon = GFX_focus_SOV_The_economic_sector_is_completely_renewed
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_The_economic_sector_is_completely_renewed
 	x = -1
 	y = 1
 	cost = 2
@@ -155,7 +152,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Optimize_enterprise_accounting_mechanisms
-	icon = GFX_focus_SOV_Optimize_enterprise_accounting_mechanisms
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Optimize_enterprise_accounting_mechanisms
 	x = 0
 	y = 1
 	cost = 2
@@ -177,7 +174,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Technical_cadres_decide_everything
-	icon = GFX_focus_SOV_Technical_cadres_decide_everything
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Technical_cadres_decide_everything
 	x = 0
 	y = 1
 	cost = 2
@@ -199,7 +196,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Soviet_economic_statistical_system
-	icon = GFX_focus_SOV_Soviet_economic_statistical_system
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Soviet_economic_statistical_system
 	x = 1
 	y = 1
 	cost = 2
@@ -221,7 +218,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Clarify_the_principles_of_physical_indicators
-	icon = GFX_focus_SOV_Clarify_the_principles_of_physical_indicators
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Clarify_the_principles_of_physical_indicators
 	x = 0
 	y = 1
 	cost = 2
@@ -237,13 +234,13 @@ shared_focus = {
 		}
 		add_to_variable = {
 			SOV_consumer_goods_factor = -0.1
-			tooltip = civilian_factory_use_tt
+			tooltip = consumer_goods_factor_tt
 		}
 	}
 }
 shared_focus = {
 	id = SOV_Encourage_technological_innovation
-	icon = GFX_focus_SOV_Encourage_technological_innovation
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Encourage_technological_innovation
 	x = 0
 	y = 1
 	cost = 2
@@ -265,7 +262,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = SOV_Brand_new_fourteen_Five_Year_Plan
-	icon = GFX_focus_SOV_Brand_new_fourteen_Five
+	icon = gfx/interface/goals/SOV/GFX_focus_SOV_Brand_new_fourteen_Five
 	x = -2
 	y = 1
 	cost = 2
@@ -283,11 +280,11 @@ shared_focus = {
 		remove_dynamic_modifier = {
 			modifier = USSR_Economic_collapse
 		}
-		add_dynamic_modifier = USSR_Socialist_planned_economy
+		add_dynamic_modifier =  { modifier = USSR_Socialist_planned_economy }
 		set_variable = { USSR_production_speed_buildings_factor = 0.1}
-		set_variable = { consumer_goods_factor = -0.01}
-		set_variable = { line_change_production_efficiency_factor = 0.1}
-		set_variable = { production_factory_start_efficiency_factor = 0.1}
+		set_variable = { USSR_consumer_goods_expected_value = -0.01}
+		set_variable = { USSR_line_change_production_efficiency_factor = 0.1}
+		set_variable = { USSR_production_factory_start_efficiency_factor = 0.1}
 		set_variable = { USSR_industrial_capacity_factory = 0.07}
 		set_variable = { USSR_industrial_capacity_dockyard = 0.07}
 	}
@@ -296,12 +293,13 @@ shared_focus = {
 # 全苏维埃信息化计划：
 shared_focus = {
     id = SOV_League_wide_Informatization_Plan
-    icon = GFX_SOV_League_wide_Informatization_Plan
+    icon = gfx/interface/goals/SOV/GFX_SOV_League_wide_Informatization_Plan
     x = 0
     y = 1
     cost = 3.000
 	relative_position_id = SOV_Brand_new_fourteen_Five_Year_Plan
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
         log = "[GetDateText]: [Root.GetName]: Focus SOV_League_wide_Informatization_Plan"
 		add_to_variable = {
 			USSR_political_power_factor = 0.1
@@ -318,7 +316,7 @@ shared_focus = {
 # 计算机帮助生产：
 shared_focus = {
     id = SOV_Computers_assist_in_production
-    icon = GFX_SOV_Computers_assist_in_production
+    icon = gfx/interface/goals/SOV/GFX_SOV_Computers_assist_in_production
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 0
     y = 2
@@ -341,7 +339,7 @@ shared_focus = {
 # 集成电路部门：
 shared_focus = {
     id = SOV_Integrated_Circuit_Department
-    icon = GFX_SOV_Integrated_Circuit_Department
+    icon = gfx/interface/goals/SOV/GFX_SOV_Integrated_Circuit_Department
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 0
     y = 3
@@ -351,6 +349,7 @@ shared_focus = {
         focus = SOV_Computers_assist_in_production
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
         add_to_variable = {
 			USSR_political_power_factor = 0.1
 			tooltip = political_power_factor_tt
@@ -366,7 +365,7 @@ shared_focus = {
 # 扩大计算机人才培养：
 shared_focus = {
     id = SOV_Expand_computer_talent_development
-    icon = GFX_SOV_Expand_computer_talent_development
+    icon = gfx/interface/goals/SOV/GFX_SOV_Expand_computer_talent_development
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -2
     y = 4
@@ -387,7 +386,7 @@ shared_focus = {
 # 学习外国先进计划：
 shared_focus = {
     id = SOV_Studying_advanced_foreign_programs
-    icon = GFX_SOV_Studying_advanced_foreign_programs
+    icon = gfx/interface/goals/SOV/GFX_SOV_Studying_advanced_foreign_programs
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 2
     y = 4
@@ -445,7 +444,7 @@ shared_focus = {
 # 无纸化办公：
 shared_focus = {
     id = SOV_Paperless_office
-    icon = GFX_OV_Paperless_office
+    icon = gfx/interface/goals/SOV/GFX_OV_Paperless_office
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 0
     y = 5
@@ -459,6 +458,7 @@ shared_focus = {
     }
 	
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
         add_to_variable = {
 			USSR_political_power_factor = 0.15
 			tooltip = political_power_factor_tt
@@ -498,12 +498,13 @@ shared_focus = {
 # 重启大规模工程：
 shared_focus = {
     id = SOV_Restart_large_scale_project
-    icon = GFX_SOV_Restart_large_scale_project
+    icon = gfx/interface/goals/SOV/GFX_SOV_Restart_large_scale_project
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -4
     y = 0
     cost = 2.000
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_political_power_factor = 0.1
 			tooltip = political_power_factor_tt
@@ -519,7 +520,7 @@ shared_focus = {
 # 完善核能利用：
 shared_focus = {
     id = SOV_Improve_use_of_nuclear_energy
-    icon = GFX_SOV_Improve_use_of_nuclear_energy
+    icon = gfx/interface/goals/SOV/GFX_SOV_Improve_use_of_nuclear_energy
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -8
     y = 0
@@ -553,7 +554,7 @@ shared_focus = {
 # 扩大前沿重工业：
 shared_focus = {
     id = SOV_Expand_advanced_heavy_industry
-    icon = GFX_SOV_Expand_advanced_heavy_industry
+    icon = gfx/interface/goals/SOV/GFX_SOV_Expand_advanced_heavy_industry
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -6
     y = 2
@@ -580,6 +581,7 @@ shared_focus = {
 		ahead_reduction = 2
 		category = industry
 		}
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_production_factory_start_efficiency_factor = 0.05
 			tooltip = production_factory_start_efficiency_factor_tt
@@ -595,7 +597,7 @@ shared_focus = {
 # 新西伯利亚计划：
 shared_focus = {
     id = SOV_Novosibirsk_Plan
-    icon = GFX_SOV_Novosibirsk_Plan
+    icon = gfx/interface/goals/SOV/GFX_SOV_Novosibirsk_Plan
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -4
     y = 3
@@ -605,6 +607,7 @@ shared_focus = {
         focus = SOV_Restart_large_scale_project
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_mobilization_speed = 0.05
 			tooltip = mobilization_speed_tt
@@ -616,7 +619,7 @@ shared_focus = {
 # 新合作社法案：
 shared_focus = {
     id = SOV_New_Cooperative_Law
-    icon = GFX_SOV_New_Cooperative_Law
+    icon = gfx/interface/goals/SOV/GFX_SOV_New_Cooperative_Law
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -6
     y = 4
@@ -626,6 +629,7 @@ shared_focus = {
         focus = SOV_Expand_advanced_heavy_industry
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_local_resources_factor = 0.05
 			tooltip = local_resources_factor_tt
@@ -645,7 +649,7 @@ shared_focus = {
 # 中亚新工业区：
 shared_focus = {
     id = SOV_New_Industrial_Zone_in_Central_Asia
-    icon = GFX_SOV_New_Industrial_Zone_in_Central_Asia
+    icon = gfx/interface/goals/SOV/GFX_SOV_New_Industrial_Zone_in_Central_Asia
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = -4
     y = 5
@@ -658,6 +662,7 @@ shared_focus = {
         focus = SOV_New_Cooperative_Law
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_mobilization_speed = 0.05
 			tooltip = mobilization_speed_tt
@@ -669,12 +674,13 @@ shared_focus = {
 # 重启斯大林的大自然改造计划：
 shared_focus = {
     id = SOV_Restart_Stalin_nature_transformation_plan
-    icon = GFX_SOV_Restart_Stalin_nature_transformation_plan
+    icon = gfx/interface/goals/SOV/GFX_SOV_Restart_Stalin_nature_transformation_plan
     relative_position_id = SOV_League_wide_Informatization_Plan
     x =4
     y = 0
     cost = 2.000
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_political_power_factor = 0.1
 			tooltip = political_power_factor_tt
@@ -690,12 +696,13 @@ shared_focus = {
 # 优化军费支出：
 shared_focus = {
     id = SOV_Optimize_military_spending
-    icon = GFX_SOV_Optimize_military_spending
+    icon = gfx/interface/goals/SOV/GFX_SOV_Optimize_military_spending
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 8
     y = 0
     cost = 2.000
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_political_power_factor = 0.1
 			tooltip = political_power_factor_tt
@@ -711,7 +718,7 @@ shared_focus = {
 # 劳动生产率指标：
 shared_focus = {
     id = SOV_Labor_productivity_indicator
-    icon = GFX_Labor_productivity_indicator
+    icon = gfx/interface/goals/SOV/GFX_Labor_productivity_indicator
     relative_position_id = SOV_League_wide_Informatization_Plan
     x =6
     y = 2
@@ -724,6 +731,7 @@ shared_focus = {
         focus = SOV_Optimize_military_spending
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_line_change_production_efficiency_factor = 0.15
 			tooltip = line_change_production_efficiency_factor
@@ -743,7 +751,7 @@ shared_focus = {
 # 减少外国粮食进口：
 shared_focus = {
     id = SOV_Reduce_imports_foreign_grain
-    icon = GFX_SOV_Reduce_imports_foreign_grain
+    icon = gfx/interface/goals/SOV/GFX_SOV_Reduce_imports_foreign_grain
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 4
     y = 3
@@ -753,6 +761,7 @@ shared_focus = {
         focus = SOV_Restart_Stalin_nature_transformation_plan
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_min_export = -0.025
 			tooltip = min_export_tt
@@ -772,7 +781,7 @@ shared_focus = {
 # 重启技术交流：
 shared_focus = {
     id = SOV_Restart_Technical_Exchange
-    icon = GFX_SOV_Restart_Technical_Exchange
+    icon = gfx/interface/goals/SOV/GFX_SOV_Restart_Technical_Exchange
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 6
     y = 4
@@ -782,6 +791,7 @@ shared_focus = {
         focus = SOV_Labor_productivity_indicator
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_production_factory_max_efficiency_factor = 0.05
 			tooltip = production_factory_max_efficiency_factor_tt
@@ -798,7 +808,7 @@ shared_focus = {
 # 农业信息化：
 shared_focus = {
     id = SOV_Agricultural_Informatization
-    icon = GFX_SOV_Agricultural_Informatization
+    icon = gfx/interface/goals/SOV/GFX_SOV_Agricultural_Informatization
     relative_position_id = SOV_League_wide_Informatization_Plan
     x = 4
     y = 5
@@ -811,6 +821,7 @@ shared_focus = {
         focus = SOV_Reduce_imports_foreign_grain
     }
     completion_reward = {
+		custom_effect_tooltip = USSR_Socialist_planned_economy_tt
 		add_to_variable = {
 			USSR_mobilization_speed = 0.05
 			tooltip = USSR_mobilization_speed_tt
