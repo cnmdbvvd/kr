@@ -1,0 +1,524 @@
+# 第三十次党代表大会：
+shared_focus = {
+    id = SOV_The_th_Party_Congress
+    icon = gfx/interface/goals/SOV/SOV_The_30th_Party_Congress
+    x = 0
+    y = 0
+    cost = 5.000
+    completion_reward = {
+    }
+}
+
+# 不再孤独：
+shared_focus = {
+    id = SOV_No_longer_alone
+    icon = gfx/interface/goals/SOV_No_longer_alone
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 0
+    cost = 3.000
+    completion_reward = {
+    }
+}
+
+# 人民之敌：
+shared_focus = {
+    id = SOV_Enemy_of_the_people
+    icon = gfx/interface/goals/SOV_Enemy_of_the_people
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 4
+    cost = 5.000
+    prerequisite = { # 前置组 7
+        focus = SOV_No_longer_alone
+    }
+    completion_reward = {
+    }
+}
+
+# 赋权内务部：
+shared_focus = {
+    id = SOV_Ministry_of_Empowerment_and_Internal_Affairs
+    icon = gfx/interface/goals/SOV_Ministry_of_Empowerment_and_Internal_Affairs
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 6
+    cost = 3.000
+    prerequisite = { # 前置组 21
+        focus = SOV_Enemy_of_the_people
+    }
+    completion_reward = {
+    }
+}
+
+# 打击腐败官僚：
+shared_focus = {
+    id = SOV_Crack_down_on_corrupt_officials
+    icon = gfx/interface/goals/SOV_Crack_down_on_corrupt_officials
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -2
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 22
+        focus = SOV_Ministry_of_Empowerment_and_Internal_Affairs
+    }
+    completion_reward = {
+    }
+}
+
+# 铲除精神鸦片：
+shared_focus = {
+    id = SOV_Eradicate_spiritual_opium
+    icon = gfx/interface/goals/SOV_Eradicate_spiritual_opium
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 2
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 23
+        focus = SOV_Ministry_of_Empowerment_and_Internal_Affairs
+    }
+    completion_reward = {
+    }
+}
+
+# 重组线人网络：
+shared_focus = {
+    id = SOV_Reorganize_the_informant_network
+    icon = gfx/interface/goals/SOV/SOV_Reorganize_the_informant_network
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 10
+    cost = 4.000
+    prerequisite = { # 前置组 24
+        focus = SOV_Crack_down_on_corrupt_officials
+        focus = SOV_Eradicate_spiritual_opium
+    }
+    completion_reward = {
+    }
+}
+
+# 战斗在文字间：
+shared_focus = {
+    id = SOV_The_battle_is_between_the_words
+    icon = gfx/interface/goals/SOV/SOV_The_battle_is_between_the_words
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -2
+    y = 12
+    cost = 4.000
+    prerequisite = { # 前置组 25
+        focus = SOV_Reorganize_the_informant_network
+    }
+    completion_reward = {
+    }
+}
+
+# 遏制修正主义分子：
+shared_focus = {
+    id = SOV_Suppress_the_revisionists
+    icon = gfx/interface/goals/SOV/SOV_Suppress_the_revisionists
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 2
+    y = 12
+    cost = 4.000
+    prerequisite = { # 前置组 26
+        focus = SOV_Reorganize_the_informant_network
+    }
+    completion_reward = {
+    }
+}
+
+# 如严冬一般残酷：
+shared_focus = {
+    id = SOV_As_cruel_as_the_dead_of_winter
+    icon = gfx/interface/goals/SOV/SOV_As_cruel_as_the_dead_of_winter
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 14
+    cost = 3.000
+    prerequisite = { # 前置组 27
+        focus = SOV_The_battle_is_between_the_words
+        focus = SOV_Suppress_the_revisionists
+    }
+    completion_reward = {
+    }
+}
+
+# 人民之党：
+shared_focus = {
+    id = SOV_People_s_Party
+    icon = gfx/interface/goals/SOV/SOV_People_s_Party
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -9
+    y = 4
+    cost = 5.000
+    prerequisite = { # 前置组 8
+        focus = SOV_No_longer_alone
+    }
+    completion_reward = {
+    }
+}
+
+# 吸纳积极分子：
+shared_focus = {
+    id = SOV_Recruit_activists
+    icon = gfx/interface/goals/SOV/SOV_Recruit_activists
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -9
+    y = 6
+    cost = 3.000
+    prerequisite = { # 前置组 9
+        focus = SOV_People_s_Party
+        focus = SOV_Recruit_activists
+    }
+    completion_reward = {
+    }
+}
+
+# 批评与自我批评：
+shared_focus = {
+    id = SOV_Criticism_and_Self_Criticism
+    icon = gfx/interface/goals/SOV/SOV_Criticism_and_Self_Criticism
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -13
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 10
+        focus = SOV_People_s_Party
+    }
+    completion_reward = {
+    }
+}
+
+# 走进基层：
+shared_focus = {
+    id = SOV_Going_into_the_grassroots
+    icon = gfx/interface/goals/SOV/SOV_Going_into_the_grassroots
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -5
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 11
+        focus = SOV_People_s_Party
+    }
+    completion_reward = {
+    }
+}
+
+# 重申党的纪律：
+shared_focus = {
+    id = SOV_Reaffirm_the_Party_s_discipline
+    icon = gfx/interface/goals/SOV/SOV_Reaffirm_the_Party_s_discipline
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -11
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 12
+        focus = SOV_Criticism_and_Self_Criticism
+        focus = SOV_Recruit_activists
+    }
+    completion_reward = {
+    }
+}
+
+# 党领导一切：
+shared_focus = {
+    id = SOV_The_Party_leads_everything
+    icon = gfx/interface/goals/SOV/SOV_The_Party_leads_everything
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -9
+    y = 10
+    cost = 3.000
+    prerequisite = { # 前置组 15
+        focus = SOV_Reaffirm_the_Party_s_discipline
+        focus = SOV_Reform_the_Communist_Youth_League
+    }
+    completion_reward = {
+    }
+}
+
+# 保证纯洁性：
+shared_focus = {
+    id = SOV_Ensure_purity
+    icon = gfx/interface/goals/SOV/SOV_Ensure_purity
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -12
+    y = 10
+    cost = 3.000
+    prerequisite = { # 前置组 14
+        focus = SOV_Reaffirm_the_Party_s_discipline
+        focus = SOV_Reform_the_Communist_Youth_League
+    }
+    completion_reward = {
+    }
+}
+
+# 重提阶级斗争：
+shared_focus = {
+    id = SOV_Revisiting_class_struggle
+    icon = gfx/interface/goals/SOV/SOV_Revisiting_class_struggle
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -6
+    y = 10
+    cost = 4.000
+    prerequisite = { # 前置组 17
+        focus = SOV_Reaffirm_the_Party_s_discipline
+        focus = SOV_Reform_the_Communist_Youth_League
+    }
+    completion_reward = {
+    }
+}
+
+# 保证党内思想统一：
+shared_focus = {
+    id = SOV_Ensure_ideological_unity_within_the_Party
+    icon = gfx/interface/goals/SOV/SOV_Ensure_ideological_unity_within_the_Party
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -9
+    y = 12
+    cost = 5.000
+    prerequisite = { # 前置组 18
+        focus = SOV_Ensure_purity
+        focus = SOV_The_Party_leads_everything
+        focus = SOV_Revisiting_class_struggle
+    }
+    completion_reward = {
+    }
+}
+
+# 落实民主集中制：
+shared_focus = {
+    id = SOV_Implement_the_system_of_democratic_centralism
+    icon = gfx/interface/goals/SOV/SOV_Implement_the_system_of_democratic_centralism
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -9
+    y = 14
+    cost = 4.000
+    prerequisite = { # 前置组 19
+        focus = SOV_Ensure_ideological_unity_within_the_Party
+    }
+    completion_reward = {
+    }
+}
+
+# 人民之中：
+shared_focus = {
+    id = SOV_Among_the_People
+    icon = gfx/interface/goals/SOV/SOV_Among_the_People
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 9
+    y = 4
+    cost = 5.000
+    prerequisite = { # 前置组 38
+        focus = SOV_No_longer_alone
+    }
+    completion_reward = {
+    }
+}
+
+# 地方有限自主权：
+shared_focus = {
+    id = SOV_Limited_local_autonomy
+    icon = gfx/interface/goals/SOV/SOV_Limited_local_autonomy
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 5
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 35
+        focus = SOV_Among_the_People
+    }
+    completion_reward = {
+    }
+}
+
+# 教育改革：
+shared_focus = {
+    id = SOV_Education_reform
+    icon = gfx/interface/goals/SOV/SOV_Education_reform
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 9
+    y = 6
+    cost = 3.000
+    prerequisite = { # 前置组 36
+        focus = SOV_Among_the_People
+    }
+    completion_reward = {
+    }
+}
+
+# 改革举报制度：
+shared_focus = {
+    id = SOV_Reform_the_reporting_system
+    icon = gfx/interface/goals/SOV/SOV_Reform_the_reporting_system
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 13
+    y = 6
+    cost = 4.000
+    prerequisite = { # 前置组 37
+        focus = SOV_Among_the_People
+    }
+    completion_reward = {
+    }
+}
+
+# 社会主义竞赛：
+shared_focus = {
+    id = SOV_Socialist_competition
+    icon = gfx/interface/goals/SOV/SOV_Socialist_competition
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 7
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 33
+        focus = SOV_Limited_local_autonomy
+        focus = SOV_Education_reform
+        focus = SOV_Reform_the_reporting_system
+    }
+    completion_reward = {
+    }
+}
+
+# 现代化邮电部门：
+shared_focus = {
+    id = SOV_Modernized_postal_and_telecommunications_department
+    icon = gfx/interface/goals/SOV/SOV_Modernized_postal_and_telecommunications_department
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 11
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 34
+        focus = SOV_Limited_local_autonomy
+        focus = SOV_Education_reform
+        focus = SOV_Reform_the_reporting_system
+    }
+    completion_reward = {
+    }
+}
+
+# 撤销冗余办公室：
+shared_focus = {
+    id = SOV_Abolish_redundant_offices
+    icon = gfx/interface/goals/SOV/SOV_Abolish_redundant_offices
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 6
+    y = 10
+    cost = 3.000
+    prerequisite = { # 前置组 30
+        focus = SOV_Socialist_competition
+        focus = SOV_Modernized_postal_and_telecommunications_department
+    }
+    completion_reward = {
+    }
+}
+
+# 试行基层民主：
+shared_focus = {
+    id = SOV_Pilot_grassroots_democracy
+    icon = gfx/interface/goals/SOV/SOV_Pilot_grassroots_democracy
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 9
+    y = 10
+    cost = 3.000
+    prerequisite = { # 前置组 31
+        focus = SOV_Socialist_competition
+        focus = SOV_Modernized_postal_and_telecommunications_department
+    }
+    completion_reward = {
+    }
+}
+
+# “小人物”的声音：
+shared_focus = {
+    id = SOV_The_Voice_of_the_Ordinary_Person
+    icon = gfx/interface/goals/SOV/SOV_The_Voice_of_the_Ordinary_Person
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 12
+    y = 10
+    cost = 4.000
+    prerequisite = { # 前置组 32
+        focus = SOV_Socialist_competition
+        focus = SOV_Modernized_postal_and_telecommunications_department
+    }
+    completion_reward = {
+    }
+}
+
+# 千禧年宪法：
+shared_focus = {
+    id = SOV_Millennium_Constitution
+    icon = gfx/interface/goals/SOV/SOV_Millennium_Constitution
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 9
+    y = 12
+    cost = 3.000
+    prerequisite = { # 前置组 29
+        focus = SOV_Abolish_redundant_offices
+        focus = SOV_Pilot_grassroots_democracy
+        focus = SOV_The_Voice_of_the_Ordinary_Person
+    }
+    completion_reward = {
+    }
+}
+
+# 苏维埃兄弟共和国：
+shared_focus = {
+    id = SOV_Soviet_Union_of_Brothers_Republics
+    icon = gfx/interface/goals/SOV/SOV_Soviet_Union_of_Brothers_Republics
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 9
+    y = 14
+    cost = 5.000
+    prerequisite = { # 前置组 28
+        focus = SOV_Millennium_Constitution
+    }
+    completion_reward = {
+    }
+}
+
+# 最美好的前途：
+shared_focus = {
+    id = SOV_The_brightest_future
+    icon = gfx/interface/goals/SOV/SOV_The_brightest_future
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 17
+    cost = 5.000
+    prerequisite = { # 前置组 20
+        focus = SOV_Implement_the_system_of_democratic_centralism
+        focus = SOV_As_cruel_as_the_dead_of_winter
+        focus = SOV_Soviet_Union_of_Brothers_Republics
+    }
+    completion_reward = {
+    }
+}
+
+# 不再孤独：
+shared_focus = {
+    id = SOV_No_longer_alone
+    icon = gfx/interface/goals/SOV/SOV_No_longer_alone
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = 0
+    y = 2
+    cost = 3.000
+    prerequisite = { # 前置组 6
+        focus = SOV_The_30th_Party_Congress
+    }
+    completion_reward = {
+    }
+}
+
+# 改革共青团：
+shared_focus = {
+    id = SOV_Reform_the_Communist_Youth_League
+    icon = gfx/interface/goals/SOV/SOV_Reform_the_Communist_Youth_League
+    relative_position_id = SOV_The_30th_Party_Congress
+    x = -7
+    y = 8
+    cost = 3.000
+    prerequisite = { # 前置组 16
+        focus = SOV_Recruit_activists
+        focus = SOV_Going_into_the_grassroots
+    }
+    completion_reward = {
+    }
+}
+
