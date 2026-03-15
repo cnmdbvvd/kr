@@ -1,0 +1,29 @@
+three_year_plan = { #三年计划
+	crd = { #返聘失业工人
+		icon = muta
+		cost = 50 #政治点数消耗
+		days_remove = 30 #任务持续时间
+		days_re_enable = 30 #决议冷却时间
+		modifier = { #决议过程中获得的效果
+			production_factory_efficiency_gain_factor = 0.20 #生产效率增益+20%
+		}
+		complete_effect = { #点击决议后获得的效果
+				add_days_mission_timeout = { #增加任务时间
+					mission = Reform_has_beenfrustrated #改革受挫
+					days = -5 #减少5天
+				}
+		
+	}
+			
+	remove_effect = { #决议完成效果
+		add_days_mission_timeout = { #增加任务时间
+			mission = three_year_plan #三年计划
+			days = -7 #减少7天
+		}
+		add_to_variable = { #变量增加
+			var = x #改革受挫
+			value = 5 #增加5
+		}
+	}
+		}
+	}
