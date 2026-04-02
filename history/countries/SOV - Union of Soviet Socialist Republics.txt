@@ -290,7 +290,7 @@ set_variable = {SOV_line_change_production_efficiency_factor = -0.5}
 
 set_variable = {SOV_production_factory_start_efficiency_factor = -0.2}
 set_variable = {SOV_production_lack_of_resource_penalty_factor = -0.5}
-set_variable = {SOV_production_lack_of_resource_penalty_factor = -0.5}
+set_variable = {SOV_production_lack_of_resource_penalty_factor = 0.5}
 set_variable = {SOV_political_power_cost = 0.5}
 set_variable = {SOV_research_speed_factor = -0.15}
 set_variable = {SOV_industrial_capacity_factory = -0.25}
@@ -468,7 +468,7 @@ set_variable = { USSR_core_attack_factor = -0.15 }
 set_variable = { USSR_core_defense_factor = -0.15 }
 set_variable = { USSR_army_strength_factor = -0.15 }
 set_variable = { USSR_command_power_gain_mult = -0.15 }
-set_variable = { USSR_org_loss_when_moving = -0.15 }
+set_variable = { USSR_org_loss_when_moving = 0.15 }
 set_variable = { USSR_land_reinforce_rate = -0.15 }
 set_variable = { USSR_land_doctrine_cost_factor = -0.15 }
 set_variable = { USSR_training_time_factor = 0.4 }

@@ -1,8 +1,0 @@
-three_year_plan = {
-    icon = gu_gu_ga_ga
-    visible_when_empty = yes
-    priority = 100
-    allowed = {
-        tag = sov
-    }
-}

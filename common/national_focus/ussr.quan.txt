@@ -10,9 +10,4 @@ focus_tree = {
 	Reset_on_civilwarno = no
 	default = no
 	shared_focus = SOV_Three_Year_Plan_for_Economic_Revival
-	shared_focus = SOV_League_wide_Informatization_Plan
-	shared_focus = SOV_Improve_use_of_nuclear_energy
-	shared_focus = SOV_Restart_large_scale_project
-	shared_focus = SOV_Restart_Stalin_nature_transformation_plan
-	shared_focus = SOV_Optimize_military_spending
 }

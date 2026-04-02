@@ -107,9 +107,9 @@ spriteTypes = {
 		name = "GFX_USSR_red_army"
 		texturefile = "gfx/interface/ideas/SOV_shared_army_spirit.dds"
 	}
-	spriteType = {
+		spriteType = {
 		name = "GFX_focus_Three_Year_Plan_for_Economic_Revival"
-		texturefile = "gfx/interface/goals/SOV/GFX_focus_Three_Year_Plan_for_Economic_Revival.png"
+		texturefile = "gfx/interface/goals/GFX_focus_Three_Year_Plan_for_Economic_Revival.png"
 	}
 	spriteType = {
 		name = "gfx/interface/goals/SOV/GFX_focus_SOV_The_Return_of_the_Accounting_Ruble"
@@ -128,8 +128,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/GFX_focus_SOV_Revising_the_textbook_of_political_economy.png"
 	}
 	spriteType = {
-		name = "gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites"
-		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites.png"
+		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Revising_the_textbook_of_political_economy"
+		texturefile = "gfx/interface/goals/SOV/GFX_SOV_Eliminate_economic_parasites"
 	}
 	spriteType = {
 		name = "gfx/interface/goals/SOV/GFX_focus_SOV_Oriented_towards_the_tertiary_industry"
